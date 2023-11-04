@@ -1,0 +1,29 @@
+# teamProject
+# 2023-11-03 13:50:34Z
+
+# IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
+dont_use_io iocell 3 2
+# IO_3@[IOP=(3)][IoId=(3)] is reserved: SWDDebugEnabled
+dont_use_io iocell 3 3
+set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
+set_io "\EZI2C:sda(0)\" iocell 3 1
+set_io "\EZI2C:scl(0)\" iocell 3 0
+set_io "Vin(0)" iocell 2 0
+set_io "But_1(0)" iocell 0 6
+set_io "But_2(0)" iocell 3 4
+set_io "But_3(0)" iocell 3 6
+set_io "But_4(0)" iocell 0 4
+set_io "led_1(0)" iocell 1 0
+set_io "led_2(0)" iocell 0 0
+set_io "\LCD:LCDPort(0)\" iocell 2 1
+set_io "\LCD:LCDPort(1)\" iocell 2 2
+set_io "\LCD:LCDPort(2)\" iocell 2 3
+set_io "\LCD:LCDPort(3)\" iocell 2 4
+set_io "\LCD:LCDPort(4)\" iocell 2 5
+set_io "\LCD:LCDPort(5)\" iocell 2 6
+set_io "\LCD:LCDPort(6)\" iocell 2 7
+set_io "led_3(0)" iocell 3 7
+set_io "led_4(0)" iocell 0 5
+set_io "PinOut_Buzz(0)" iocell 3 5
+set_io "butt_cheat(0)" iocell 0 7
+set_location "\ADC:cy_psoc4_sar\" p4sarcell -1 -1 0

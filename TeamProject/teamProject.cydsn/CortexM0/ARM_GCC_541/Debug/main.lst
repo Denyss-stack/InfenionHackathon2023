@@ -1,0 +1,2686 @@
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.Buzz_Play_SuccesMelody,"ax",%progbits
+  20              		.align	2
+  21              		.global	Buzz_Play_SuccesMelody
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	Buzz_Play_SuccesMelody, %function
+  25              	Buzz_Play_SuccesMelody:
+  26              	.LFB32:
+  27              		.file 1 "main.c"
+   1:main.c        **** #include <project.h>
+   2:main.c        **** #define INIT_STATE (0X40)
+   3:main.c        **** #define PASS_STATE (0X20)
+   4:main.c        **** #define FAIL_STATE (0X10)
+   5:main.c        **** 
+   6:main.c        **** #define POT_CHAN (0)
+   7:main.c        **** #define WRITABLE (3)
+   8:main.c        **** 
+   9:main.c        **** #define Buzz_C (3824)
+  10:main.c        **** #define Buzz_G (2552)
+  11:main.c        **** #define Buzz_A (2272)
+  12:main.c        **** #define Buzz_D (3408)
+  13:main.c        **** #define Buzz_F (2865)
+  14:main.c        **** #define Buzz_E (3034)
+  15:main.c        **** 
+  16:main.c        **** #define Buzz_Delay (200)
+  17:main.c        **** 
+  18:main.c        **** 
+  19:main.c        **** 
+  20:main.c        **** void Buzz_Play_SuccesMelody(void) // Перемога
+  21:main.c        **** {
+  28              		.loc 1 21 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+  33              		.cfi_def_cfa_offset 24
+  34              		.cfi_offset 3, -24
+  35              		.cfi_offset 4, -20
+  36              		.cfi_offset 5, -16
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 2
+
+
+  37              		.cfi_offset 6, -12
+  38              		.cfi_offset 7, -8
+  39              		.cfi_offset 14, -4
+  22:main.c        ****     Buzz_PWM_Wakeup();
+  40              		.loc 1 22 0
+  41 0002 FFF7FEFF 		bl	Buzz_PWM_Wakeup
+  42              	.LVL0:
+  23:main.c        ****     //C
+  24:main.c        ****     Buzz_PWM_WritePeriod(Buzz_C);
+  43              		.loc 1 24 0
+  44 0006 EF27     		movs	r7, #239
+  45 0008 3F01     		lsls	r7, r7, #4
+  46 000a 3800     		movs	r0, r7
+  47 000c FFF7FEFF 		bl	Buzz_PWM_WritePeriod
+  48              	.LVL1:
+  25:main.c        ****     Buzz_PWM_WriteCompare(Buzz_C/2);
+  49              		.loc 1 25 0
+  50 0010 EF26     		movs	r6, #239
+  51 0012 F600     		lsls	r6, r6, #3
+  52 0014 3000     		movs	r0, r6
+  53 0016 FFF7FEFF 		bl	Buzz_PWM_WriteCompare
+  54              	.LVL2:
+  26:main.c        ****     CyDelay(Buzz_Delay);
+  55              		.loc 1 26 0
+  56 001a C820     		movs	r0, #200
+  57 001c FFF7FEFF 		bl	CyDelay
+  58              	.LVL3:
+  27:main.c        ****     
+  28:main.c        ****     //G
+  29:main.c        ****     Buzz_PWM_WritePeriod(Buzz_G);
+  59              		.loc 1 29 0
+  60 0020 234D     		ldr	r5, .L2
+  61 0022 2800     		movs	r0, r5
+  62 0024 FFF7FEFF 		bl	Buzz_PWM_WritePeriod
+  63              	.LVL4:
+  30:main.c        ****     Buzz_PWM_WriteCompare(Buzz_G/2);
+  64              		.loc 1 30 0
+  65 0028 224C     		ldr	r4, .L2+4
+  66 002a 2000     		movs	r0, r4
+  67 002c FFF7FEFF 		bl	Buzz_PWM_WriteCompare
+  68              	.LVL5:
+  31:main.c        ****     CyDelay(Buzz_Delay);
+  69              		.loc 1 31 0
+  70 0030 C820     		movs	r0, #200
+  71 0032 FFF7FEFF 		bl	CyDelay
+  72              	.LVL6:
+  32:main.c        ****     
+  33:main.c        ****     //A
+  34:main.c        ****     Buzz_PWM_WritePeriod(Buzz_A);
+  73              		.loc 1 34 0
+  74 0036 8E20     		movs	r0, #142
+  75 0038 0001     		lsls	r0, r0, #4
+  76 003a FFF7FEFF 		bl	Buzz_PWM_WritePeriod
+  77              	.LVL7:
+  35:main.c        ****     Buzz_PWM_WriteCompare(Buzz_A/2);
+  78              		.loc 1 35 0
+  79 003e 8E20     		movs	r0, #142
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 3
+
+
+  80 0040 C000     		lsls	r0, r0, #3
+  81 0042 FFF7FEFF 		bl	Buzz_PWM_WriteCompare
+  82              	.LVL8:
+  36:main.c        ****     CyDelay(Buzz_Delay);
+  83              		.loc 1 36 0
+  84 0046 C820     		movs	r0, #200
+  85 0048 FFF7FEFF 		bl	CyDelay
+  86              	.LVL9:
+  37:main.c        ****     
+  38:main.c        ****     //G
+  39:main.c        ****     Buzz_PWM_WritePeriod(Buzz_G);
+  87              		.loc 1 39 0
+  88 004c 2800     		movs	r0, r5
+  89 004e FFF7FEFF 		bl	Buzz_PWM_WritePeriod
+  90              	.LVL10:
+  40:main.c        ****     Buzz_PWM_WriteCompare(Buzz_G/2);
+  91              		.loc 1 40 0
+  92 0052 2000     		movs	r0, r4
+  93 0054 FFF7FEFF 		bl	Buzz_PWM_WriteCompare
+  94              	.LVL11:
+  41:main.c        ****     CyDelay(Buzz_Delay);
+  95              		.loc 1 41 0
+  96 0058 C820     		movs	r0, #200
+  97 005a FFF7FEFF 		bl	CyDelay
+  98              	.LVL12:
+  42:main.c        ****     
+  43:main.c        ****     //C
+  44:main.c        ****     Buzz_PWM_WritePeriod(Buzz_C);
+  99              		.loc 1 44 0
+ 100 005e 3800     		movs	r0, r7
+ 101 0060 FFF7FEFF 		bl	Buzz_PWM_WritePeriod
+ 102              	.LVL13:
+  45:main.c        ****     Buzz_PWM_WriteCompare(Buzz_C/2);
+ 103              		.loc 1 45 0
+ 104 0064 3000     		movs	r0, r6
+ 105 0066 FFF7FEFF 		bl	Buzz_PWM_WriteCompare
+ 106              	.LVL14:
+  46:main.c        ****     CyDelay(Buzz_Delay);
+ 107              		.loc 1 46 0
+ 108 006a C820     		movs	r0, #200
+ 109 006c FFF7FEFF 		bl	CyDelay
+ 110              	.LVL15:
+  47:main.c        ****     
+  48:main.c        ****     //G
+  49:main.c        ****     Buzz_PWM_WritePeriod(Buzz_G);
+ 111              		.loc 1 49 0
+ 112 0070 2800     		movs	r0, r5
+ 113 0072 FFF7FEFF 		bl	Buzz_PWM_WritePeriod
+ 114              	.LVL16:
+  50:main.c        ****     Buzz_PWM_WriteCompare(Buzz_G/2);
+ 115              		.loc 1 50 0
+ 116 0076 2000     		movs	r0, r4
+ 117 0078 FFF7FEFF 		bl	Buzz_PWM_WriteCompare
+ 118              	.LVL17:
+  51:main.c        ****     CyDelay(Buzz_Delay);
+ 119              		.loc 1 51 0
+ 120 007c C820     		movs	r0, #200
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 4
+
+
+ 121 007e FFF7FEFF 		bl	CyDelay
+ 122              	.LVL18:
+  52:main.c        ****     
+  53:main.c        ****     //A
+  54:main.c        ****     Buzz_PWM_WritePeriod(Buzz_A);
+ 123              		.loc 1 54 0
+ 124 0082 8E20     		movs	r0, #142
+ 125 0084 0001     		lsls	r0, r0, #4
+ 126 0086 FFF7FEFF 		bl	Buzz_PWM_WritePeriod
+ 127              	.LVL19:
+  55:main.c        ****     Buzz_PWM_WriteCompare(Buzz_A/2);
+ 128              		.loc 1 55 0
+ 129 008a 8E20     		movs	r0, #142
+ 130 008c C000     		lsls	r0, r0, #3
+ 131 008e FFF7FEFF 		bl	Buzz_PWM_WriteCompare
+ 132              	.LVL20:
+  56:main.c        ****     CyDelay(Buzz_Delay);
+ 133              		.loc 1 56 0
+ 134 0092 C820     		movs	r0, #200
+ 135 0094 FFF7FEFF 		bl	CyDelay
+ 136              	.LVL21:
+  57:main.c        ****     
+  58:main.c        ****     //G
+  59:main.c        ****     Buzz_PWM_WritePeriod(Buzz_G);
+ 137              		.loc 1 59 0
+ 138 0098 2800     		movs	r0, r5
+ 139 009a FFF7FEFF 		bl	Buzz_PWM_WritePeriod
+ 140              	.LVL22:
+  60:main.c        ****     Buzz_PWM_WriteCompare(Buzz_G/2);
+ 141              		.loc 1 60 0
+ 142 009e 2000     		movs	r0, r4
+ 143 00a0 FFF7FEFF 		bl	Buzz_PWM_WriteCompare
+ 144              	.LVL23:
+  61:main.c        ****     CyDelay(Buzz_Delay);
+ 145              		.loc 1 61 0
+ 146 00a4 C820     		movs	r0, #200
+ 147 00a6 FFF7FEFF 		bl	CyDelay
+ 148              	.LVL24:
+  62:main.c        ****     
+  63:main.c        ****     Buzz_PWM_Sleep();
+ 149              		.loc 1 63 0
+ 150 00aa FFF7FEFF 		bl	Buzz_PWM_Sleep
+ 151              	.LVL25:
+  64:main.c        **** }
+ 152              		.loc 1 64 0
+ 153              		@ sp needed
+ 154 00ae F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 155              	.L3:
+ 156              		.align	2
+ 157              	.L2:
+ 158 00b0 F8090000 		.word	2552
+ 159 00b4 FC040000 		.word	1276
+ 160              		.cfi_endproc
+ 161              	.LFE32:
+ 162              		.size	Buzz_Play_SuccesMelody, .-Buzz_Play_SuccesMelody
+ 163              		.section	.text.Buzz_Play_DefMelody,"ax",%progbits
+ 164              		.align	2
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 5
+
+
+ 165              		.global	Buzz_Play_DefMelody
+ 166              		.code	16
+ 167              		.thumb_func
+ 168              		.type	Buzz_Play_DefMelody, %function
+ 169              	Buzz_Play_DefMelody:
+ 170              	.LFB33:
+  65:main.c        **** 
+  66:main.c        **** void Buzz_Play_DefMelody(void) //Програш
+  67:main.c        **** {
+ 171              		.loc 1 67 0
+ 172              		.cfi_startproc
+ 173              		@ args = 0, pretend = 0, frame = 0
+ 174              		@ frame_needed = 0, uses_anonymous_args = 0
+ 175 0000 70B5     		push	{r4, r5, r6, lr}
+ 176              		.cfi_def_cfa_offset 16
+ 177              		.cfi_offset 4, -16
+ 178              		.cfi_offset 5, -12
+ 179              		.cfi_offset 6, -8
+ 180              		.cfi_offset 14, -4
+  68:main.c        ****     Buzz_PWM_Wakeup();
+ 181              		.loc 1 68 0
+ 182 0002 FFF7FEFF 		bl	Buzz_PWM_Wakeup
+ 183              	.LVL26:
+  69:main.c        ****     
+  70:main.c        ****     //D
+  71:main.c        ****     Buzz_PWM_WritePeriod(Buzz_D);
+ 184              		.loc 1 71 0
+ 185 0006 D525     		movs	r5, #213
+ 186 0008 2D01     		lsls	r5, r5, #4
+ 187 000a 2800     		movs	r0, r5
+ 188 000c FFF7FEFF 		bl	Buzz_PWM_WritePeriod
+ 189              	.LVL27:
+  72:main.c        ****     Buzz_PWM_WriteCompare(Buzz_D/2);
+ 190              		.loc 1 72 0
+ 191 0010 D524     		movs	r4, #213
+ 192 0012 E400     		lsls	r4, r4, #3
+ 193 0014 2000     		movs	r0, r4
+ 194 0016 FFF7FEFF 		bl	Buzz_PWM_WriteCompare
+ 195              	.LVL28:
+  73:main.c        ****     CyDelay(Buzz_Delay + 300);
+ 196              		.loc 1 73 0
+ 197 001a FA26     		movs	r6, #250
+ 198 001c 7600     		lsls	r6, r6, #1
+ 199 001e 3000     		movs	r0, r6
+ 200 0020 FFF7FEFF 		bl	CyDelay
+ 201              	.LVL29:
+  74:main.c        ****     
+  75:main.c        ****     //OffBuzz
+  76:main.c        ****     Buzz_PWM_Sleep();
+ 202              		.loc 1 76 0
+ 203 0024 FFF7FEFF 		bl	Buzz_PWM_Sleep
+ 204              	.LVL30:
+  77:main.c        ****     CyDelay(Buzz_Delay / 2);
+ 205              		.loc 1 77 0
+ 206 0028 6420     		movs	r0, #100
+ 207 002a FFF7FEFF 		bl	CyDelay
+ 208              	.LVL31:
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 6
+
+
+  78:main.c        ****     Buzz_PWM_Wakeup();    
+ 209              		.loc 1 78 0
+ 210 002e FFF7FEFF 		bl	Buzz_PWM_Wakeup
+ 211              	.LVL32:
+  79:main.c        ****     
+  80:main.c        ****     //D
+  81:main.c        ****     Buzz_PWM_WritePeriod(Buzz_D);
+ 212              		.loc 1 81 0
+ 213 0032 2800     		movs	r0, r5
+ 214 0034 FFF7FEFF 		bl	Buzz_PWM_WritePeriod
+ 215              	.LVL33:
+  82:main.c        ****     Buzz_PWM_WriteCompare(Buzz_D/2);
+ 216              		.loc 1 82 0
+ 217 0038 2000     		movs	r0, r4
+ 218 003a FFF7FEFF 		bl	Buzz_PWM_WriteCompare
+ 219              	.LVL34:
+  83:main.c        ****     CyDelay(Buzz_Delay + 300);
+ 220              		.loc 1 83 0
+ 221 003e 3000     		movs	r0, r6
+ 222 0040 FFF7FEFF 		bl	CyDelay
+ 223              	.LVL35:
+  84:main.c        ****     
+  85:main.c        ****     //OffBuzz
+  86:main.c        ****     Buzz_PWM_Sleep();
+ 224              		.loc 1 86 0
+ 225 0044 FFF7FEFF 		bl	Buzz_PWM_Sleep
+ 226              	.LVL36:
+  87:main.c        ****     CyDelay(Buzz_Delay / 2);
+ 227              		.loc 1 87 0
+ 228 0048 6420     		movs	r0, #100
+ 229 004a FFF7FEFF 		bl	CyDelay
+ 230              	.LVL37:
+  88:main.c        ****     Buzz_PWM_Wakeup();
+ 231              		.loc 1 88 0
+ 232 004e FFF7FEFF 		bl	Buzz_PWM_Wakeup
+ 233              	.LVL38:
+  89:main.c        ****     
+  90:main.c        ****     //D
+  91:main.c        ****     Buzz_PWM_WritePeriod(Buzz_D);
+ 234              		.loc 1 91 0
+ 235 0052 2800     		movs	r0, r5
+ 236 0054 FFF7FEFF 		bl	Buzz_PWM_WritePeriod
+ 237              	.LVL39:
+  92:main.c        ****     Buzz_PWM_WriteCompare(Buzz_D/2);
+ 238              		.loc 1 92 0
+ 239 0058 2000     		movs	r0, r4
+ 240 005a FFF7FEFF 		bl	Buzz_PWM_WriteCompare
+ 241              	.LVL40:
+  93:main.c        ****     CyDelay(Buzz_Delay + 1000);
+ 242              		.loc 1 93 0
+ 243 005e 9620     		movs	r0, #150
+ 244 0060 C000     		lsls	r0, r0, #3
+ 245 0062 FFF7FEFF 		bl	CyDelay
+ 246              	.LVL41:
+  94:main.c        ****     
+  95:main.c        ****     Buzz_PWM_Sleep();
+ 247              		.loc 1 95 0
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 7
+
+
+ 248 0066 FFF7FEFF 		bl	Buzz_PWM_Sleep
+ 249              	.LVL42:
+  96:main.c        **** }
+ 250              		.loc 1 96 0
+ 251              		@ sp needed
+ 252 006a 70BD     		pop	{r4, r5, r6, pc}
+ 253              		.cfi_endproc
+ 254              	.LFE33:
+ 255              		.size	Buzz_Play_DefMelody, .-Buzz_Play_DefMelody
+ 256              		.section	.text.Buzz_Play_ButtMelody,"ax",%progbits
+ 257              		.align	2
+ 258              		.global	Buzz_Play_ButtMelody
+ 259              		.code	16
+ 260              		.thumb_func
+ 261              		.type	Buzz_Play_ButtMelody, %function
+ 262              	Buzz_Play_ButtMelody:
+ 263              	.LFB34:
+  97:main.c        **** 
+  98:main.c        **** void Buzz_Play_ButtMelody(int RegButt) //Програш
+  99:main.c        **** {
+ 264              		.loc 1 99 0
+ 265              		.cfi_startproc
+ 266              		@ args = 0, pretend = 0, frame = 0
+ 267              		@ frame_needed = 0, uses_anonymous_args = 0
+ 268              	.LVL43:
+ 269 0000 10B5     		push	{r4, lr}
+ 270              		.cfi_def_cfa_offset 8
+ 271              		.cfi_offset 4, -8
+ 272              		.cfi_offset 14, -4
+ 273 0002 0400     		movs	r4, r0
+ 100:main.c        ****     Buzz_PWM_Wakeup();
+ 274              		.loc 1 100 0
+ 275 0004 FFF7FEFF 		bl	Buzz_PWM_Wakeup
+ 276              	.LVL44:
+ 101:main.c        ****     
+ 102:main.c        ****     switch(RegButt)
+ 277              		.loc 1 102 0
+ 278 0008 022C     		cmp	r4, #2
+ 279 000a 14D0     		beq	.L7
+ 280 000c 02DC     		bgt	.L8
+ 281 000e 012C     		cmp	r4, #1
+ 282 0010 05D0     		beq	.L9
+ 283 0012 32E0     		b	.L6
+ 284              	.L8:
+ 285 0014 042C     		cmp	r4, #4
+ 286 0016 19D0     		beq	.L10
+ 287 0018 082C     		cmp	r4, #8
+ 288 001a 23D0     		beq	.L11
+ 289 001c 2DE0     		b	.L6
+ 290              	.L9:
+ 103:main.c        ****     {        
+ 104:main.c        ****         case(0x1):
+ 105:main.c        ****             //D
+ 106:main.c        ****             Buzz_PWM_WritePeriod(Buzz_D);
+ 291              		.loc 1 106 0
+ 292 001e D520     		movs	r0, #213
+ 293 0020 0001     		lsls	r0, r0, #4
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 8
+
+
+ 294 0022 FFF7FEFF 		bl	Buzz_PWM_WritePeriod
+ 295              	.LVL45:
+ 107:main.c        ****             Buzz_PWM_WriteCompare(Buzz_D/2);
+ 296              		.loc 1 107 0
+ 297 0026 D520     		movs	r0, #213
+ 298 0028 C000     		lsls	r0, r0, #3
+ 299 002a FFF7FEFF 		bl	Buzz_PWM_WriteCompare
+ 300              	.LVL46:
+ 108:main.c        ****             CyDelay(Buzz_Delay / 4);
+ 301              		.loc 1 108 0
+ 302 002e 3220     		movs	r0, #50
+ 303 0030 FFF7FEFF 		bl	CyDelay
+ 304              	.LVL47:
+ 109:main.c        ****             break;
+ 305              		.loc 1 109 0
+ 306 0034 21E0     		b	.L6
+ 307              	.L7:
+ 110:main.c        ****         
+ 111:main.c        ****         case(0x2):
+ 112:main.c        ****             //F
+ 113:main.c        ****             Buzz_PWM_WritePeriod(Buzz_F);
+ 308              		.loc 1 113 0
+ 309 0036 1248     		ldr	r0, .L12
+ 310 0038 FFF7FEFF 		bl	Buzz_PWM_WritePeriod
+ 311              	.LVL48:
+ 114:main.c        ****             Buzz_PWM_WriteCompare(Buzz_F/2);
+ 312              		.loc 1 114 0
+ 313 003c B320     		movs	r0, #179
+ 314 003e C000     		lsls	r0, r0, #3
+ 315 0040 FFF7FEFF 		bl	Buzz_PWM_WriteCompare
+ 316              	.LVL49:
+ 115:main.c        ****             CyDelay(Buzz_Delay / 4);
+ 317              		.loc 1 115 0
+ 318 0044 3220     		movs	r0, #50
+ 319 0046 FFF7FEFF 		bl	CyDelay
+ 320              	.LVL50:
+ 116:main.c        ****         
+ 117:main.c        ****             break;
+ 321              		.loc 1 117 0
+ 322 004a 16E0     		b	.L6
+ 323              	.L10:
+ 118:main.c        ****         
+ 119:main.c        ****         case(0x4):
+ 120:main.c        ****             //A
+ 121:main.c        ****             Buzz_PWM_WritePeriod(Buzz_A);
+ 324              		.loc 1 121 0
+ 325 004c 8E20     		movs	r0, #142
+ 326 004e 0001     		lsls	r0, r0, #4
+ 327 0050 FFF7FEFF 		bl	Buzz_PWM_WritePeriod
+ 328              	.LVL51:
+ 122:main.c        ****             Buzz_PWM_WriteCompare(Buzz_A/2);
+ 329              		.loc 1 122 0
+ 330 0054 8E20     		movs	r0, #142
+ 331 0056 C000     		lsls	r0, r0, #3
+ 332 0058 FFF7FEFF 		bl	Buzz_PWM_WriteCompare
+ 333              	.LVL52:
+ 123:main.c        ****             CyDelay(Buzz_Delay / 4);        
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 9
+
+
+ 334              		.loc 1 123 0
+ 335 005c 3220     		movs	r0, #50
+ 336 005e FFF7FEFF 		bl	CyDelay
+ 337              	.LVL53:
+ 124:main.c        ****             break;
+ 338              		.loc 1 124 0
+ 339 0062 0AE0     		b	.L6
+ 340              	.L11:
+ 125:main.c        ****         
+ 126:main.c        ****         case(0x8):        
+ 127:main.c        ****             //C
+ 128:main.c        ****             Buzz_PWM_WritePeriod(Buzz_C);
+ 341              		.loc 1 128 0
+ 342 0064 EF20     		movs	r0, #239
+ 343 0066 0001     		lsls	r0, r0, #4
+ 344 0068 FFF7FEFF 		bl	Buzz_PWM_WritePeriod
+ 345              	.LVL54:
+ 129:main.c        ****             Buzz_PWM_WriteCompare(Buzz_C/2);
+ 346              		.loc 1 129 0
+ 347 006c EF20     		movs	r0, #239
+ 348 006e C000     		lsls	r0, r0, #3
+ 349 0070 FFF7FEFF 		bl	Buzz_PWM_WriteCompare
+ 350              	.LVL55:
+ 130:main.c        ****             CyDelay(Buzz_Delay / 4);
+ 351              		.loc 1 130 0
+ 352 0074 3220     		movs	r0, #50
+ 353 0076 FFF7FEFF 		bl	CyDelay
+ 354              	.LVL56:
+ 355              	.L6:
+ 131:main.c        ****             break;   
+ 132:main.c        ****         
+ 133:main.c        ****         default:
+ 134:main.c        ****         break;
+ 135:main.c        ****     }
+ 136:main.c        ****         
+ 137:main.c        ****     Buzz_PWM_Sleep();
+ 356              		.loc 1 137 0
+ 357 007a FFF7FEFF 		bl	Buzz_PWM_Sleep
+ 358              	.LVL57:
+ 138:main.c        **** }
+ 359              		.loc 1 138 0
+ 360              		@ sp needed
+ 361              	.LVL58:
+ 362 007e 10BD     		pop	{r4, pc}
+ 363              	.L13:
+ 364              		.align	2
+ 365              	.L12:
+ 366 0080 310B0000 		.word	2865
+ 367              		.cfi_endproc
+ 368              	.LFE34:
+ 369              		.size	Buzz_Play_ButtMelody, .-Buzz_Play_ButtMelody
+ 370              		.section	.text.main,"ax",%progbits
+ 371              		.align	2
+ 372              		.global	main
+ 373              		.code	16
+ 374              		.thumb_func
+ 375              		.type	main, %function
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 10
+
+
+ 376              	main:
+ 377              	.LFB35:
+ 139:main.c        **** 
+ 140:main.c        **** 
+ 141:main.c        **** int main()
+ 142:main.c        **** {
+ 378              		.loc 1 142 0
+ 379              		.cfi_startproc
+ 380              		@ args = 0, pretend = 0, frame = 8
+ 381              		@ frame_needed = 0, uses_anonymous_args = 0
+ 382 0000 10B5     		push	{r4, lr}
+ 383              		.cfi_def_cfa_offset 8
+ 384              		.cfi_offset 4, -8
+ 385              		.cfi_offset 14, -4
+ 386 0002 82B0     		sub	sp, sp, #8
+ 387              		.cfi_def_cfa_offset 16
+ 143:main.c        ****     int16 counts; 
+ 144:main.c        ****     int16 mVolts; 
+ 145:main.c        **** 
+ 146:main.c        ****     uint8 i2cReg[3]; 
+ 147:main.c        ****     EZI2C_Start();
+ 388              		.loc 1 147 0
+ 389 0004 FFF7FEFF 		bl	EZI2C_Start
+ 390              	.LVL59:
+ 148:main.c        ****     EZI2C_EzI2CSetBuffer1(sizeof(i2cReg), WRITABLE, i2cReg);
+ 391              		.loc 1 148 0
+ 392 0008 01AA     		add	r2, sp, #4
+ 393 000a 0321     		movs	r1, #3
+ 394 000c 0320     		movs	r0, #3
+ 395 000e FFF7FEFF 		bl	EZI2C_EzI2CSetBuffer1
+ 396              	.LVL60:
+ 149:main.c        ****     ADC_Start();
+ 397              		.loc 1 149 0
+ 398 0012 FFF7FEFF 		bl	ADC_Start
+ 399              	.LVL61:
+ 150:main.c        ****     ADC_StartConvert();
+ 400              		.loc 1 150 0
+ 401 0016 FFF7FEFF 		bl	ADC_StartConvert
+ 402              	.LVL62:
+ 151:main.c        ****     LCD_Start();
+ 403              		.loc 1 151 0
+ 404 001a FFF7FEFF 		bl	LCD_Start
+ 405              	.LVL63:
+ 152:main.c        ****     Buzz_PWM_Start();
+ 406              		.loc 1 152 0
+ 407 001e FFF7FEFF 		bl	Buzz_PWM_Start
+ 408              	.LVL64:
+ 153:main.c        ****     Buzz_PWM_Sleep();
+ 409              		.loc 1 153 0
+ 410 0022 FFF7FEFF 		bl	Buzz_PWM_Sleep
+ 411              	.LVL65:
+ 154:main.c        **** 
+ 155:main.c        ****     CyGlobalIntEnable;
+ 412              		.loc 1 155 0
+ 413              		.syntax divided
+ 414              	@ 155 "main.c" 1
+ 415 0026 62B6     		CPSIE   i
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 11
+
+
+ 416              	@ 0 "" 2
+ 417              		.thumb
+ 418              		.syntax unified
+ 419              	.L21:
+ 420              	.LBB2:
+ 156:main.c        ****     for(;;)
+ 157:main.c        ****     {
+ 158:main.c        ****         counts = ADC_GetResult16(POT_CHAN);
+ 421              		.loc 1 158 0
+ 422 0028 0020     		movs	r0, #0
+ 423 002a FFF7FEFF 		bl	ADC_GetResult16
+ 424              	.LVL66:
+ 425 002e 0100     		movs	r1, r0
+ 426              	.LVL67:
+ 159:main.c        ****         mVolts = ADC_CountsTo_mVolts(POT_CHAN,counts);
+ 427              		.loc 1 159 0
+ 428 0030 0020     		movs	r0, #0
+ 429 0032 FFF7FEFF 		bl	ADC_CountsTo_mVolts
+ 430              	.LVL68:
+ 160:main.c        ****         
+ 161:main.c        ****         int pot_state =  (mVolts >> 10) +1;
+ 431              		.loc 1 161 0
+ 432 0036 8012     		asrs	r0, r0, #10
+ 433              	.LVL69:
+ 434 0038 04B2     		sxth	r4, r0
+ 435 003a 0134     		adds	r4, r4, #1
+ 436              	.LVL70:
+ 162:main.c        ****         i2cReg[2] = pot_state;
+ 437              		.loc 1 162 0
+ 438 003c 01AB     		add	r3, sp, #4
+ 439 003e 9C70     		strb	r4, [r3, #2]
+ 163:main.c        ****         if (i2cReg[0] == INIT_STATE ){
+ 440              		.loc 1 163 0
+ 441 0040 1B78     		ldrb	r3, [r3]
+ 442 0042 402B     		cmp	r3, #64
+ 443 0044 19D1     		bne	.L15
+ 164:main.c        ****             LCD_ClearDisplay();
+ 444              		.loc 1 164 0
+ 445 0046 0120     		movs	r0, #1
+ 446 0048 FFF7FEFF 		bl	LCD_WriteControl
+ 447              	.LVL71:
+ 165:main.c        ****             LCD_Position(0,0);
+ 448              		.loc 1 165 0
+ 449 004c 0021     		movs	r1, #0
+ 450 004e 0020     		movs	r0, #0
+ 451 0050 FFF7FEFF 		bl	LCD_Position
+ 452              	.LVL72:
+ 166:main.c        ****             LCD_PrintString("INIT");
+ 453              		.loc 1 166 0
+ 454 0054 2F48     		ldr	r0, .L22
+ 455 0056 FFF7FEFF 		bl	LCD_PrintString
+ 456              	.LVL73:
+ 167:main.c        ****             LCD_Position(1,0);
+ 457              		.loc 1 167 0
+ 458 005a 0021     		movs	r1, #0
+ 459 005c 0120     		movs	r0, #1
+ 460 005e FFF7FEFF 		bl	LCD_Position
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 12
+
+
+ 461              	.LVL74:
+ 168:main.c        ****             LCD_PrintString("SPEED");
+ 462              		.loc 1 168 0
+ 463 0062 2D48     		ldr	r0, .L22+4
+ 464 0064 FFF7FEFF 		bl	LCD_PrintString
+ 465              	.LVL75:
+ 169:main.c        ****             LCD_Position(1,7);
+ 466              		.loc 1 169 0
+ 467 0068 0721     		movs	r1, #7
+ 468 006a 0120     		movs	r0, #1
+ 469 006c FFF7FEFF 		bl	LCD_Position
+ 470              	.LVL76:
+ 170:main.c        ****             LCD_PrintNumber(pot_state);
+ 471              		.loc 1 170 0
+ 472 0070 2004     		lsls	r0, r4, #16
+ 473 0072 000C     		lsrs	r0, r0, #16
+ 474 0074 FFF7FEFF 		bl	LCD_PrintU32Number
+ 475              	.LVL77:
+ 476 0078 36E0     		b	.L16
+ 477              	.L15:
+ 171:main.c        ****             
+ 172:main.c        ****         }
+ 173:main.c        ****         else  if (i2cReg[0] == PASS_STATE ){
+ 478              		.loc 1 173 0
+ 479 007a 202B     		cmp	r3, #32
+ 480 007c 0CD1     		bne	.L17
+ 174:main.c        ****             LCD_ClearDisplay();
+ 481              		.loc 1 174 0
+ 482 007e 0120     		movs	r0, #1
+ 483 0080 FFF7FEFF 		bl	LCD_WriteControl
+ 484              	.LVL78:
+ 175:main.c        ****             LCD_Position(0,0);
+ 485              		.loc 1 175 0
+ 486 0084 0021     		movs	r1, #0
+ 487 0086 0020     		movs	r0, #0
+ 488 0088 FFF7FEFF 		bl	LCD_Position
+ 489              	.LVL79:
+ 176:main.c        ****             LCD_PrintString("PASS");
+ 490              		.loc 1 176 0
+ 491 008c 2348     		ldr	r0, .L22+8
+ 492 008e FFF7FEFF 		bl	LCD_PrintString
+ 493              	.LVL80:
+ 177:main.c        ****             Buzz_Play_SuccesMelody();
+ 494              		.loc 1 177 0
+ 495 0092 FFF7FEFF 		bl	Buzz_Play_SuccesMelody
+ 496              	.LVL81:
+ 497 0096 27E0     		b	.L16
+ 498              	.L17:
+ 178:main.c        ****         
+ 179:main.c        ****         }
+ 180:main.c        ****         else  if (i2cReg[0] == FAIL_STATE ){
+ 499              		.loc 1 180 0
+ 500 0098 102B     		cmp	r3, #16
+ 501 009a 0CD1     		bne	.L18
+ 181:main.c        ****             LCD_ClearDisplay();
+ 502              		.loc 1 181 0
+ 503 009c 0120     		movs	r0, #1
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 13
+
+
+ 504 009e FFF7FEFF 		bl	LCD_WriteControl
+ 505              	.LVL82:
+ 182:main.c        ****             LCD_Position(0,0);
+ 506              		.loc 1 182 0
+ 507 00a2 0021     		movs	r1, #0
+ 508 00a4 0020     		movs	r0, #0
+ 509 00a6 FFF7FEFF 		bl	LCD_Position
+ 510              	.LVL83:
+ 183:main.c        ****             LCD_PrintString("FAIL");
+ 511              		.loc 1 183 0
+ 512 00aa 1D48     		ldr	r0, .L22+12
+ 513 00ac FFF7FEFF 		bl	LCD_PrintString
+ 514              	.LVL84:
+ 184:main.c        ****             Buzz_Play_DefMelody();
+ 515              		.loc 1 184 0
+ 516 00b0 FFF7FEFF 		bl	Buzz_Play_DefMelody
+ 517              	.LVL85:
+ 518 00b4 18E0     		b	.L16
+ 519              	.L18:
+ 185:main.c        ****         }
+ 186:main.c        ****         else{
+ 187:main.c        ****             LCD_ClearDisplay();
+ 520              		.loc 1 187 0
+ 521 00b6 0120     		movs	r0, #1
+ 522 00b8 FFF7FEFF 		bl	LCD_WriteControl
+ 523              	.LVL86:
+ 188:main.c        ****             LCD_Position(0,0);
+ 524              		.loc 1 188 0
+ 525 00bc 0021     		movs	r1, #0
+ 526 00be 0020     		movs	r0, #0
+ 527 00c0 FFF7FEFF 		bl	LCD_Position
+ 528              	.LVL87:
+ 189:main.c        ****             LCD_PrintString("RUN");
+ 529              		.loc 1 189 0
+ 530 00c4 1748     		ldr	r0, .L22+16
+ 531 00c6 FFF7FEFF 		bl	LCD_PrintString
+ 532              	.LVL88:
+ 190:main.c        ****             LCD_Position(1,0);
+ 533              		.loc 1 190 0
+ 534 00ca 0021     		movs	r1, #0
+ 535 00cc 0120     		movs	r0, #1
+ 536 00ce FFF7FEFF 		bl	LCD_Position
+ 537              	.LVL89:
+ 191:main.c        ****             LCD_PrintString("SPEED");
+ 538              		.loc 1 191 0
+ 539 00d2 1148     		ldr	r0, .L22+4
+ 540 00d4 FFF7FEFF 		bl	LCD_PrintString
+ 541              	.LVL90:
+ 192:main.c        ****             LCD_Position(1,7);
+ 542              		.loc 1 192 0
+ 543 00d8 0721     		movs	r1, #7
+ 544 00da 0120     		movs	r0, #1
+ 545 00dc FFF7FEFF 		bl	LCD_Position
+ 546              	.LVL91:
+ 193:main.c        ****             LCD_PrintNumber(pot_state);
+ 547              		.loc 1 193 0
+ 548 00e0 2004     		lsls	r0, r4, #16
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 14
+
+
+ 549 00e2 000C     		lsrs	r0, r0, #16
+ 550 00e4 FFF7FEFF 		bl	LCD_PrintU32Number
+ 551              	.LVL92:
+ 552              	.L16:
+ 194:main.c        ****         }
+ 195:main.c        ****         i2cReg[1] = Status_Reg_Read();
+ 553              		.loc 1 195 0
+ 554 00e8 FFF7FEFF 		bl	Status_Reg_Read
+ 555              	.LVL93:
+ 556 00ec 01AC     		add	r4, sp, #4
+ 557              	.LVL94:
+ 558 00ee 6070     		strb	r0, [r4, #1]
+ 196:main.c        ****         Buzz_Play_ButtMelody(i2cReg[1]);
+ 559              		.loc 1 196 0
+ 560 00f0 FFF7FEFF 		bl	Buzz_Play_ButtMelody
+ 561              	.LVL95:
+ 197:main.c        ****         if (i2cReg[0] ==0x1 || i2cReg[0] ==0x2 || i2cReg[0] ==0x4 || i2cReg[0] ==0x8){
+ 562              		.loc 1 197 0
+ 563 00f4 2078     		ldrb	r0, [r4]
+ 564 00f6 431E     		subs	r3, r0, #1
+ 565 00f8 DBB2     		uxtb	r3, r3
+ 566 00fa 012B     		cmp	r3, #1
+ 567 00fc 03D9     		bls	.L19
+ 568              		.loc 1 197 0 is_stmt 0 discriminator 1
+ 569 00fe 0428     		cmp	r0, #4
+ 570 0100 01D0     		beq	.L19
+ 571              		.loc 1 197 0 discriminator 2
+ 572 0102 0828     		cmp	r0, #8
+ 573 0104 01D1     		bne	.L20
+ 574              	.L19:
+ 198:main.c        ****             Buzz_Play_ButtMelody(i2cReg[0]);
+ 575              		.loc 1 198 0 is_stmt 1
+ 576 0106 FFF7FEFF 		bl	Buzz_Play_ButtMelody
+ 577              	.LVL96:
+ 578              	.L20:
+ 199:main.c        ****         }
+ 200:main.c        ****         
+ 201:main.c        ****         
+ 202:main.c        ****         
+ 203:main.c        **** 
+ 204:main.c        ****              
+ 205:main.c        ****         
+ 206:main.c        ****     //sw4 12 
+ 207:main.c        ****     /* Store ADC value in I2C buffer */
+ 208:main.c        ****         CyDelay(100);
+ 579              		.loc 1 208 0
+ 580 010a 6420     		movs	r0, #100
+ 581 010c FFF7FEFF 		bl	CyDelay
+ 582              	.LVL97:
+ 583              	.LBE2:
+ 209:main.c        ****     }
+ 584              		.loc 1 209 0
+ 585 0110 8AE7     		b	.L21
+ 586              	.L23:
+ 587 0112 C046     		.align	2
+ 588              	.L22:
+ 589 0114 00000000 		.word	.LC0
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 15
+
+
+ 590 0118 08000000 		.word	.LC2
+ 591 011c 10000000 		.word	.LC4
+ 592 0120 18000000 		.word	.LC6
+ 593 0124 20000000 		.word	.LC8
+ 594              		.cfi_endproc
+ 595              	.LFE35:
+ 596              		.size	main, .-main
+ 597              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 598              		.align	2
+ 599              	.LC0:
+ 600 0000 494E4954 		.ascii	"INIT\000"
+ 600      00
+ 601 0005 000000   		.space	3
+ 602              	.LC2:
+ 603 0008 53504545 		.ascii	"SPEED\000"
+ 603      4400
+ 604 000e 0000     		.space	2
+ 605              	.LC4:
+ 606 0010 50415353 		.ascii	"PASS\000"
+ 606      00
+ 607 0015 000000   		.space	3
+ 608              	.LC6:
+ 609 0018 4641494C 		.ascii	"FAIL\000"
+ 609      00
+ 610 001d 000000   		.space	3
+ 611              	.LC8:
+ 612 0020 52554E00 		.ascii	"RUN\000"
+ 613              		.text
+ 614              	.Letext0:
+ 615              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 616              		.file 3 "Generated_Source\\PSoC4/Buzz_PWM.h"
+ 617              		.file 4 "Generated_Source\\PSoC4/CyLib.h"
+ 618              		.file 5 "Generated_Source\\PSoC4/ADC.h"
+ 619              		.file 6 "Generated_Source\\PSoC4/LCD.h"
+ 620              		.file 7 "Generated_Source\\PSoC4/Status_Reg.h"
+ 621              		.file 8 "Generated_Source\\PSoC4/EZI2C.h"
+ 622              		.file 9 "Generated_Source\\PSoC4/EZI2C_EZI2C.h"
+ 623              		.section	.debug_info,"",%progbits
+ 624              	.Ldebug_info0:
+ 625 0000 CE080000 		.4byte	0x8ce
+ 626 0004 0400     		.2byte	0x4
+ 627 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 628 000a 04       		.byte	0x4
+ 629 000b 01       		.uleb128 0x1
+ 630 000c 8B010000 		.4byte	.LASF42
+ 631 0010 0C       		.byte	0xc
+ 632 0011 59020000 		.4byte	.LASF43
+ 633 0015 86020000 		.4byte	.LASF44
+ 634 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 635 001d 00000000 		.4byte	0
+ 636 0021 00000000 		.4byte	.Ldebug_line0
+ 637 0025 02       		.uleb128 0x2
+ 638 0026 01       		.byte	0x1
+ 639 0027 06       		.byte	0x6
+ 640 0028 F1020000 		.4byte	.LASF0
+ 641 002c 02       		.uleb128 0x2
+ 642 002d 01       		.byte	0x1
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 16
+
+
+ 643 002e 08       		.byte	0x8
+ 644 002f 7B000000 		.4byte	.LASF1
+ 645 0033 02       		.uleb128 0x2
+ 646 0034 02       		.byte	0x2
+ 647 0035 05       		.byte	0x5
+ 648 0036 F1000000 		.4byte	.LASF2
+ 649 003a 02       		.uleb128 0x2
+ 650 003b 02       		.byte	0x2
+ 651 003c 07       		.byte	0x7
+ 652 003d 52000000 		.4byte	.LASF3
+ 653 0041 02       		.uleb128 0x2
+ 654 0042 04       		.byte	0x4
+ 655 0043 05       		.byte	0x5
+ 656 0044 D7020000 		.4byte	.LASF4
+ 657 0048 02       		.uleb128 0x2
+ 658 0049 04       		.byte	0x4
+ 659 004a 07       		.byte	0x7
+ 660 004b AD000000 		.4byte	.LASF5
+ 661 004f 02       		.uleb128 0x2
+ 662 0050 08       		.byte	0x8
+ 663 0051 05       		.byte	0x5
+ 664 0052 00000000 		.4byte	.LASF6
+ 665 0056 02       		.uleb128 0x2
+ 666 0057 08       		.byte	0x8
+ 667 0058 07       		.byte	0x7
+ 668 0059 2B010000 		.4byte	.LASF7
+ 669 005d 03       		.uleb128 0x3
+ 670 005e 04       		.byte	0x4
+ 671 005f 05       		.byte	0x5
+ 672 0060 696E7400 		.ascii	"int\000"
+ 673 0064 02       		.uleb128 0x2
+ 674 0065 04       		.byte	0x4
+ 675 0066 07       		.byte	0x7
+ 676 0067 17010000 		.4byte	.LASF8
+ 677 006b 04       		.uleb128 0x4
+ 678 006c BF000000 		.4byte	.LASF9
+ 679 0070 02       		.byte	0x2
+ 680 0071 FB01     		.2byte	0x1fb
+ 681 0073 2C000000 		.4byte	0x2c
+ 682 0077 04       		.uleb128 0x4
+ 683 0078 0B010000 		.4byte	.LASF10
+ 684 007c 02       		.byte	0x2
+ 685 007d FC01     		.2byte	0x1fc
+ 686 007f 3A000000 		.4byte	0x3a
+ 687 0083 04       		.uleb128 0x4
+ 688 0084 65000000 		.4byte	.LASF11
+ 689 0088 02       		.byte	0x2
+ 690 0089 FF01     		.2byte	0x1ff
+ 691 008b 33000000 		.4byte	0x33
+ 692 008f 02       		.uleb128 0x2
+ 693 0090 04       		.byte	0x4
+ 694 0091 04       		.byte	0x4
+ 695 0092 6B000000 		.4byte	.LASF12
+ 696 0096 02       		.uleb128 0x2
+ 697 0097 08       		.byte	0x8
+ 698 0098 04       		.byte	0x4
+ 699 0099 EA000000 		.4byte	.LASF13
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 17
+
+
+ 700 009d 02       		.uleb128 0x2
+ 701 009e 01       		.byte	0x1
+ 702 009f 08       		.byte	0x8
+ 703 00a0 E0020000 		.4byte	.LASF14
+ 704 00a4 02       		.uleb128 0x2
+ 705 00a5 08       		.byte	0x8
+ 706 00a6 04       		.byte	0x4
+ 707 00a7 E5020000 		.4byte	.LASF15
+ 708 00ab 02       		.uleb128 0x2
+ 709 00ac 04       		.byte	0x4
+ 710 00ad 07       		.byte	0x7
+ 711 00ae 3F020000 		.4byte	.LASF16
+ 712 00b2 05       		.uleb128 0x5
+ 713 00b3 6F020000 		.4byte	.LASF17
+ 714 00b7 01       		.byte	0x1
+ 715 00b8 14       		.byte	0x14
+ 716 00b9 00000000 		.4byte	.LFB32
+ 717 00bd B8000000 		.4byte	.LFE32-.LFB32
+ 718 00c1 01       		.uleb128 0x1
+ 719 00c2 9C       		.byte	0x9c
+ 720 00c3 BE020000 		.4byte	0x2be
+ 721 00c7 06       		.uleb128 0x6
+ 722 00c8 06000000 		.4byte	.LVL0
+ 723 00cc 06080000 		.4byte	0x806
+ 724 00d0 07       		.uleb128 0x7
+ 725 00d1 10000000 		.4byte	.LVL1
+ 726 00d5 12080000 		.4byte	0x812
+ 727 00d9 E4000000 		.4byte	0xe4
+ 728 00dd 08       		.uleb128 0x8
+ 729 00de 01       		.uleb128 0x1
+ 730 00df 50       		.byte	0x50
+ 731 00e0 02       		.uleb128 0x2
+ 732 00e1 77       		.byte	0x77
+ 733 00e2 00       		.sleb128 0
+ 734 00e3 00       		.byte	0
+ 735 00e4 07       		.uleb128 0x7
+ 736 00e5 1A000000 		.4byte	.LVL2
+ 737 00e9 1E080000 		.4byte	0x81e
+ 738 00ed F8000000 		.4byte	0xf8
+ 739 00f1 08       		.uleb128 0x8
+ 740 00f2 01       		.uleb128 0x1
+ 741 00f3 50       		.byte	0x50
+ 742 00f4 02       		.uleb128 0x2
+ 743 00f5 76       		.byte	0x76
+ 744 00f6 00       		.sleb128 0
+ 745 00f7 00       		.byte	0
+ 746 00f8 07       		.uleb128 0x7
+ 747 00f9 20000000 		.4byte	.LVL3
+ 748 00fd 2A080000 		.4byte	0x82a
+ 749 0101 0C010000 		.4byte	0x10c
+ 750 0105 08       		.uleb128 0x8
+ 751 0106 01       		.uleb128 0x1
+ 752 0107 50       		.byte	0x50
+ 753 0108 02       		.uleb128 0x2
+ 754 0109 08       		.byte	0x8
+ 755 010a C8       		.byte	0xc8
+ 756 010b 00       		.byte	0
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 18
+
+
+ 757 010c 07       		.uleb128 0x7
+ 758 010d 28000000 		.4byte	.LVL4
+ 759 0111 12080000 		.4byte	0x812
+ 760 0115 20010000 		.4byte	0x120
+ 761 0119 08       		.uleb128 0x8
+ 762 011a 01       		.uleb128 0x1
+ 763 011b 50       		.byte	0x50
+ 764 011c 02       		.uleb128 0x2
+ 765 011d 75       		.byte	0x75
+ 766 011e 00       		.sleb128 0
+ 767 011f 00       		.byte	0
+ 768 0120 07       		.uleb128 0x7
+ 769 0121 30000000 		.4byte	.LVL5
+ 770 0125 1E080000 		.4byte	0x81e
+ 771 0129 34010000 		.4byte	0x134
+ 772 012d 08       		.uleb128 0x8
+ 773 012e 01       		.uleb128 0x1
+ 774 012f 50       		.byte	0x50
+ 775 0130 02       		.uleb128 0x2
+ 776 0131 74       		.byte	0x74
+ 777 0132 00       		.sleb128 0
+ 778 0133 00       		.byte	0
+ 779 0134 07       		.uleb128 0x7
+ 780 0135 36000000 		.4byte	.LVL6
+ 781 0139 2A080000 		.4byte	0x82a
+ 782 013d 48010000 		.4byte	0x148
+ 783 0141 08       		.uleb128 0x8
+ 784 0142 01       		.uleb128 0x1
+ 785 0143 50       		.byte	0x50
+ 786 0144 02       		.uleb128 0x2
+ 787 0145 08       		.byte	0x8
+ 788 0146 C8       		.byte	0xc8
+ 789 0147 00       		.byte	0
+ 790 0148 07       		.uleb128 0x7
+ 791 0149 3E000000 		.4byte	.LVL7
+ 792 014d 12080000 		.4byte	0x812
+ 793 0151 5D010000 		.4byte	0x15d
+ 794 0155 08       		.uleb128 0x8
+ 795 0156 01       		.uleb128 0x1
+ 796 0157 50       		.byte	0x50
+ 797 0158 03       		.uleb128 0x3
+ 798 0159 0A       		.byte	0xa
+ 799 015a E008     		.2byte	0x8e0
+ 800 015c 00       		.byte	0
+ 801 015d 07       		.uleb128 0x7
+ 802 015e 46000000 		.4byte	.LVL8
+ 803 0162 1E080000 		.4byte	0x81e
+ 804 0166 72010000 		.4byte	0x172
+ 805 016a 08       		.uleb128 0x8
+ 806 016b 01       		.uleb128 0x1
+ 807 016c 50       		.byte	0x50
+ 808 016d 03       		.uleb128 0x3
+ 809 016e 0A       		.byte	0xa
+ 810 016f 7004     		.2byte	0x470
+ 811 0171 00       		.byte	0
+ 812 0172 07       		.uleb128 0x7
+ 813 0173 4C000000 		.4byte	.LVL9
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 19
+
+
+ 814 0177 2A080000 		.4byte	0x82a
+ 815 017b 86010000 		.4byte	0x186
+ 816 017f 08       		.uleb128 0x8
+ 817 0180 01       		.uleb128 0x1
+ 818 0181 50       		.byte	0x50
+ 819 0182 02       		.uleb128 0x2
+ 820 0183 08       		.byte	0x8
+ 821 0184 C8       		.byte	0xc8
+ 822 0185 00       		.byte	0
+ 823 0186 07       		.uleb128 0x7
+ 824 0187 52000000 		.4byte	.LVL10
+ 825 018b 12080000 		.4byte	0x812
+ 826 018f 9A010000 		.4byte	0x19a
+ 827 0193 08       		.uleb128 0x8
+ 828 0194 01       		.uleb128 0x1
+ 829 0195 50       		.byte	0x50
+ 830 0196 02       		.uleb128 0x2
+ 831 0197 75       		.byte	0x75
+ 832 0198 00       		.sleb128 0
+ 833 0199 00       		.byte	0
+ 834 019a 07       		.uleb128 0x7
+ 835 019b 58000000 		.4byte	.LVL11
+ 836 019f 1E080000 		.4byte	0x81e
+ 837 01a3 AE010000 		.4byte	0x1ae
+ 838 01a7 08       		.uleb128 0x8
+ 839 01a8 01       		.uleb128 0x1
+ 840 01a9 50       		.byte	0x50
+ 841 01aa 02       		.uleb128 0x2
+ 842 01ab 74       		.byte	0x74
+ 843 01ac 00       		.sleb128 0
+ 844 01ad 00       		.byte	0
+ 845 01ae 07       		.uleb128 0x7
+ 846 01af 5E000000 		.4byte	.LVL12
+ 847 01b3 2A080000 		.4byte	0x82a
+ 848 01b7 C2010000 		.4byte	0x1c2
+ 849 01bb 08       		.uleb128 0x8
+ 850 01bc 01       		.uleb128 0x1
+ 851 01bd 50       		.byte	0x50
+ 852 01be 02       		.uleb128 0x2
+ 853 01bf 08       		.byte	0x8
+ 854 01c0 C8       		.byte	0xc8
+ 855 01c1 00       		.byte	0
+ 856 01c2 07       		.uleb128 0x7
+ 857 01c3 64000000 		.4byte	.LVL13
+ 858 01c7 12080000 		.4byte	0x812
+ 859 01cb D6010000 		.4byte	0x1d6
+ 860 01cf 08       		.uleb128 0x8
+ 861 01d0 01       		.uleb128 0x1
+ 862 01d1 50       		.byte	0x50
+ 863 01d2 02       		.uleb128 0x2
+ 864 01d3 77       		.byte	0x77
+ 865 01d4 00       		.sleb128 0
+ 866 01d5 00       		.byte	0
+ 867 01d6 07       		.uleb128 0x7
+ 868 01d7 6A000000 		.4byte	.LVL14
+ 869 01db 1E080000 		.4byte	0x81e
+ 870 01df EA010000 		.4byte	0x1ea
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 20
+
+
+ 871 01e3 08       		.uleb128 0x8
+ 872 01e4 01       		.uleb128 0x1
+ 873 01e5 50       		.byte	0x50
+ 874 01e6 02       		.uleb128 0x2
+ 875 01e7 76       		.byte	0x76
+ 876 01e8 00       		.sleb128 0
+ 877 01e9 00       		.byte	0
+ 878 01ea 07       		.uleb128 0x7
+ 879 01eb 70000000 		.4byte	.LVL15
+ 880 01ef 2A080000 		.4byte	0x82a
+ 881 01f3 FE010000 		.4byte	0x1fe
+ 882 01f7 08       		.uleb128 0x8
+ 883 01f8 01       		.uleb128 0x1
+ 884 01f9 50       		.byte	0x50
+ 885 01fa 02       		.uleb128 0x2
+ 886 01fb 08       		.byte	0x8
+ 887 01fc C8       		.byte	0xc8
+ 888 01fd 00       		.byte	0
+ 889 01fe 07       		.uleb128 0x7
+ 890 01ff 76000000 		.4byte	.LVL16
+ 891 0203 12080000 		.4byte	0x812
+ 892 0207 12020000 		.4byte	0x212
+ 893 020b 08       		.uleb128 0x8
+ 894 020c 01       		.uleb128 0x1
+ 895 020d 50       		.byte	0x50
+ 896 020e 02       		.uleb128 0x2
+ 897 020f 75       		.byte	0x75
+ 898 0210 00       		.sleb128 0
+ 899 0211 00       		.byte	0
+ 900 0212 07       		.uleb128 0x7
+ 901 0213 7C000000 		.4byte	.LVL17
+ 902 0217 1E080000 		.4byte	0x81e
+ 903 021b 26020000 		.4byte	0x226
+ 904 021f 08       		.uleb128 0x8
+ 905 0220 01       		.uleb128 0x1
+ 906 0221 50       		.byte	0x50
+ 907 0222 02       		.uleb128 0x2
+ 908 0223 74       		.byte	0x74
+ 909 0224 00       		.sleb128 0
+ 910 0225 00       		.byte	0
+ 911 0226 07       		.uleb128 0x7
+ 912 0227 82000000 		.4byte	.LVL18
+ 913 022b 2A080000 		.4byte	0x82a
+ 914 022f 3A020000 		.4byte	0x23a
+ 915 0233 08       		.uleb128 0x8
+ 916 0234 01       		.uleb128 0x1
+ 917 0235 50       		.byte	0x50
+ 918 0236 02       		.uleb128 0x2
+ 919 0237 08       		.byte	0x8
+ 920 0238 C8       		.byte	0xc8
+ 921 0239 00       		.byte	0
+ 922 023a 07       		.uleb128 0x7
+ 923 023b 8A000000 		.4byte	.LVL19
+ 924 023f 12080000 		.4byte	0x812
+ 925 0243 4F020000 		.4byte	0x24f
+ 926 0247 08       		.uleb128 0x8
+ 927 0248 01       		.uleb128 0x1
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 21
+
+
+ 928 0249 50       		.byte	0x50
+ 929 024a 03       		.uleb128 0x3
+ 930 024b 0A       		.byte	0xa
+ 931 024c E008     		.2byte	0x8e0
+ 932 024e 00       		.byte	0
+ 933 024f 07       		.uleb128 0x7
+ 934 0250 92000000 		.4byte	.LVL20
+ 935 0254 1E080000 		.4byte	0x81e
+ 936 0258 64020000 		.4byte	0x264
+ 937 025c 08       		.uleb128 0x8
+ 938 025d 01       		.uleb128 0x1
+ 939 025e 50       		.byte	0x50
+ 940 025f 03       		.uleb128 0x3
+ 941 0260 0A       		.byte	0xa
+ 942 0261 7004     		.2byte	0x470
+ 943 0263 00       		.byte	0
+ 944 0264 07       		.uleb128 0x7
+ 945 0265 98000000 		.4byte	.LVL21
+ 946 0269 2A080000 		.4byte	0x82a
+ 947 026d 78020000 		.4byte	0x278
+ 948 0271 08       		.uleb128 0x8
+ 949 0272 01       		.uleb128 0x1
+ 950 0273 50       		.byte	0x50
+ 951 0274 02       		.uleb128 0x2
+ 952 0275 08       		.byte	0x8
+ 953 0276 C8       		.byte	0xc8
+ 954 0277 00       		.byte	0
+ 955 0278 07       		.uleb128 0x7
+ 956 0279 9E000000 		.4byte	.LVL22
+ 957 027d 12080000 		.4byte	0x812
+ 958 0281 8C020000 		.4byte	0x28c
+ 959 0285 08       		.uleb128 0x8
+ 960 0286 01       		.uleb128 0x1
+ 961 0287 50       		.byte	0x50
+ 962 0288 02       		.uleb128 0x2
+ 963 0289 75       		.byte	0x75
+ 964 028a 00       		.sleb128 0
+ 965 028b 00       		.byte	0
+ 966 028c 07       		.uleb128 0x7
+ 967 028d A4000000 		.4byte	.LVL23
+ 968 0291 1E080000 		.4byte	0x81e
+ 969 0295 A0020000 		.4byte	0x2a0
+ 970 0299 08       		.uleb128 0x8
+ 971 029a 01       		.uleb128 0x1
+ 972 029b 50       		.byte	0x50
+ 973 029c 02       		.uleb128 0x2
+ 974 029d 74       		.byte	0x74
+ 975 029e 00       		.sleb128 0
+ 976 029f 00       		.byte	0
+ 977 02a0 07       		.uleb128 0x7
+ 978 02a1 AA000000 		.4byte	.LVL24
+ 979 02a5 2A080000 		.4byte	0x82a
+ 980 02a9 B4020000 		.4byte	0x2b4
+ 981 02ad 08       		.uleb128 0x8
+ 982 02ae 01       		.uleb128 0x1
+ 983 02af 50       		.byte	0x50
+ 984 02b0 02       		.uleb128 0x2
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 22
+
+
+ 985 02b1 08       		.byte	0x8
+ 986 02b2 C8       		.byte	0xc8
+ 987 02b3 00       		.byte	0
+ 988 02b4 06       		.uleb128 0x6
+ 989 02b5 AE000000 		.4byte	.LVL25
+ 990 02b9 35080000 		.4byte	0x835
+ 991 02bd 00       		.byte	0
+ 992 02be 05       		.uleb128 0x5
+ 993 02bf 89000000 		.4byte	.LASF18
+ 994 02c3 01       		.byte	0x1
+ 995 02c4 42       		.byte	0x42
+ 996 02c5 00000000 		.4byte	.LFB33
+ 997 02c9 6C000000 		.4byte	.LFE33-.LFB33
+ 998 02cd 01       		.uleb128 0x1
+ 999 02ce 9C       		.byte	0x9c
+ 1000 02cf E7030000 		.4byte	0x3e7
+ 1001 02d3 06       		.uleb128 0x6
+ 1002 02d4 06000000 		.4byte	.LVL26
+ 1003 02d8 06080000 		.4byte	0x806
+ 1004 02dc 07       		.uleb128 0x7
+ 1005 02dd 10000000 		.4byte	.LVL27
+ 1006 02e1 12080000 		.4byte	0x812
+ 1007 02e5 F0020000 		.4byte	0x2f0
+ 1008 02e9 08       		.uleb128 0x8
+ 1009 02ea 01       		.uleb128 0x1
+ 1010 02eb 50       		.byte	0x50
+ 1011 02ec 02       		.uleb128 0x2
+ 1012 02ed 75       		.byte	0x75
+ 1013 02ee 00       		.sleb128 0
+ 1014 02ef 00       		.byte	0
+ 1015 02f0 07       		.uleb128 0x7
+ 1016 02f1 1A000000 		.4byte	.LVL28
+ 1017 02f5 1E080000 		.4byte	0x81e
+ 1018 02f9 04030000 		.4byte	0x304
+ 1019 02fd 08       		.uleb128 0x8
+ 1020 02fe 01       		.uleb128 0x1
+ 1021 02ff 50       		.byte	0x50
+ 1022 0300 02       		.uleb128 0x2
+ 1023 0301 74       		.byte	0x74
+ 1024 0302 00       		.sleb128 0
+ 1025 0303 00       		.byte	0
+ 1026 0304 07       		.uleb128 0x7
+ 1027 0305 24000000 		.4byte	.LVL29
+ 1028 0309 2A080000 		.4byte	0x82a
+ 1029 030d 18030000 		.4byte	0x318
+ 1030 0311 08       		.uleb128 0x8
+ 1031 0312 01       		.uleb128 0x1
+ 1032 0313 50       		.byte	0x50
+ 1033 0314 02       		.uleb128 0x2
+ 1034 0315 76       		.byte	0x76
+ 1035 0316 00       		.sleb128 0
+ 1036 0317 00       		.byte	0
+ 1037 0318 06       		.uleb128 0x6
+ 1038 0319 28000000 		.4byte	.LVL30
+ 1039 031d 35080000 		.4byte	0x835
+ 1040 0321 07       		.uleb128 0x7
+ 1041 0322 2E000000 		.4byte	.LVL31
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 23
+
+
+ 1042 0326 2A080000 		.4byte	0x82a
+ 1043 032a 35030000 		.4byte	0x335
+ 1044 032e 08       		.uleb128 0x8
+ 1045 032f 01       		.uleb128 0x1
+ 1046 0330 50       		.byte	0x50
+ 1047 0331 02       		.uleb128 0x2
+ 1048 0332 08       		.byte	0x8
+ 1049 0333 64       		.byte	0x64
+ 1050 0334 00       		.byte	0
+ 1051 0335 06       		.uleb128 0x6
+ 1052 0336 32000000 		.4byte	.LVL32
+ 1053 033a 06080000 		.4byte	0x806
+ 1054 033e 07       		.uleb128 0x7
+ 1055 033f 38000000 		.4byte	.LVL33
+ 1056 0343 12080000 		.4byte	0x812
+ 1057 0347 52030000 		.4byte	0x352
+ 1058 034b 08       		.uleb128 0x8
+ 1059 034c 01       		.uleb128 0x1
+ 1060 034d 50       		.byte	0x50
+ 1061 034e 02       		.uleb128 0x2
+ 1062 034f 75       		.byte	0x75
+ 1063 0350 00       		.sleb128 0
+ 1064 0351 00       		.byte	0
+ 1065 0352 07       		.uleb128 0x7
+ 1066 0353 3E000000 		.4byte	.LVL34
+ 1067 0357 1E080000 		.4byte	0x81e
+ 1068 035b 66030000 		.4byte	0x366
+ 1069 035f 08       		.uleb128 0x8
+ 1070 0360 01       		.uleb128 0x1
+ 1071 0361 50       		.byte	0x50
+ 1072 0362 02       		.uleb128 0x2
+ 1073 0363 74       		.byte	0x74
+ 1074 0364 00       		.sleb128 0
+ 1075 0365 00       		.byte	0
+ 1076 0366 07       		.uleb128 0x7
+ 1077 0367 44000000 		.4byte	.LVL35
+ 1078 036b 2A080000 		.4byte	0x82a
+ 1079 036f 7A030000 		.4byte	0x37a
+ 1080 0373 08       		.uleb128 0x8
+ 1081 0374 01       		.uleb128 0x1
+ 1082 0375 50       		.byte	0x50
+ 1083 0376 02       		.uleb128 0x2
+ 1084 0377 76       		.byte	0x76
+ 1085 0378 00       		.sleb128 0
+ 1086 0379 00       		.byte	0
+ 1087 037a 06       		.uleb128 0x6
+ 1088 037b 48000000 		.4byte	.LVL36
+ 1089 037f 35080000 		.4byte	0x835
+ 1090 0383 07       		.uleb128 0x7
+ 1091 0384 4E000000 		.4byte	.LVL37
+ 1092 0388 2A080000 		.4byte	0x82a
+ 1093 038c 97030000 		.4byte	0x397
+ 1094 0390 08       		.uleb128 0x8
+ 1095 0391 01       		.uleb128 0x1
+ 1096 0392 50       		.byte	0x50
+ 1097 0393 02       		.uleb128 0x2
+ 1098 0394 08       		.byte	0x8
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 24
+
+
+ 1099 0395 64       		.byte	0x64
+ 1100 0396 00       		.byte	0
+ 1101 0397 06       		.uleb128 0x6
+ 1102 0398 52000000 		.4byte	.LVL38
+ 1103 039c 06080000 		.4byte	0x806
+ 1104 03a0 07       		.uleb128 0x7
+ 1105 03a1 58000000 		.4byte	.LVL39
+ 1106 03a5 12080000 		.4byte	0x812
+ 1107 03a9 B4030000 		.4byte	0x3b4
+ 1108 03ad 08       		.uleb128 0x8
+ 1109 03ae 01       		.uleb128 0x1
+ 1110 03af 50       		.byte	0x50
+ 1111 03b0 02       		.uleb128 0x2
+ 1112 03b1 75       		.byte	0x75
+ 1113 03b2 00       		.sleb128 0
+ 1114 03b3 00       		.byte	0
+ 1115 03b4 07       		.uleb128 0x7
+ 1116 03b5 5E000000 		.4byte	.LVL40
+ 1117 03b9 1E080000 		.4byte	0x81e
+ 1118 03bd C8030000 		.4byte	0x3c8
+ 1119 03c1 08       		.uleb128 0x8
+ 1120 03c2 01       		.uleb128 0x1
+ 1121 03c3 50       		.byte	0x50
+ 1122 03c4 02       		.uleb128 0x2
+ 1123 03c5 74       		.byte	0x74
+ 1124 03c6 00       		.sleb128 0
+ 1125 03c7 00       		.byte	0
+ 1126 03c8 07       		.uleb128 0x7
+ 1127 03c9 66000000 		.4byte	.LVL41
+ 1128 03cd 2A080000 		.4byte	0x82a
+ 1129 03d1 DD030000 		.4byte	0x3dd
+ 1130 03d5 08       		.uleb128 0x8
+ 1131 03d6 01       		.uleb128 0x1
+ 1132 03d7 50       		.byte	0x50
+ 1133 03d8 03       		.uleb128 0x3
+ 1134 03d9 0A       		.byte	0xa
+ 1135 03da B004     		.2byte	0x4b0
+ 1136 03dc 00       		.byte	0
+ 1137 03dd 06       		.uleb128 0x6
+ 1138 03de 6A000000 		.4byte	.LVL42
+ 1139 03e2 35080000 		.4byte	0x835
+ 1140 03e6 00       		.byte	0
+ 1141 03e7 05       		.uleb128 0x5
+ 1142 03e8 D5000000 		.4byte	.LASF19
+ 1143 03ec 01       		.byte	0x1
+ 1144 03ed 62       		.byte	0x62
+ 1145 03ee 00000000 		.4byte	.LFB34
+ 1146 03f2 84000000 		.4byte	.LFE34-.LFB34
+ 1147 03f6 01       		.uleb128 0x1
+ 1148 03f7 9C       		.byte	0x9c
+ 1149 03f8 16050000 		.4byte	0x516
+ 1150 03fc 09       		.uleb128 0x9
+ 1151 03fd 4A000000 		.4byte	.LASF45
+ 1152 0401 01       		.byte	0x1
+ 1153 0402 62       		.byte	0x62
+ 1154 0403 5D000000 		.4byte	0x5d
+ 1155 0407 00000000 		.4byte	.LLST0
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 25
+
+
+ 1156 040b 06       		.uleb128 0x6
+ 1157 040c 08000000 		.4byte	.LVL44
+ 1158 0410 06080000 		.4byte	0x806
+ 1159 0414 07       		.uleb128 0x7
+ 1160 0415 26000000 		.4byte	.LVL45
+ 1161 0419 12080000 		.4byte	0x812
+ 1162 041d 29040000 		.4byte	0x429
+ 1163 0421 08       		.uleb128 0x8
+ 1164 0422 01       		.uleb128 0x1
+ 1165 0423 50       		.byte	0x50
+ 1166 0424 03       		.uleb128 0x3
+ 1167 0425 0A       		.byte	0xa
+ 1168 0426 500D     		.2byte	0xd50
+ 1169 0428 00       		.byte	0
+ 1170 0429 07       		.uleb128 0x7
+ 1171 042a 2E000000 		.4byte	.LVL46
+ 1172 042e 1E080000 		.4byte	0x81e
+ 1173 0432 3E040000 		.4byte	0x43e
+ 1174 0436 08       		.uleb128 0x8
+ 1175 0437 01       		.uleb128 0x1
+ 1176 0438 50       		.byte	0x50
+ 1177 0439 03       		.uleb128 0x3
+ 1178 043a 0A       		.byte	0xa
+ 1179 043b A806     		.2byte	0x6a8
+ 1180 043d 00       		.byte	0
+ 1181 043e 07       		.uleb128 0x7
+ 1182 043f 34000000 		.4byte	.LVL47
+ 1183 0443 2A080000 		.4byte	0x82a
+ 1184 0447 52040000 		.4byte	0x452
+ 1185 044b 08       		.uleb128 0x8
+ 1186 044c 01       		.uleb128 0x1
+ 1187 044d 50       		.byte	0x50
+ 1188 044e 02       		.uleb128 0x2
+ 1189 044f 08       		.byte	0x8
+ 1190 0450 32       		.byte	0x32
+ 1191 0451 00       		.byte	0
+ 1192 0452 07       		.uleb128 0x7
+ 1193 0453 3C000000 		.4byte	.LVL48
+ 1194 0457 12080000 		.4byte	0x812
+ 1195 045b 67040000 		.4byte	0x467
+ 1196 045f 08       		.uleb128 0x8
+ 1197 0460 01       		.uleb128 0x1
+ 1198 0461 50       		.byte	0x50
+ 1199 0462 03       		.uleb128 0x3
+ 1200 0463 0A       		.byte	0xa
+ 1201 0464 310B     		.2byte	0xb31
+ 1202 0466 00       		.byte	0
+ 1203 0467 07       		.uleb128 0x7
+ 1204 0468 44000000 		.4byte	.LVL49
+ 1205 046c 1E080000 		.4byte	0x81e
+ 1206 0470 7C040000 		.4byte	0x47c
+ 1207 0474 08       		.uleb128 0x8
+ 1208 0475 01       		.uleb128 0x1
+ 1209 0476 50       		.byte	0x50
+ 1210 0477 03       		.uleb128 0x3
+ 1211 0478 0A       		.byte	0xa
+ 1212 0479 9805     		.2byte	0x598
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 26
+
+
+ 1213 047b 00       		.byte	0
+ 1214 047c 07       		.uleb128 0x7
+ 1215 047d 4A000000 		.4byte	.LVL50
+ 1216 0481 2A080000 		.4byte	0x82a
+ 1217 0485 90040000 		.4byte	0x490
+ 1218 0489 08       		.uleb128 0x8
+ 1219 048a 01       		.uleb128 0x1
+ 1220 048b 50       		.byte	0x50
+ 1221 048c 02       		.uleb128 0x2
+ 1222 048d 08       		.byte	0x8
+ 1223 048e 32       		.byte	0x32
+ 1224 048f 00       		.byte	0
+ 1225 0490 07       		.uleb128 0x7
+ 1226 0491 54000000 		.4byte	.LVL51
+ 1227 0495 12080000 		.4byte	0x812
+ 1228 0499 A5040000 		.4byte	0x4a5
+ 1229 049d 08       		.uleb128 0x8
+ 1230 049e 01       		.uleb128 0x1
+ 1231 049f 50       		.byte	0x50
+ 1232 04a0 03       		.uleb128 0x3
+ 1233 04a1 0A       		.byte	0xa
+ 1234 04a2 E008     		.2byte	0x8e0
+ 1235 04a4 00       		.byte	0
+ 1236 04a5 07       		.uleb128 0x7
+ 1237 04a6 5C000000 		.4byte	.LVL52
+ 1238 04aa 1E080000 		.4byte	0x81e
+ 1239 04ae BA040000 		.4byte	0x4ba
+ 1240 04b2 08       		.uleb128 0x8
+ 1241 04b3 01       		.uleb128 0x1
+ 1242 04b4 50       		.byte	0x50
+ 1243 04b5 03       		.uleb128 0x3
+ 1244 04b6 0A       		.byte	0xa
+ 1245 04b7 7004     		.2byte	0x470
+ 1246 04b9 00       		.byte	0
+ 1247 04ba 07       		.uleb128 0x7
+ 1248 04bb 62000000 		.4byte	.LVL53
+ 1249 04bf 2A080000 		.4byte	0x82a
+ 1250 04c3 CE040000 		.4byte	0x4ce
+ 1251 04c7 08       		.uleb128 0x8
+ 1252 04c8 01       		.uleb128 0x1
+ 1253 04c9 50       		.byte	0x50
+ 1254 04ca 02       		.uleb128 0x2
+ 1255 04cb 08       		.byte	0x8
+ 1256 04cc 32       		.byte	0x32
+ 1257 04cd 00       		.byte	0
+ 1258 04ce 07       		.uleb128 0x7
+ 1259 04cf 6C000000 		.4byte	.LVL54
+ 1260 04d3 12080000 		.4byte	0x812
+ 1261 04d7 E3040000 		.4byte	0x4e3
+ 1262 04db 08       		.uleb128 0x8
+ 1263 04dc 01       		.uleb128 0x1
+ 1264 04dd 50       		.byte	0x50
+ 1265 04de 03       		.uleb128 0x3
+ 1266 04df 0A       		.byte	0xa
+ 1267 04e0 F00E     		.2byte	0xef0
+ 1268 04e2 00       		.byte	0
+ 1269 04e3 07       		.uleb128 0x7
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 27
+
+
+ 1270 04e4 74000000 		.4byte	.LVL55
+ 1271 04e8 1E080000 		.4byte	0x81e
+ 1272 04ec F8040000 		.4byte	0x4f8
+ 1273 04f0 08       		.uleb128 0x8
+ 1274 04f1 01       		.uleb128 0x1
+ 1275 04f2 50       		.byte	0x50
+ 1276 04f3 03       		.uleb128 0x3
+ 1277 04f4 0A       		.byte	0xa
+ 1278 04f5 7807     		.2byte	0x778
+ 1279 04f7 00       		.byte	0
+ 1280 04f8 07       		.uleb128 0x7
+ 1281 04f9 7A000000 		.4byte	.LVL56
+ 1282 04fd 2A080000 		.4byte	0x82a
+ 1283 0501 0C050000 		.4byte	0x50c
+ 1284 0505 08       		.uleb128 0x8
+ 1285 0506 01       		.uleb128 0x1
+ 1286 0507 50       		.byte	0x50
+ 1287 0508 02       		.uleb128 0x2
+ 1288 0509 08       		.byte	0x8
+ 1289 050a 32       		.byte	0x32
+ 1290 050b 00       		.byte	0
+ 1291 050c 06       		.uleb128 0x6
+ 1292 050d 7E000000 		.4byte	.LVL57
+ 1293 0511 35080000 		.4byte	0x835
+ 1294 0515 00       		.byte	0
+ 1295 0516 0A       		.uleb128 0xa
+ 1296 0517 12010000 		.4byte	.LASF46
+ 1297 051b 01       		.byte	0x1
+ 1298 051c 8D       		.byte	0x8d
+ 1299 051d 5D000000 		.4byte	0x5d
+ 1300 0521 00000000 		.4byte	.LFB35
+ 1301 0525 28010000 		.4byte	.LFE35-.LFB35
+ 1302 0529 01       		.uleb128 0x1
+ 1303 052a 9C       		.byte	0x9c
+ 1304 052b F6070000 		.4byte	0x7f6
+ 1305 052f 0B       		.uleb128 0xb
+ 1306 0530 24010000 		.4byte	.LASF20
+ 1307 0534 01       		.byte	0x1
+ 1308 0535 8F       		.byte	0x8f
+ 1309 0536 83000000 		.4byte	0x83
+ 1310 053a 2C000000 		.4byte	.LLST1
+ 1311 053e 0B       		.uleb128 0xb
+ 1312 053f 2E020000 		.4byte	.LASF21
+ 1313 0543 01       		.byte	0x1
+ 1314 0544 90       		.byte	0x90
+ 1315 0545 83000000 		.4byte	0x83
+ 1316 0549 3F000000 		.4byte	.LLST2
+ 1317 054d 0C       		.uleb128 0xc
+ 1318 054e 0E000000 		.4byte	.LASF22
+ 1319 0552 01       		.byte	0x1
+ 1320 0553 92       		.byte	0x92
+ 1321 0554 F6070000 		.4byte	0x7f6
+ 1322 0558 02       		.uleb128 0x2
+ 1323 0559 91       		.byte	0x91
+ 1324 055a 74       		.sleb128 -12
+ 1325 055b 0D       		.uleb128 0xd
+ 1326 055c 28000000 		.4byte	.LBB2
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 28
+
+
+ 1327 0560 E8000000 		.4byte	.LBE2-.LBB2
+ 1328 0564 A1070000 		.4byte	0x7a1
+ 1329 0568 0B       		.uleb128 0xb
+ 1330 0569 35020000 		.4byte	.LASF23
+ 1331 056d 01       		.byte	0x1
+ 1332 056e A1       		.byte	0xa1
+ 1333 056f 5D000000 		.4byte	0x5d
+ 1334 0573 52000000 		.4byte	.LLST3
+ 1335 0577 07       		.uleb128 0x7
+ 1336 0578 2E000000 		.4byte	.LVL66
+ 1337 057c 41080000 		.4byte	0x841
+ 1338 0580 8A050000 		.4byte	0x58a
+ 1339 0584 08       		.uleb128 0x8
+ 1340 0585 01       		.uleb128 0x1
+ 1341 0586 50       		.byte	0x50
+ 1342 0587 01       		.uleb128 0x1
+ 1343 0588 30       		.byte	0x30
+ 1344 0589 00       		.byte	0
+ 1345 058a 07       		.uleb128 0x7
+ 1346 058b 36000000 		.4byte	.LVL68
+ 1347 058f 4C080000 		.4byte	0x84c
+ 1348 0593 9D050000 		.4byte	0x59d
+ 1349 0597 08       		.uleb128 0x8
+ 1350 0598 01       		.uleb128 0x1
+ 1351 0599 50       		.byte	0x50
+ 1352 059a 01       		.uleb128 0x1
+ 1353 059b 30       		.byte	0x30
+ 1354 059c 00       		.byte	0
+ 1355 059d 07       		.uleb128 0x7
+ 1356 059e 4C000000 		.4byte	.LVL71
+ 1357 05a2 57080000 		.4byte	0x857
+ 1358 05a6 B0050000 		.4byte	0x5b0
+ 1359 05aa 08       		.uleb128 0x8
+ 1360 05ab 01       		.uleb128 0x1
+ 1361 05ac 50       		.byte	0x50
+ 1362 05ad 01       		.uleb128 0x1
+ 1363 05ae 31       		.byte	0x31
+ 1364 05af 00       		.byte	0
+ 1365 05b0 07       		.uleb128 0x7
+ 1366 05b1 54000000 		.4byte	.LVL72
+ 1367 05b5 62080000 		.4byte	0x862
+ 1368 05b9 C8050000 		.4byte	0x5c8
+ 1369 05bd 08       		.uleb128 0x8
+ 1370 05be 01       		.uleb128 0x1
+ 1371 05bf 50       		.byte	0x50
+ 1372 05c0 01       		.uleb128 0x1
+ 1373 05c1 30       		.byte	0x30
+ 1374 05c2 08       		.uleb128 0x8
+ 1375 05c3 01       		.uleb128 0x1
+ 1376 05c4 51       		.byte	0x51
+ 1377 05c5 01       		.uleb128 0x1
+ 1378 05c6 30       		.byte	0x30
+ 1379 05c7 00       		.byte	0
+ 1380 05c8 07       		.uleb128 0x7
+ 1381 05c9 5A000000 		.4byte	.LVL73
+ 1382 05cd 6D080000 		.4byte	0x86d
+ 1383 05d1 DF050000 		.4byte	0x5df
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 29
+
+
+ 1384 05d5 08       		.uleb128 0x8
+ 1385 05d6 01       		.uleb128 0x1
+ 1386 05d7 50       		.byte	0x50
+ 1387 05d8 05       		.uleb128 0x5
+ 1388 05d9 03       		.byte	0x3
+ 1389 05da 00000000 		.4byte	.LC0
+ 1390 05de 00       		.byte	0
+ 1391 05df 07       		.uleb128 0x7
+ 1392 05e0 62000000 		.4byte	.LVL74
+ 1393 05e4 62080000 		.4byte	0x862
+ 1394 05e8 F7050000 		.4byte	0x5f7
+ 1395 05ec 08       		.uleb128 0x8
+ 1396 05ed 01       		.uleb128 0x1
+ 1397 05ee 50       		.byte	0x50
+ 1398 05ef 01       		.uleb128 0x1
+ 1399 05f0 31       		.byte	0x31
+ 1400 05f1 08       		.uleb128 0x8
+ 1401 05f2 01       		.uleb128 0x1
+ 1402 05f3 51       		.byte	0x51
+ 1403 05f4 01       		.uleb128 0x1
+ 1404 05f5 30       		.byte	0x30
+ 1405 05f6 00       		.byte	0
+ 1406 05f7 07       		.uleb128 0x7
+ 1407 05f8 68000000 		.4byte	.LVL75
+ 1408 05fc 6D080000 		.4byte	0x86d
+ 1409 0600 0E060000 		.4byte	0x60e
+ 1410 0604 08       		.uleb128 0x8
+ 1411 0605 01       		.uleb128 0x1
+ 1412 0606 50       		.byte	0x50
+ 1413 0607 05       		.uleb128 0x5
+ 1414 0608 03       		.byte	0x3
+ 1415 0609 08000000 		.4byte	.LC2
+ 1416 060d 00       		.byte	0
+ 1417 060e 07       		.uleb128 0x7
+ 1418 060f 70000000 		.4byte	.LVL76
+ 1419 0613 62080000 		.4byte	0x862
+ 1420 0617 26060000 		.4byte	0x626
+ 1421 061b 08       		.uleb128 0x8
+ 1422 061c 01       		.uleb128 0x1
+ 1423 061d 50       		.byte	0x50
+ 1424 061e 01       		.uleb128 0x1
+ 1425 061f 31       		.byte	0x31
+ 1426 0620 08       		.uleb128 0x8
+ 1427 0621 01       		.uleb128 0x1
+ 1428 0622 51       		.byte	0x51
+ 1429 0623 01       		.uleb128 0x1
+ 1430 0624 37       		.byte	0x37
+ 1431 0625 00       		.byte	0
+ 1432 0626 07       		.uleb128 0x7
+ 1433 0627 78000000 		.4byte	.LVL77
+ 1434 062b 78080000 		.4byte	0x878
+ 1435 062f 3E060000 		.4byte	0x63e
+ 1436 0633 08       		.uleb128 0x8
+ 1437 0634 01       		.uleb128 0x1
+ 1438 0635 50       		.byte	0x50
+ 1439 0636 06       		.uleb128 0x6
+ 1440 0637 74       		.byte	0x74
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 30
+
+
+ 1441 0638 00       		.sleb128 0
+ 1442 0639 40       		.byte	0x40
+ 1443 063a 24       		.byte	0x24
+ 1444 063b 40       		.byte	0x40
+ 1445 063c 25       		.byte	0x25
+ 1446 063d 00       		.byte	0
+ 1447 063e 07       		.uleb128 0x7
+ 1448 063f 84000000 		.4byte	.LVL78
+ 1449 0643 57080000 		.4byte	0x857
+ 1450 0647 51060000 		.4byte	0x651
+ 1451 064b 08       		.uleb128 0x8
+ 1452 064c 01       		.uleb128 0x1
+ 1453 064d 50       		.byte	0x50
+ 1454 064e 01       		.uleb128 0x1
+ 1455 064f 31       		.byte	0x31
+ 1456 0650 00       		.byte	0
+ 1457 0651 07       		.uleb128 0x7
+ 1458 0652 8C000000 		.4byte	.LVL79
+ 1459 0656 62080000 		.4byte	0x862
+ 1460 065a 69060000 		.4byte	0x669
+ 1461 065e 08       		.uleb128 0x8
+ 1462 065f 01       		.uleb128 0x1
+ 1463 0660 50       		.byte	0x50
+ 1464 0661 01       		.uleb128 0x1
+ 1465 0662 30       		.byte	0x30
+ 1466 0663 08       		.uleb128 0x8
+ 1467 0664 01       		.uleb128 0x1
+ 1468 0665 51       		.byte	0x51
+ 1469 0666 01       		.uleb128 0x1
+ 1470 0667 30       		.byte	0x30
+ 1471 0668 00       		.byte	0
+ 1472 0669 07       		.uleb128 0x7
+ 1473 066a 92000000 		.4byte	.LVL80
+ 1474 066e 6D080000 		.4byte	0x86d
+ 1475 0672 80060000 		.4byte	0x680
+ 1476 0676 08       		.uleb128 0x8
+ 1477 0677 01       		.uleb128 0x1
+ 1478 0678 50       		.byte	0x50
+ 1479 0679 05       		.uleb128 0x5
+ 1480 067a 03       		.byte	0x3
+ 1481 067b 10000000 		.4byte	.LC4
+ 1482 067f 00       		.byte	0
+ 1483 0680 06       		.uleb128 0x6
+ 1484 0681 96000000 		.4byte	.LVL81
+ 1485 0685 B2000000 		.4byte	0xb2
+ 1486 0689 07       		.uleb128 0x7
+ 1487 068a A2000000 		.4byte	.LVL82
+ 1488 068e 57080000 		.4byte	0x857
+ 1489 0692 9C060000 		.4byte	0x69c
+ 1490 0696 08       		.uleb128 0x8
+ 1491 0697 01       		.uleb128 0x1
+ 1492 0698 50       		.byte	0x50
+ 1493 0699 01       		.uleb128 0x1
+ 1494 069a 31       		.byte	0x31
+ 1495 069b 00       		.byte	0
+ 1496 069c 07       		.uleb128 0x7
+ 1497 069d AA000000 		.4byte	.LVL83
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 31
+
+
+ 1498 06a1 62080000 		.4byte	0x862
+ 1499 06a5 B4060000 		.4byte	0x6b4
+ 1500 06a9 08       		.uleb128 0x8
+ 1501 06aa 01       		.uleb128 0x1
+ 1502 06ab 50       		.byte	0x50
+ 1503 06ac 01       		.uleb128 0x1
+ 1504 06ad 30       		.byte	0x30
+ 1505 06ae 08       		.uleb128 0x8
+ 1506 06af 01       		.uleb128 0x1
+ 1507 06b0 51       		.byte	0x51
+ 1508 06b1 01       		.uleb128 0x1
+ 1509 06b2 30       		.byte	0x30
+ 1510 06b3 00       		.byte	0
+ 1511 06b4 07       		.uleb128 0x7
+ 1512 06b5 B0000000 		.4byte	.LVL84
+ 1513 06b9 6D080000 		.4byte	0x86d
+ 1514 06bd CB060000 		.4byte	0x6cb
+ 1515 06c1 08       		.uleb128 0x8
+ 1516 06c2 01       		.uleb128 0x1
+ 1517 06c3 50       		.byte	0x50
+ 1518 06c4 05       		.uleb128 0x5
+ 1519 06c5 03       		.byte	0x3
+ 1520 06c6 18000000 		.4byte	.LC6
+ 1521 06ca 00       		.byte	0
+ 1522 06cb 06       		.uleb128 0x6
+ 1523 06cc B4000000 		.4byte	.LVL85
+ 1524 06d0 BE020000 		.4byte	0x2be
+ 1525 06d4 07       		.uleb128 0x7
+ 1526 06d5 BC000000 		.4byte	.LVL86
+ 1527 06d9 57080000 		.4byte	0x857
+ 1528 06dd E7060000 		.4byte	0x6e7
+ 1529 06e1 08       		.uleb128 0x8
+ 1530 06e2 01       		.uleb128 0x1
+ 1531 06e3 50       		.byte	0x50
+ 1532 06e4 01       		.uleb128 0x1
+ 1533 06e5 31       		.byte	0x31
+ 1534 06e6 00       		.byte	0
+ 1535 06e7 07       		.uleb128 0x7
+ 1536 06e8 C4000000 		.4byte	.LVL87
+ 1537 06ec 62080000 		.4byte	0x862
+ 1538 06f0 FF060000 		.4byte	0x6ff
+ 1539 06f4 08       		.uleb128 0x8
+ 1540 06f5 01       		.uleb128 0x1
+ 1541 06f6 50       		.byte	0x50
+ 1542 06f7 01       		.uleb128 0x1
+ 1543 06f8 30       		.byte	0x30
+ 1544 06f9 08       		.uleb128 0x8
+ 1545 06fa 01       		.uleb128 0x1
+ 1546 06fb 51       		.byte	0x51
+ 1547 06fc 01       		.uleb128 0x1
+ 1548 06fd 30       		.byte	0x30
+ 1549 06fe 00       		.byte	0
+ 1550 06ff 07       		.uleb128 0x7
+ 1551 0700 CA000000 		.4byte	.LVL88
+ 1552 0704 6D080000 		.4byte	0x86d
+ 1553 0708 16070000 		.4byte	0x716
+ 1554 070c 08       		.uleb128 0x8
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 32
+
+
+ 1555 070d 01       		.uleb128 0x1
+ 1556 070e 50       		.byte	0x50
+ 1557 070f 05       		.uleb128 0x5
+ 1558 0710 03       		.byte	0x3
+ 1559 0711 20000000 		.4byte	.LC8
+ 1560 0715 00       		.byte	0
+ 1561 0716 07       		.uleb128 0x7
+ 1562 0717 D2000000 		.4byte	.LVL89
+ 1563 071b 62080000 		.4byte	0x862
+ 1564 071f 2E070000 		.4byte	0x72e
+ 1565 0723 08       		.uleb128 0x8
+ 1566 0724 01       		.uleb128 0x1
+ 1567 0725 50       		.byte	0x50
+ 1568 0726 01       		.uleb128 0x1
+ 1569 0727 31       		.byte	0x31
+ 1570 0728 08       		.uleb128 0x8
+ 1571 0729 01       		.uleb128 0x1
+ 1572 072a 51       		.byte	0x51
+ 1573 072b 01       		.uleb128 0x1
+ 1574 072c 30       		.byte	0x30
+ 1575 072d 00       		.byte	0
+ 1576 072e 07       		.uleb128 0x7
+ 1577 072f D8000000 		.4byte	.LVL90
+ 1578 0733 6D080000 		.4byte	0x86d
+ 1579 0737 45070000 		.4byte	0x745
+ 1580 073b 08       		.uleb128 0x8
+ 1581 073c 01       		.uleb128 0x1
+ 1582 073d 50       		.byte	0x50
+ 1583 073e 05       		.uleb128 0x5
+ 1584 073f 03       		.byte	0x3
+ 1585 0740 08000000 		.4byte	.LC2
+ 1586 0744 00       		.byte	0
+ 1587 0745 07       		.uleb128 0x7
+ 1588 0746 E0000000 		.4byte	.LVL91
+ 1589 074a 62080000 		.4byte	0x862
+ 1590 074e 5D070000 		.4byte	0x75d
+ 1591 0752 08       		.uleb128 0x8
+ 1592 0753 01       		.uleb128 0x1
+ 1593 0754 50       		.byte	0x50
+ 1594 0755 01       		.uleb128 0x1
+ 1595 0756 31       		.byte	0x31
+ 1596 0757 08       		.uleb128 0x8
+ 1597 0758 01       		.uleb128 0x1
+ 1598 0759 51       		.byte	0x51
+ 1599 075a 01       		.uleb128 0x1
+ 1600 075b 37       		.byte	0x37
+ 1601 075c 00       		.byte	0
+ 1602 075d 07       		.uleb128 0x7
+ 1603 075e E8000000 		.4byte	.LVL92
+ 1604 0762 78080000 		.4byte	0x878
+ 1605 0766 75070000 		.4byte	0x775
+ 1606 076a 08       		.uleb128 0x8
+ 1607 076b 01       		.uleb128 0x1
+ 1608 076c 50       		.byte	0x50
+ 1609 076d 06       		.uleb128 0x6
+ 1610 076e 74       		.byte	0x74
+ 1611 076f 00       		.sleb128 0
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 33
+
+
+ 1612 0770 40       		.byte	0x40
+ 1613 0771 24       		.byte	0x24
+ 1614 0772 40       		.byte	0x40
+ 1615 0773 25       		.byte	0x25
+ 1616 0774 00       		.byte	0
+ 1617 0775 06       		.uleb128 0x6
+ 1618 0776 EC000000 		.4byte	.LVL93
+ 1619 077a 83080000 		.4byte	0x883
+ 1620 077e 06       		.uleb128 0x6
+ 1621 077f F4000000 		.4byte	.LVL95
+ 1622 0783 E7030000 		.4byte	0x3e7
+ 1623 0787 06       		.uleb128 0x6
+ 1624 0788 0A010000 		.4byte	.LVL96
+ 1625 078c E7030000 		.4byte	0x3e7
+ 1626 0790 0E       		.uleb128 0xe
+ 1627 0791 10010000 		.4byte	.LVL97
+ 1628 0795 2A080000 		.4byte	0x82a
+ 1629 0799 08       		.uleb128 0x8
+ 1630 079a 01       		.uleb128 0x1
+ 1631 079b 50       		.byte	0x50
+ 1632 079c 02       		.uleb128 0x2
+ 1633 079d 08       		.byte	0x8
+ 1634 079e 64       		.byte	0x64
+ 1635 079f 00       		.byte	0
+ 1636 07a0 00       		.byte	0
+ 1637 07a1 06       		.uleb128 0x6
+ 1638 07a2 08000000 		.4byte	.LVL59
+ 1639 07a6 8E080000 		.4byte	0x88e
+ 1640 07aa 07       		.uleb128 0x7
+ 1641 07ab 12000000 		.4byte	.LVL60
+ 1642 07af 99080000 		.4byte	0x899
+ 1643 07b3 C8070000 		.4byte	0x7c8
+ 1644 07b7 08       		.uleb128 0x8
+ 1645 07b8 01       		.uleb128 0x1
+ 1646 07b9 50       		.byte	0x50
+ 1647 07ba 01       		.uleb128 0x1
+ 1648 07bb 33       		.byte	0x33
+ 1649 07bc 08       		.uleb128 0x8
+ 1650 07bd 01       		.uleb128 0x1
+ 1651 07be 51       		.byte	0x51
+ 1652 07bf 01       		.uleb128 0x1
+ 1653 07c0 33       		.byte	0x33
+ 1654 07c1 08       		.uleb128 0x8
+ 1655 07c2 01       		.uleb128 0x1
+ 1656 07c3 52       		.byte	0x52
+ 1657 07c4 02       		.uleb128 0x2
+ 1658 07c5 91       		.byte	0x91
+ 1659 07c6 74       		.sleb128 -12
+ 1660 07c7 00       		.byte	0
+ 1661 07c8 06       		.uleb128 0x6
+ 1662 07c9 16000000 		.4byte	.LVL61
+ 1663 07cd A4080000 		.4byte	0x8a4
+ 1664 07d1 06       		.uleb128 0x6
+ 1665 07d2 1A000000 		.4byte	.LVL62
+ 1666 07d6 AF080000 		.4byte	0x8af
+ 1667 07da 06       		.uleb128 0x6
+ 1668 07db 1E000000 		.4byte	.LVL63
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 34
+
+
+ 1669 07df BA080000 		.4byte	0x8ba
+ 1670 07e3 06       		.uleb128 0x6
+ 1671 07e4 22000000 		.4byte	.LVL64
+ 1672 07e8 C5080000 		.4byte	0x8c5
+ 1673 07ec 06       		.uleb128 0x6
+ 1674 07ed 26000000 		.4byte	.LVL65
+ 1675 07f1 35080000 		.4byte	0x835
+ 1676 07f5 00       		.byte	0
+ 1677 07f6 0F       		.uleb128 0xf
+ 1678 07f7 6B000000 		.4byte	0x6b
+ 1679 07fb 06080000 		.4byte	0x806
+ 1680 07ff 10       		.uleb128 0x10
+ 1681 0800 AB000000 		.4byte	0xab
+ 1682 0804 02       		.byte	0x2
+ 1683 0805 00       		.byte	0
+ 1684 0806 11       		.uleb128 0x11
+ 1685 0807 26000000 		.4byte	.LASF24
+ 1686 080b 26000000 		.4byte	.LASF24
+ 1687 080f 03       		.byte	0x3
+ 1688 0810 6601     		.2byte	0x166
+ 1689 0812 11       		.uleb128 0x11
+ 1690 0813 19020000 		.4byte	.LASF25
+ 1691 0817 19020000 		.4byte	.LASF25
+ 1692 081b 03       		.byte	0x3
+ 1693 081c 5001     		.2byte	0x150
+ 1694 081e 11       		.uleb128 0x11
+ 1695 081f 58010000 		.4byte	.LASF26
+ 1696 0823 58010000 		.4byte	.LASF26
+ 1697 0827 03       		.byte	0x3
+ 1698 0828 5501     		.2byte	0x155
+ 1699 082a 12       		.uleb128 0x12
+ 1700 082b 19030000 		.4byte	.LASF27
+ 1701 082f 19030000 		.4byte	.LASF27
+ 1702 0833 04       		.byte	0x4
+ 1703 0834 EC       		.byte	0xec
+ 1704 0835 11       		.uleb128 0x11
+ 1705 0836 60020000 		.4byte	.LASF28
+ 1706 083a 60020000 		.4byte	.LASF28
+ 1707 083e 03       		.byte	0x3
+ 1708 083f 6501     		.2byte	0x165
+ 1709 0841 12       		.uleb128 0x12
+ 1710 0842 C5000000 		.4byte	.LASF29
+ 1711 0846 C5000000 		.4byte	.LASF29
+ 1712 084a 05       		.byte	0x5
+ 1713 084b A0       		.byte	0xa0
+ 1714 084c 12       		.uleb128 0x12
+ 1715 084d 36000000 		.4byte	.LASF30
+ 1716 0851 36000000 		.4byte	.LASF30
+ 1717 0855 05       		.byte	0x5
+ 1718 0856 AC       		.byte	0xac
+ 1719 0857 12       		.uleb128 0x12
+ 1720 0858 15000000 		.4byte	.LASF31
+ 1721 085c 15000000 		.4byte	.LASF31
+ 1722 0860 06       		.byte	0x6
+ 1723 0861 3A       		.byte	0x3a
+ 1724 0862 12       		.uleb128 0x12
+ 1725 0863 FD020000 		.4byte	.LASF32
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 35
+
+
+ 1726 0867 FD020000 		.4byte	.LASF32
+ 1727 086b 06       		.byte	0x6
+ 1728 086c 3D       		.byte	0x3d
+ 1729 086d 12       		.uleb128 0x12
+ 1730 086e FB000000 		.4byte	.LASF33
+ 1731 0872 FB000000 		.4byte	.LASF33
+ 1732 0876 06       		.byte	0x6
+ 1733 0877 3C       		.byte	0x3c
+ 1734 0878 12       		.uleb128 0x12
+ 1735 0879 6E010000 		.4byte	.LASF34
+ 1736 087d 6E010000 		.4byte	.LASF34
+ 1737 0881 06       		.byte	0x6
+ 1738 0882 61       		.byte	0x61
+ 1739 0883 12       		.uleb128 0x12
+ 1740 0884 9D000000 		.4byte	.LASF35
+ 1741 0888 9D000000 		.4byte	.LASF35
+ 1742 088c 07       		.byte	0x7
+ 1743 088d 30       		.byte	0x30
+ 1744 088e 12       		.uleb128 0x12
+ 1745 088f CB020000 		.4byte	.LASF36
+ 1746 0893 CB020000 		.4byte	.LASF36
+ 1747 0897 08       		.byte	0x8
+ 1748 0898 72       		.byte	0x72
+ 1749 0899 12       		.uleb128 0x12
+ 1750 089a 42010000 		.4byte	.LASF37
+ 1751 089e 42010000 		.4byte	.LASF37
+ 1752 08a2 09       		.byte	0x9
+ 1753 08a3 A2       		.byte	0xa2
+ 1754 08a4 12       		.uleb128 0x12
+ 1755 08a5 81010000 		.4byte	.LASF38
+ 1756 08a9 81010000 		.4byte	.LASF38
+ 1757 08ad 05       		.byte	0x5
+ 1758 08ae 99       		.byte	0x99
+ 1759 08af 12       		.uleb128 0x12
+ 1760 08b0 48020000 		.4byte	.LASF39
+ 1761 08b4 48020000 		.4byte	.LASF39
+ 1762 08b8 05       		.byte	0x5
+ 1763 08b9 9D       		.byte	0x9d
+ 1764 08ba 12       		.uleb128 0x12
+ 1765 08bb 71000000 		.4byte	.LASF40
+ 1766 08bf 71000000 		.4byte	.LASF40
+ 1767 08c3 06       		.byte	0x6
+ 1768 08c4 38       		.byte	0x38
+ 1769 08c5 11       		.uleb128 0x11
+ 1770 08c6 0A030000 		.4byte	.LASF41
+ 1771 08ca 0A030000 		.4byte	.LASF41
+ 1772 08ce 03       		.byte	0x3
+ 1773 08cf 3201     		.2byte	0x132
+ 1774 08d1 00       		.byte	0
+ 1775              		.section	.debug_abbrev,"",%progbits
+ 1776              	.Ldebug_abbrev0:
+ 1777 0000 01       		.uleb128 0x1
+ 1778 0001 11       		.uleb128 0x11
+ 1779 0002 01       		.byte	0x1
+ 1780 0003 25       		.uleb128 0x25
+ 1781 0004 0E       		.uleb128 0xe
+ 1782 0005 13       		.uleb128 0x13
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 36
+
+
+ 1783 0006 0B       		.uleb128 0xb
+ 1784 0007 03       		.uleb128 0x3
+ 1785 0008 0E       		.uleb128 0xe
+ 1786 0009 1B       		.uleb128 0x1b
+ 1787 000a 0E       		.uleb128 0xe
+ 1788 000b 55       		.uleb128 0x55
+ 1789 000c 17       		.uleb128 0x17
+ 1790 000d 11       		.uleb128 0x11
+ 1791 000e 01       		.uleb128 0x1
+ 1792 000f 10       		.uleb128 0x10
+ 1793 0010 17       		.uleb128 0x17
+ 1794 0011 00       		.byte	0
+ 1795 0012 00       		.byte	0
+ 1796 0013 02       		.uleb128 0x2
+ 1797 0014 24       		.uleb128 0x24
+ 1798 0015 00       		.byte	0
+ 1799 0016 0B       		.uleb128 0xb
+ 1800 0017 0B       		.uleb128 0xb
+ 1801 0018 3E       		.uleb128 0x3e
+ 1802 0019 0B       		.uleb128 0xb
+ 1803 001a 03       		.uleb128 0x3
+ 1804 001b 0E       		.uleb128 0xe
+ 1805 001c 00       		.byte	0
+ 1806 001d 00       		.byte	0
+ 1807 001e 03       		.uleb128 0x3
+ 1808 001f 24       		.uleb128 0x24
+ 1809 0020 00       		.byte	0
+ 1810 0021 0B       		.uleb128 0xb
+ 1811 0022 0B       		.uleb128 0xb
+ 1812 0023 3E       		.uleb128 0x3e
+ 1813 0024 0B       		.uleb128 0xb
+ 1814 0025 03       		.uleb128 0x3
+ 1815 0026 08       		.uleb128 0x8
+ 1816 0027 00       		.byte	0
+ 1817 0028 00       		.byte	0
+ 1818 0029 04       		.uleb128 0x4
+ 1819 002a 16       		.uleb128 0x16
+ 1820 002b 00       		.byte	0
+ 1821 002c 03       		.uleb128 0x3
+ 1822 002d 0E       		.uleb128 0xe
+ 1823 002e 3A       		.uleb128 0x3a
+ 1824 002f 0B       		.uleb128 0xb
+ 1825 0030 3B       		.uleb128 0x3b
+ 1826 0031 05       		.uleb128 0x5
+ 1827 0032 49       		.uleb128 0x49
+ 1828 0033 13       		.uleb128 0x13
+ 1829 0034 00       		.byte	0
+ 1830 0035 00       		.byte	0
+ 1831 0036 05       		.uleb128 0x5
+ 1832 0037 2E       		.uleb128 0x2e
+ 1833 0038 01       		.byte	0x1
+ 1834 0039 3F       		.uleb128 0x3f
+ 1835 003a 19       		.uleb128 0x19
+ 1836 003b 03       		.uleb128 0x3
+ 1837 003c 0E       		.uleb128 0xe
+ 1838 003d 3A       		.uleb128 0x3a
+ 1839 003e 0B       		.uleb128 0xb
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 37
+
+
+ 1840 003f 3B       		.uleb128 0x3b
+ 1841 0040 0B       		.uleb128 0xb
+ 1842 0041 27       		.uleb128 0x27
+ 1843 0042 19       		.uleb128 0x19
+ 1844 0043 11       		.uleb128 0x11
+ 1845 0044 01       		.uleb128 0x1
+ 1846 0045 12       		.uleb128 0x12
+ 1847 0046 06       		.uleb128 0x6
+ 1848 0047 40       		.uleb128 0x40
+ 1849 0048 18       		.uleb128 0x18
+ 1850 0049 9742     		.uleb128 0x2117
+ 1851 004b 19       		.uleb128 0x19
+ 1852 004c 01       		.uleb128 0x1
+ 1853 004d 13       		.uleb128 0x13
+ 1854 004e 00       		.byte	0
+ 1855 004f 00       		.byte	0
+ 1856 0050 06       		.uleb128 0x6
+ 1857 0051 898201   		.uleb128 0x4109
+ 1858 0054 00       		.byte	0
+ 1859 0055 11       		.uleb128 0x11
+ 1860 0056 01       		.uleb128 0x1
+ 1861 0057 31       		.uleb128 0x31
+ 1862 0058 13       		.uleb128 0x13
+ 1863 0059 00       		.byte	0
+ 1864 005a 00       		.byte	0
+ 1865 005b 07       		.uleb128 0x7
+ 1866 005c 898201   		.uleb128 0x4109
+ 1867 005f 01       		.byte	0x1
+ 1868 0060 11       		.uleb128 0x11
+ 1869 0061 01       		.uleb128 0x1
+ 1870 0062 31       		.uleb128 0x31
+ 1871 0063 13       		.uleb128 0x13
+ 1872 0064 01       		.uleb128 0x1
+ 1873 0065 13       		.uleb128 0x13
+ 1874 0066 00       		.byte	0
+ 1875 0067 00       		.byte	0
+ 1876 0068 08       		.uleb128 0x8
+ 1877 0069 8A8201   		.uleb128 0x410a
+ 1878 006c 00       		.byte	0
+ 1879 006d 02       		.uleb128 0x2
+ 1880 006e 18       		.uleb128 0x18
+ 1881 006f 9142     		.uleb128 0x2111
+ 1882 0071 18       		.uleb128 0x18
+ 1883 0072 00       		.byte	0
+ 1884 0073 00       		.byte	0
+ 1885 0074 09       		.uleb128 0x9
+ 1886 0075 05       		.uleb128 0x5
+ 1887 0076 00       		.byte	0
+ 1888 0077 03       		.uleb128 0x3
+ 1889 0078 0E       		.uleb128 0xe
+ 1890 0079 3A       		.uleb128 0x3a
+ 1891 007a 0B       		.uleb128 0xb
+ 1892 007b 3B       		.uleb128 0x3b
+ 1893 007c 0B       		.uleb128 0xb
+ 1894 007d 49       		.uleb128 0x49
+ 1895 007e 13       		.uleb128 0x13
+ 1896 007f 02       		.uleb128 0x2
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 38
+
+
+ 1897 0080 17       		.uleb128 0x17
+ 1898 0081 00       		.byte	0
+ 1899 0082 00       		.byte	0
+ 1900 0083 0A       		.uleb128 0xa
+ 1901 0084 2E       		.uleb128 0x2e
+ 1902 0085 01       		.byte	0x1
+ 1903 0086 3F       		.uleb128 0x3f
+ 1904 0087 19       		.uleb128 0x19
+ 1905 0088 03       		.uleb128 0x3
+ 1906 0089 0E       		.uleb128 0xe
+ 1907 008a 3A       		.uleb128 0x3a
+ 1908 008b 0B       		.uleb128 0xb
+ 1909 008c 3B       		.uleb128 0x3b
+ 1910 008d 0B       		.uleb128 0xb
+ 1911 008e 49       		.uleb128 0x49
+ 1912 008f 13       		.uleb128 0x13
+ 1913 0090 8701     		.uleb128 0x87
+ 1914 0092 19       		.uleb128 0x19
+ 1915 0093 11       		.uleb128 0x11
+ 1916 0094 01       		.uleb128 0x1
+ 1917 0095 12       		.uleb128 0x12
+ 1918 0096 06       		.uleb128 0x6
+ 1919 0097 40       		.uleb128 0x40
+ 1920 0098 18       		.uleb128 0x18
+ 1921 0099 9742     		.uleb128 0x2117
+ 1922 009b 19       		.uleb128 0x19
+ 1923 009c 01       		.uleb128 0x1
+ 1924 009d 13       		.uleb128 0x13
+ 1925 009e 00       		.byte	0
+ 1926 009f 00       		.byte	0
+ 1927 00a0 0B       		.uleb128 0xb
+ 1928 00a1 34       		.uleb128 0x34
+ 1929 00a2 00       		.byte	0
+ 1930 00a3 03       		.uleb128 0x3
+ 1931 00a4 0E       		.uleb128 0xe
+ 1932 00a5 3A       		.uleb128 0x3a
+ 1933 00a6 0B       		.uleb128 0xb
+ 1934 00a7 3B       		.uleb128 0x3b
+ 1935 00a8 0B       		.uleb128 0xb
+ 1936 00a9 49       		.uleb128 0x49
+ 1937 00aa 13       		.uleb128 0x13
+ 1938 00ab 02       		.uleb128 0x2
+ 1939 00ac 17       		.uleb128 0x17
+ 1940 00ad 00       		.byte	0
+ 1941 00ae 00       		.byte	0
+ 1942 00af 0C       		.uleb128 0xc
+ 1943 00b0 34       		.uleb128 0x34
+ 1944 00b1 00       		.byte	0
+ 1945 00b2 03       		.uleb128 0x3
+ 1946 00b3 0E       		.uleb128 0xe
+ 1947 00b4 3A       		.uleb128 0x3a
+ 1948 00b5 0B       		.uleb128 0xb
+ 1949 00b6 3B       		.uleb128 0x3b
+ 1950 00b7 0B       		.uleb128 0xb
+ 1951 00b8 49       		.uleb128 0x49
+ 1952 00b9 13       		.uleb128 0x13
+ 1953 00ba 02       		.uleb128 0x2
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 39
+
+
+ 1954 00bb 18       		.uleb128 0x18
+ 1955 00bc 00       		.byte	0
+ 1956 00bd 00       		.byte	0
+ 1957 00be 0D       		.uleb128 0xd
+ 1958 00bf 0B       		.uleb128 0xb
+ 1959 00c0 01       		.byte	0x1
+ 1960 00c1 11       		.uleb128 0x11
+ 1961 00c2 01       		.uleb128 0x1
+ 1962 00c3 12       		.uleb128 0x12
+ 1963 00c4 06       		.uleb128 0x6
+ 1964 00c5 01       		.uleb128 0x1
+ 1965 00c6 13       		.uleb128 0x13
+ 1966 00c7 00       		.byte	0
+ 1967 00c8 00       		.byte	0
+ 1968 00c9 0E       		.uleb128 0xe
+ 1969 00ca 898201   		.uleb128 0x4109
+ 1970 00cd 01       		.byte	0x1
+ 1971 00ce 11       		.uleb128 0x11
+ 1972 00cf 01       		.uleb128 0x1
+ 1973 00d0 31       		.uleb128 0x31
+ 1974 00d1 13       		.uleb128 0x13
+ 1975 00d2 00       		.byte	0
+ 1976 00d3 00       		.byte	0
+ 1977 00d4 0F       		.uleb128 0xf
+ 1978 00d5 01       		.uleb128 0x1
+ 1979 00d6 01       		.byte	0x1
+ 1980 00d7 49       		.uleb128 0x49
+ 1981 00d8 13       		.uleb128 0x13
+ 1982 00d9 01       		.uleb128 0x1
+ 1983 00da 13       		.uleb128 0x13
+ 1984 00db 00       		.byte	0
+ 1985 00dc 00       		.byte	0
+ 1986 00dd 10       		.uleb128 0x10
+ 1987 00de 21       		.uleb128 0x21
+ 1988 00df 00       		.byte	0
+ 1989 00e0 49       		.uleb128 0x49
+ 1990 00e1 13       		.uleb128 0x13
+ 1991 00e2 2F       		.uleb128 0x2f
+ 1992 00e3 0B       		.uleb128 0xb
+ 1993 00e4 00       		.byte	0
+ 1994 00e5 00       		.byte	0
+ 1995 00e6 11       		.uleb128 0x11
+ 1996 00e7 2E       		.uleb128 0x2e
+ 1997 00e8 00       		.byte	0
+ 1998 00e9 3F       		.uleb128 0x3f
+ 1999 00ea 19       		.uleb128 0x19
+ 2000 00eb 3C       		.uleb128 0x3c
+ 2001 00ec 19       		.uleb128 0x19
+ 2002 00ed 6E       		.uleb128 0x6e
+ 2003 00ee 0E       		.uleb128 0xe
+ 2004 00ef 03       		.uleb128 0x3
+ 2005 00f0 0E       		.uleb128 0xe
+ 2006 00f1 3A       		.uleb128 0x3a
+ 2007 00f2 0B       		.uleb128 0xb
+ 2008 00f3 3B       		.uleb128 0x3b
+ 2009 00f4 05       		.uleb128 0x5
+ 2010 00f5 00       		.byte	0
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 40
+
+
+ 2011 00f6 00       		.byte	0
+ 2012 00f7 12       		.uleb128 0x12
+ 2013 00f8 2E       		.uleb128 0x2e
+ 2014 00f9 00       		.byte	0
+ 2015 00fa 3F       		.uleb128 0x3f
+ 2016 00fb 19       		.uleb128 0x19
+ 2017 00fc 3C       		.uleb128 0x3c
+ 2018 00fd 19       		.uleb128 0x19
+ 2019 00fe 6E       		.uleb128 0x6e
+ 2020 00ff 0E       		.uleb128 0xe
+ 2021 0100 03       		.uleb128 0x3
+ 2022 0101 0E       		.uleb128 0xe
+ 2023 0102 3A       		.uleb128 0x3a
+ 2024 0103 0B       		.uleb128 0xb
+ 2025 0104 3B       		.uleb128 0x3b
+ 2026 0105 0B       		.uleb128 0xb
+ 2027 0106 00       		.byte	0
+ 2028 0107 00       		.byte	0
+ 2029 0108 00       		.byte	0
+ 2030              		.section	.debug_loc,"",%progbits
+ 2031              	.Ldebug_loc0:
+ 2032              	.LLST0:
+ 2033 0000 00000000 		.4byte	.LVL43
+ 2034 0004 07000000 		.4byte	.LVL44-1
+ 2035 0008 0100     		.2byte	0x1
+ 2036 000a 50       		.byte	0x50
+ 2037 000b 07000000 		.4byte	.LVL44-1
+ 2038 000f 7E000000 		.4byte	.LVL58
+ 2039 0013 0100     		.2byte	0x1
+ 2040 0015 54       		.byte	0x54
+ 2041 0016 7E000000 		.4byte	.LVL58
+ 2042 001a 84000000 		.4byte	.LFE34
+ 2043 001e 0400     		.2byte	0x4
+ 2044 0020 F3       		.byte	0xf3
+ 2045 0021 01       		.uleb128 0x1
+ 2046 0022 50       		.byte	0x50
+ 2047 0023 9F       		.byte	0x9f
+ 2048 0024 00000000 		.4byte	0
+ 2049 0028 00000000 		.4byte	0
+ 2050              	.LLST1:
+ 2051 002c 30000000 		.4byte	.LVL67
+ 2052 0030 35000000 		.4byte	.LVL68-1
+ 2053 0034 0100     		.2byte	0x1
+ 2054 0036 51       		.byte	0x51
+ 2055 0037 00000000 		.4byte	0
+ 2056 003b 00000000 		.4byte	0
+ 2057              	.LLST2:
+ 2058 003f 36000000 		.4byte	.LVL68
+ 2059 0043 38000000 		.4byte	.LVL69
+ 2060 0047 0100     		.2byte	0x1
+ 2061 0049 50       		.byte	0x50
+ 2062 004a 00000000 		.4byte	0
+ 2063 004e 00000000 		.4byte	0
+ 2064              	.LLST3:
+ 2065 0052 3C000000 		.4byte	.LVL70
+ 2066 0056 EE000000 		.4byte	.LVL94
+ 2067 005a 0100     		.2byte	0x1
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 41
+
+
+ 2068 005c 54       		.byte	0x54
+ 2069 005d 00000000 		.4byte	0
+ 2070 0061 00000000 		.4byte	0
+ 2071              		.section	.debug_aranges,"",%progbits
+ 2072 0000 34000000 		.4byte	0x34
+ 2073 0004 0200     		.2byte	0x2
+ 2074 0006 00000000 		.4byte	.Ldebug_info0
+ 2075 000a 04       		.byte	0x4
+ 2076 000b 00       		.byte	0
+ 2077 000c 0000     		.2byte	0
+ 2078 000e 0000     		.2byte	0
+ 2079 0010 00000000 		.4byte	.LFB32
+ 2080 0014 B8000000 		.4byte	.LFE32-.LFB32
+ 2081 0018 00000000 		.4byte	.LFB33
+ 2082 001c 6C000000 		.4byte	.LFE33-.LFB33
+ 2083 0020 00000000 		.4byte	.LFB34
+ 2084 0024 84000000 		.4byte	.LFE34-.LFB34
+ 2085 0028 00000000 		.4byte	.LFB35
+ 2086 002c 28010000 		.4byte	.LFE35-.LFB35
+ 2087 0030 00000000 		.4byte	0
+ 2088 0034 00000000 		.4byte	0
+ 2089              		.section	.debug_ranges,"",%progbits
+ 2090              	.Ldebug_ranges0:
+ 2091 0000 00000000 		.4byte	.LFB32
+ 2092 0004 B8000000 		.4byte	.LFE32
+ 2093 0008 00000000 		.4byte	.LFB33
+ 2094 000c 6C000000 		.4byte	.LFE33
+ 2095 0010 00000000 		.4byte	.LFB34
+ 2096 0014 84000000 		.4byte	.LFE34
+ 2097 0018 00000000 		.4byte	.LFB35
+ 2098 001c 28010000 		.4byte	.LFE35
+ 2099 0020 00000000 		.4byte	0
+ 2100 0024 00000000 		.4byte	0
+ 2101              		.section	.debug_line,"",%progbits
+ 2102              	.Ldebug_line0:
+ 2103 0000 56010000 		.section	.debug_str,"MS",%progbits,1
+ 2103      02009800 
+ 2103      00000201 
+ 2103      FB0E0D00 
+ 2103      01010101 
+ 2104              	.LASF6:
+ 2105 0000 6C6F6E67 		.ascii	"long long int\000"
+ 2105      206C6F6E 
+ 2105      6720696E 
+ 2105      7400
+ 2106              	.LASF22:
+ 2107 000e 69326352 		.ascii	"i2cReg\000"
+ 2107      656700
+ 2108              	.LASF31:
+ 2109 0015 4C43445F 		.ascii	"LCD_WriteControl\000"
+ 2109      57726974 
+ 2109      65436F6E 
+ 2109      74726F6C 
+ 2109      00
+ 2110              	.LASF24:
+ 2111 0026 42757A7A 		.ascii	"Buzz_PWM_Wakeup\000"
+ 2111      5F50574D 
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 42
+
+
+ 2111      5F57616B 
+ 2111      65757000 
+ 2112              	.LASF30:
+ 2113 0036 4144435F 		.ascii	"ADC_CountsTo_mVolts\000"
+ 2113      436F756E 
+ 2113      7473546F 
+ 2113      5F6D566F 
+ 2113      6C747300 
+ 2114              	.LASF45:
+ 2115 004a 52656742 		.ascii	"RegButt\000"
+ 2115      75747400 
+ 2116              	.LASF3:
+ 2117 0052 73686F72 		.ascii	"short unsigned int\000"
+ 2117      7420756E 
+ 2117      7369676E 
+ 2117      65642069 
+ 2117      6E7400
+ 2118              	.LASF11:
+ 2119 0065 696E7431 		.ascii	"int16\000"
+ 2119      3600
+ 2120              	.LASF12:
+ 2121 006b 666C6F61 		.ascii	"float\000"
+ 2121      7400
+ 2122              	.LASF40:
+ 2123 0071 4C43445F 		.ascii	"LCD_Start\000"
+ 2123      53746172 
+ 2123      7400
+ 2124              	.LASF1:
+ 2125 007b 756E7369 		.ascii	"unsigned char\000"
+ 2125      676E6564 
+ 2125      20636861 
+ 2125      7200
+ 2126              	.LASF18:
+ 2127 0089 42757A7A 		.ascii	"Buzz_Play_DefMelody\000"
+ 2127      5F506C61 
+ 2127      795F4465 
+ 2127      664D656C 
+ 2127      6F647900 
+ 2128              	.LASF35:
+ 2129 009d 53746174 		.ascii	"Status_Reg_Read\000"
+ 2129      75735F52 
+ 2129      65675F52 
+ 2129      65616400 
+ 2130              	.LASF5:
+ 2131 00ad 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2131      20756E73 
+ 2131      69676E65 
+ 2131      6420696E 
+ 2131      7400
+ 2132              	.LASF9:
+ 2133 00bf 75696E74 		.ascii	"uint8\000"
+ 2133      3800
+ 2134              	.LASF29:
+ 2135 00c5 4144435F 		.ascii	"ADC_GetResult16\000"
+ 2135      47657452 
+ 2135      6573756C 
+ 2135      74313600 
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 43
+
+
+ 2136              	.LASF19:
+ 2137 00d5 42757A7A 		.ascii	"Buzz_Play_ButtMelody\000"
+ 2137      5F506C61 
+ 2137      795F4275 
+ 2137      74744D65 
+ 2137      6C6F6479 
+ 2138              	.LASF13:
+ 2139 00ea 646F7562 		.ascii	"double\000"
+ 2139      6C6500
+ 2140              	.LASF2:
+ 2141 00f1 73686F72 		.ascii	"short int\000"
+ 2141      7420696E 
+ 2141      7400
+ 2142              	.LASF33:
+ 2143 00fb 4C43445F 		.ascii	"LCD_PrintString\000"
+ 2143      5072696E 
+ 2143      74537472 
+ 2143      696E6700 
+ 2144              	.LASF10:
+ 2145 010b 75696E74 		.ascii	"uint16\000"
+ 2145      313600
+ 2146              	.LASF46:
+ 2147 0112 6D61696E 		.ascii	"main\000"
+ 2147      00
+ 2148              	.LASF8:
+ 2149 0117 756E7369 		.ascii	"unsigned int\000"
+ 2149      676E6564 
+ 2149      20696E74 
+ 2149      00
+ 2150              	.LASF20:
+ 2151 0124 636F756E 		.ascii	"counts\000"
+ 2151      747300
+ 2152              	.LASF7:
+ 2153 012b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2153      206C6F6E 
+ 2153      6720756E 
+ 2153      7369676E 
+ 2153      65642069 
+ 2154              	.LASF37:
+ 2155 0142 455A4932 		.ascii	"EZI2C_EzI2CSetBuffer1\000"
+ 2155      435F457A 
+ 2155      49324353 
+ 2155      65744275 
+ 2155      66666572 
+ 2156              	.LASF26:
+ 2157 0158 42757A7A 		.ascii	"Buzz_PWM_WriteCompare\000"
+ 2157      5F50574D 
+ 2157      5F577269 
+ 2157      7465436F 
+ 2157      6D706172 
+ 2158              	.LASF34:
+ 2159 016e 4C43445F 		.ascii	"LCD_PrintU32Number\000"
+ 2159      5072696E 
+ 2159      74553332 
+ 2159      4E756D62 
+ 2159      657200
+ 2160              	.LASF38:
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 44
+
+
+ 2161 0181 4144435F 		.ascii	"ADC_Start\000"
+ 2161      53746172 
+ 2161      7400
+ 2162              	.LASF42:
+ 2163 018b 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2163      43313120 
+ 2163      352E342E 
+ 2163      31203230 
+ 2163      31363036 
+ 2164 01be 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 2164      20726576 
+ 2164      6973696F 
+ 2164      6E203233 
+ 2164      37373135 
+ 2165 01f1 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2165      66756E63 
+ 2165      74696F6E 
+ 2165      2D736563 
+ 2165      74696F6E 
+ 2166              	.LASF25:
+ 2167 0219 42757A7A 		.ascii	"Buzz_PWM_WritePeriod\000"
+ 2167      5F50574D 
+ 2167      5F577269 
+ 2167      74655065 
+ 2167      72696F64 
+ 2168              	.LASF21:
+ 2169 022e 6D566F6C 		.ascii	"mVolts\000"
+ 2169      747300
+ 2170              	.LASF23:
+ 2171 0235 706F745F 		.ascii	"pot_state\000"
+ 2171      73746174 
+ 2171      6500
+ 2172              	.LASF16:
+ 2173 023f 73697A65 		.ascii	"sizetype\000"
+ 2173      74797065 
+ 2173      00
+ 2174              	.LASF39:
+ 2175 0248 4144435F 		.ascii	"ADC_StartConvert\000"
+ 2175      53746172 
+ 2175      74436F6E 
+ 2175      76657274 
+ 2175      00
+ 2176              	.LASF43:
+ 2177 0259 6D61696E 		.ascii	"main.c\000"
+ 2177      2E6300
+ 2178              	.LASF28:
+ 2179 0260 42757A7A 		.ascii	"Buzz_PWM_Sleep\000"
+ 2179      5F50574D 
+ 2179      5F536C65 
+ 2179      657000
+ 2180              	.LASF17:
+ 2181 026f 42757A7A 		.ascii	"Buzz_Play_SuccesMelody\000"
+ 2181      5F506C61 
+ 2181      795F5375 
+ 2181      63636573 
+ 2181      4D656C6F 
+ 2182              	.LASF44:
+ARM GAS  C:\Users\yura\AppData\Local\Temp\ccdecsYX.s 			page 45
+
+
+ 2183 0286 433A5C55 		.ascii	"C:\\Users\\yura\\Documents\\PSoC Creator\\Yura_hack"
+ 2183      73657273 
+ 2183      5C797572 
+ 2183      615C446F 
+ 2183      63756D65 
+ 2184 02b4 61746F6E 		.ascii	"aton\\teamProject.cydsn\000"
+ 2184      5C746561 
+ 2184      6D50726F 
+ 2184      6A656374 
+ 2184      2E637964 
+ 2185              	.LASF36:
+ 2186 02cb 455A4932 		.ascii	"EZI2C_Start\000"
+ 2186      435F5374 
+ 2186      61727400 
+ 2187              	.LASF4:
+ 2188 02d7 6C6F6E67 		.ascii	"long int\000"
+ 2188      20696E74 
+ 2188      00
+ 2189              	.LASF14:
+ 2190 02e0 63686172 		.ascii	"char\000"
+ 2190      00
+ 2191              	.LASF15:
+ 2192 02e5 6C6F6E67 		.ascii	"long double\000"
+ 2192      20646F75 
+ 2192      626C6500 
+ 2193              	.LASF0:
+ 2194 02f1 7369676E 		.ascii	"signed char\000"
+ 2194      65642063 
+ 2194      68617200 
+ 2195              	.LASF32:
+ 2196 02fd 4C43445F 		.ascii	"LCD_Position\000"
+ 2196      506F7369 
+ 2196      74696F6E 
+ 2196      00
+ 2197              	.LASF41:
+ 2198 030a 42757A7A 		.ascii	"Buzz_PWM_Start\000"
+ 2198      5F50574D 
+ 2198      5F537461 
+ 2198      727400
+ 2199              	.LASF27:
+ 2200 0319 43794465 		.ascii	"CyDelay\000"
+ 2200      6C617900 
+ 2201              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
