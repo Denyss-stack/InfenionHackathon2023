@@ -1,0 +1,21 @@
+C:\Users\yura\Documents\PSoC Creator\Yura_hackaton\first_project.cydsn\first_project.cyprj|ca0b9cea-f223-46a1-b313-dbb2afc5b629
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|1110ea19-0728-407c-b8bc-fe8c8d2a2257
+C:\Users\yura\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|cfe54946-925a-400f-a100-1a3533aa08af
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|5c5083d1-d6fd-4a1f-9542-d6fe1523949a
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|9b526fe7-383d-4747-ad29-0c45bf5624b4
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|c635322c-a187-4f20-9be4-3e1b49a1d733
+C:\Users\yura\Documents\PSoC Creator\Yura_hackaton\L2.cydsn\L2.cyprj|a256e26a-8351-49a8-bb22-f88a6878dd2b
+C:\Users\yura\Documents\PSoC Creator\Yura_hackaton\L1.cydsn\L1.cyprj|1e02b894-fd0c-4123-b4a2-486ecf55a7c6
+C:\Users\yura\Documents\PSoC Creator\Yura_hackaton\L3.cydsn\L3.cyprj|f71e1c08-4b44-4758-9ffc-bc4b1b1681c3
+C:\Users\yura\Documents\PSoC Creator\Yura_hackaton\L4.cydsn\L4.cyprj|18a854c7-88a8-48c6-833b-caf1acbd5395
+C:\Users\yura\Documents\PSoC Creator\Yura_hackaton\L5.cydsn\L5.cyprj|f4eeb701-a18d-4ac5-8c0c-6afc86ebc9be
+C:\Users\yura\Documents\PSoC Creator\Yura_hackaton\L6.cydsn\L6.cyprj|ea3de95b-d55d-4eee-8f8e-4912c6396579
+C:\Users\yura\Documents\PSoC Creator\Yura_hackaton\L7.cydsn\L7.cyprj|21ef7d28-5fb9-49d5-a11c-65452cc8d81d
+C:\Users\yura\Documents\PSoC Creator\Yura_hackaton\L8.cydsn\L8.cyprj|f89858f5-a509-4240-9df4-490abe74514f
+C:\Users\yura\Documents\PSoC Creator\Yura_hackaton\L9.cydsn\L9.cyprj|900b1939-6ef6-4b9d-afca-1ba31afa9436
+C:\Users\yura\Documents\PSoC Creator\Yura_hackaton\L10.cydsn\L10.cyprj|0aaa3661-2e01-46a0-a914-87e98f58f38f
+C:\Users\yura\Documents\PSoC Creator\Yura_hackaton\L11.cydsn\L11.cyprj|8594ec31-c1c2-4d93-96c2-e31dc59d56f6
+C:\Users\yura\Documents\PSoC Creator\Yura_hackaton\CE210289_CapSense_P4_Linear_Slider01.cydsn\CE210289_CapSense_P4_Linear_Slider01.cyprj|c7bb74d2-5abe-42fd-b6ff-a4ae6c47e6a2
+C:\Users\yura\Documents\PSoC Creator\Yura_hackaton\teamProject.cydsn\teamProject.cyprj|2ff90ebd-c32e-496a-bc1c-eb58916aa0d7
+C:\Users\yura\Documents\PSoC Creator\IoT_labs\neo-6m-gps.cydsn\neo-6m-gps.cyprj|09ad3053-6970-4c2c-87d8-fe099743163a
+C:\YURA\Psoc_projects\Design10.cydsn\Design10.cyprj|9bf58f8f-ade0-4ba1-b9f5-703dc702a65b

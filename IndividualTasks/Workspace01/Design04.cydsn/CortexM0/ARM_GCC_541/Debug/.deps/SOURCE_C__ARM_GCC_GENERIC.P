@@ -1,0 +1,18 @@
+C:/DenysProjects/Workspace01/Design04.cydsn/CortexM0/ARM_GCC_541/Debug/cyfitter_cfg.o : C:/DenysProjects/Workspace01/Design04.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/DenysProjects/Workspace01/Design04.cydsn/Generated_Source/PSoC4/CyLib.h C:/DenysProjects/Workspace01/Design04.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design04.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design04.cydsn/Generated_Source/PSoC4/cyfitter_cfg.c C:/DenysProjects/Workspace01/Design04.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/DenysProjects/Workspace01/Design04.cydsn/Generated_Source/PSoC4/cytypes.h C:/DenysProjects/Workspace01/Design04.cydsn/cyapicallbacks.h 
+
+C:/DenysProjects/Workspace01/Design04.cydsn/Generated_Source/PSoC4/CyLFClk.h : 
+
+C:/DenysProjects/Workspace01/Design04.cydsn/Generated_Source/PSoC4/CyLib.h : 
+
+C:/DenysProjects/Workspace01/Design04.cydsn/Generated_Source/PSoC4/cydevice_trm.h : 
+
+C:/DenysProjects/Workspace01/Design04.cydsn/Generated_Source/PSoC4/cyfitter.h : 
+
+C:/DenysProjects/Workspace01/Design04.cydsn/Generated_Source/PSoC4/cyfitter_cfg.c : 
+
+C:/DenysProjects/Workspace01/Design04.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h : 
+
+C:/DenysProjects/Workspace01/Design04.cydsn/Generated_Source/PSoC4/cytypes.h : 
+
+C:/DenysProjects/Workspace01/Design04.cydsn/cyapicallbacks.h : 
+

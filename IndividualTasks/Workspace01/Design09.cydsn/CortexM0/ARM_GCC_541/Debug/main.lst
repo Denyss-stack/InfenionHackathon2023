@@ -1,0 +1,838 @@
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccKajofx.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB32:
+  27              		.file 1 "main.c"
+   1:main.c        **** #include <project.h>
+   2:main.c        **** /* ADC channel 0 */
+   3:main.c        **** #define POT_CHAN (0)
+   4:main.c        **** #define WRITABLE (0)
+   5:main.c        **** int main()
+   6:main.c        **** {
+  28              		.loc 1 6 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 8
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 30B5     		push	{r4, r5, lr}
+  33              		.cfi_def_cfa_offset 12
+  34              		.cfi_offset 4, -12
+  35              		.cfi_offset 5, -8
+  36              		.cfi_offset 14, -4
+  37 0002 83B0     		sub	sp, sp, #12
+  38              		.cfi_def_cfa_offset 24
+   7:main.c        ****  int16 counts; /* ADC result in counts */
+   8:main.c        ****  int16 mVolts; /* ADC result in mVolts */
+   9:main.c        ****  uint8 i2cReg[2]; /* 2 byte I2C register */
+  10:main.c        ****  
+  11:main.c        ****  ADC_Start();
+  39              		.loc 1 11 0
+  40 0004 FFF7FEFF 		bl	ADC_Start
+  41              	.LVL0:
+  12:main.c        ****  ADC_StartConvert();
+  42              		.loc 1 12 0
+  43 0008 FFF7FEFF 		bl	ADC_StartConvert
+  44              	.LVL1:
+  13:main.c        ****  LCD_Start();
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccKajofx.s 			page 2
+
+
+  45              		.loc 1 13 0
+  46 000c FFF7FEFF 		bl	LCD_Start
+  47              	.LVL2:
+  14:main.c        ****  EZI2C_Start();
+  48              		.loc 1 14 0
+  49 0010 FFF7FEFF 		bl	EZI2C_Start
+  50              	.LVL3:
+  15:main.c        ****  
+  16:main.c        ****  /* 2 byte I2C buffer, 0 bytes writeable by the host, name is I2CReg */
+  17:main.c        ****  EZI2C_EzI2CSetBuffer1(sizeof(i2cReg), WRITABLE, i2cReg);
+  51              		.loc 1 17 0
+  52 0014 01AA     		add	r2, sp, #4
+  53 0016 0021     		movs	r1, #0
+  54 0018 0220     		movs	r0, #2
+  55 001a FFF7FEFF 		bl	EZI2C_EzI2CSetBuffer1
+  56              	.LVL4:
+  18:main.c        ****  CyGlobalIntEnable;
+  57              		.loc 1 18 0
+  58              		.syntax divided
+  59              	@ 18 "main.c" 1
+  60 001e 62B6     		CPSIE   i
+  61              	@ 0 "" 2
+  62              		.thumb
+  63              		.syntax unified
+  64              	.L2:
+  19:main.c        ****  for(;;)
+  20:main.c        ****  {
+  21:main.c        ****      /* Get ADC result and convert to mV */
+  22:main.c        ****      counts = ADC_GetResult16(POT_CHAN);
+  65              		.loc 1 22 0 discriminator 1
+  66 0020 0020     		movs	r0, #0
+  67 0022 FFF7FEFF 		bl	ADC_GetResult16
+  68              	.LVL5:
+  69 0026 0100     		movs	r1, r0
+  70              	.LVL6:
+  23:main.c        ****      mVolts = ADC_CountsTo_mVolts(POT_CHAN,counts);
+  71              		.loc 1 23 0 discriminator 1
+  72 0028 0020     		movs	r0, #0
+  73 002a FFF7FEFF 		bl	ADC_CountsTo_mVolts
+  74              	.LVL7:
+  75 002e 0500     		movs	r5, r0
+  76              	.LVL8:
+  24:main.c        ****      
+  25:main.c        ****      /* Display value to LCD */
+  26:main.c        ****      LCD_Position(0,0);
+  77              		.loc 1 26 0 discriminator 1
+  78 0030 0021     		movs	r1, #0
+  79 0032 0020     		movs	r0, #0
+  80 0034 FFF7FEFF 		bl	LCD_Position
+  81              	.LVL9:
+  27:main.c        ****      LCD_PrintNumber(mVolts);
+  82              		.loc 1 27 0 discriminator 1
+  83 0038 ACB2     		uxth	r4, r5
+  84 003a 2000     		movs	r0, r4
+  85 003c FFF7FEFF 		bl	LCD_PrintU32Number
+  86              	.LVL10:
+  28:main.c        ****      LCD_PrintString("mV ");
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccKajofx.s 			page 3
+
+
+  87              		.loc 1 28 0 discriminator 1
+  88 0040 0348     		ldr	r0, .L3
+  89 0042 FFF7FEFF 		bl	LCD_PrintString
+  90              	.LVL11:
+  29:main.c        ****      
+  30:main.c        ****      /* Store ADC value in I2C buffer */
+  31:main.c        ****      i2cReg[0] = HI8(mVolts); /* upper byte of result */
+  91              		.loc 1 31 0 discriminator 1
+  92 0046 240A     		lsrs	r4, r4, #8
+  93 0048 01AB     		add	r3, sp, #4
+  94 004a 1C70     		strb	r4, [r3]
+  32:main.c        ****      i2cReg[1] = LO8(mVolts); /* lower byte of result */
+  95              		.loc 1 32 0 discriminator 1
+  96 004c 5D70     		strb	r5, [r3, #1]
+  97 004e E7E7     		b	.L2
+  98              	.L4:
+  99              		.align	2
+ 100              	.L3:
+ 101 0050 00000000 		.word	.LC0
+ 102              		.cfi_endproc
+ 103              	.LFE32:
+ 104              		.size	main, .-main
+ 105              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 106              		.align	2
+ 107              	.LC0:
+ 108 0000 6D562000 		.ascii	"mV \000"
+ 109              		.text
+ 110              	.Letext0:
+ 111              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 112              		.file 3 "Generated_Source\\PSoC4/ADC.h"
+ 113              		.file 4 "Generated_Source\\PSoC4/LCD.h"
+ 114              		.file 5 "Generated_Source\\PSoC4/EZI2C.h"
+ 115              		.file 6 "Generated_Source\\PSoC4/EZI2C_EZI2C.h"
+ 116              		.section	.debug_info,"",%progbits
+ 117              	.Ldebug_info0:
+ 118 0000 18020000 		.4byte	0x218
+ 119 0004 0400     		.2byte	0x4
+ 120 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 121 000a 04       		.byte	0x4
+ 122 000b 01       		.uleb128 0x1
+ 123 000c 42010000 		.4byte	.LASF30
+ 124 0010 0C       		.byte	0xc
+ 125 0011 F1010000 		.4byte	.LASF31
+ 126 0015 B8000000 		.4byte	.LASF32
+ 127 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 128 001d 00000000 		.4byte	0
+ 129 0021 00000000 		.4byte	.Ldebug_line0
+ 130 0025 02       		.uleb128 0x2
+ 131 0026 01       		.byte	0x1
+ 132 0027 06       		.byte	0x6
+ 133 0028 28020000 		.4byte	.LASF0
+ 134 002c 02       		.uleb128 0x2
+ 135 002d 01       		.byte	0x1
+ 136 002e 08       		.byte	0x8
+ 137 002f 59000000 		.4byte	.LASF1
+ 138 0033 02       		.uleb128 0x2
+ 139 0034 02       		.byte	0x2
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccKajofx.s 			page 4
+
+
+ 140 0035 05       		.byte	0x5
+ 141 0036 FD010000 		.4byte	.LASF2
+ 142 003a 02       		.uleb128 0x2
+ 143 003b 02       		.byte	0x2
+ 144 003c 07       		.byte	0x7
+ 145 003d 29000000 		.4byte	.LASF3
+ 146 0041 02       		.uleb128 0x2
+ 147 0042 04       		.byte	0x4
+ 148 0043 05       		.byte	0x5
+ 149 0044 13020000 		.4byte	.LASF4
+ 150 0048 02       		.uleb128 0x2
+ 151 0049 04       		.byte	0x4
+ 152 004a 07       		.byte	0x7
+ 153 004b 6D000000 		.4byte	.LASF5
+ 154 004f 02       		.uleb128 0x2
+ 155 0050 08       		.byte	0x8
+ 156 0051 05       		.byte	0x5
+ 157 0052 00000000 		.4byte	.LASF6
+ 158 0056 02       		.uleb128 0x2
+ 159 0057 08       		.byte	0x8
+ 160 0058 07       		.byte	0x7
+ 161 0059 EB000000 		.4byte	.LASF7
+ 162 005d 03       		.uleb128 0x3
+ 163 005e 04       		.byte	0x4
+ 164 005f 05       		.byte	0x5
+ 165 0060 696E7400 		.ascii	"int\000"
+ 166 0064 02       		.uleb128 0x2
+ 167 0065 04       		.byte	0x4
+ 168 0066 07       		.byte	0x7
+ 169 0067 3C000000 		.4byte	.LASF8
+ 170 006b 04       		.uleb128 0x4
+ 171 006c 7F000000 		.4byte	.LASF9
+ 172 0070 02       		.byte	0x2
+ 173 0071 FB01     		.2byte	0x1fb
+ 174 0073 2C000000 		.4byte	0x2c
+ 175 0077 04       		.uleb128 0x4
+ 176 0078 B1000000 		.4byte	.LASF10
+ 177 007c 02       		.byte	0x2
+ 178 007d FC01     		.2byte	0x1fc
+ 179 007f 3A000000 		.4byte	0x3a
+ 180 0083 04       		.uleb128 0x4
+ 181 0084 67000000 		.4byte	.LASF11
+ 182 0088 02       		.byte	0x2
+ 183 0089 FF01     		.2byte	0x1ff
+ 184 008b 33000000 		.4byte	0x33
+ 185 008f 02       		.uleb128 0x2
+ 186 0090 04       		.byte	0x4
+ 187 0091 04       		.byte	0x4
+ 188 0092 49000000 		.4byte	.LASF12
+ 189 0096 02       		.uleb128 0x2
+ 190 0097 08       		.byte	0x8
+ 191 0098 04       		.byte	0x4
+ 192 0099 95000000 		.4byte	.LASF13
+ 193 009d 02       		.uleb128 0x2
+ 194 009e 01       		.byte	0x1
+ 195 009f 08       		.byte	0x8
+ 196 00a0 F8010000 		.4byte	.LASF14
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccKajofx.s 			page 5
+
+
+ 197 00a4 02       		.uleb128 0x2
+ 198 00a5 08       		.byte	0x8
+ 199 00a6 04       		.byte	0x4
+ 200 00a7 1C020000 		.4byte	.LASF15
+ 201 00ab 02       		.uleb128 0x2
+ 202 00ac 04       		.byte	0x4
+ 203 00ad 07       		.byte	0x7
+ 204 00ae D7010000 		.4byte	.LASF16
+ 205 00b2 05       		.uleb128 0x5
+ 206 00b3 9C000000 		.4byte	.LASF33
+ 207 00b7 01       		.byte	0x1
+ 208 00b8 05       		.byte	0x5
+ 209 00b9 5D000000 		.4byte	0x5d
+ 210 00bd 00000000 		.4byte	.LFB32
+ 211 00c1 54000000 		.4byte	.LFE32-.LFB32
+ 212 00c5 01       		.uleb128 0x1
+ 213 00c6 9C       		.byte	0x9c
+ 214 00c7 9D010000 		.4byte	0x19d
+ 215 00cb 06       		.uleb128 0x6
+ 216 00cc E4000000 		.4byte	.LASF17
+ 217 00d0 01       		.byte	0x1
+ 218 00d1 07       		.byte	0x7
+ 219 00d2 83000000 		.4byte	0x83
+ 220 00d6 00000000 		.4byte	.LLST0
+ 221 00da 07       		.uleb128 0x7
+ 222 00db D0010000 		.4byte	.LASF18
+ 223 00df 01       		.byte	0x1
+ 224 00e0 08       		.byte	0x8
+ 225 00e1 83000000 		.4byte	0x83
+ 226 00e5 01       		.uleb128 0x1
+ 227 00e6 55       		.byte	0x55
+ 228 00e7 07       		.uleb128 0x7
+ 229 00e8 0E000000 		.4byte	.LASF19
+ 230 00ec 01       		.byte	0x1
+ 231 00ed 09       		.byte	0x9
+ 232 00ee 9D010000 		.4byte	0x19d
+ 233 00f2 02       		.uleb128 0x2
+ 234 00f3 91       		.byte	0x91
+ 235 00f4 6C       		.sleb128 -20
+ 236 00f5 08       		.uleb128 0x8
+ 237 00f6 08000000 		.4byte	.LVL0
+ 238 00fa AD010000 		.4byte	0x1ad
+ 239 00fe 08       		.uleb128 0x8
+ 240 00ff 0C000000 		.4byte	.LVL1
+ 241 0103 B8010000 		.4byte	0x1b8
+ 242 0107 08       		.uleb128 0x8
+ 243 0108 10000000 		.4byte	.LVL2
+ 244 010c C3010000 		.4byte	0x1c3
+ 245 0110 08       		.uleb128 0x8
+ 246 0111 14000000 		.4byte	.LVL3
+ 247 0115 CE010000 		.4byte	0x1ce
+ 248 0119 09       		.uleb128 0x9
+ 249 011a 1E000000 		.4byte	.LVL4
+ 250 011e D9010000 		.4byte	0x1d9
+ 251 0122 37010000 		.4byte	0x137
+ 252 0126 0A       		.uleb128 0xa
+ 253 0127 01       		.uleb128 0x1
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccKajofx.s 			page 6
+
+
+ 254 0128 50       		.byte	0x50
+ 255 0129 01       		.uleb128 0x1
+ 256 012a 32       		.byte	0x32
+ 257 012b 0A       		.uleb128 0xa
+ 258 012c 01       		.uleb128 0x1
+ 259 012d 51       		.byte	0x51
+ 260 012e 01       		.uleb128 0x1
+ 261 012f 30       		.byte	0x30
+ 262 0130 0A       		.uleb128 0xa
+ 263 0131 01       		.uleb128 0x1
+ 264 0132 52       		.byte	0x52
+ 265 0133 02       		.uleb128 0x2
+ 266 0134 91       		.byte	0x91
+ 267 0135 6C       		.sleb128 -20
+ 268 0136 00       		.byte	0
+ 269 0137 09       		.uleb128 0x9
+ 270 0138 26000000 		.4byte	.LVL5
+ 271 013c E4010000 		.4byte	0x1e4
+ 272 0140 4A010000 		.4byte	0x14a
+ 273 0144 0A       		.uleb128 0xa
+ 274 0145 01       		.uleb128 0x1
+ 275 0146 50       		.byte	0x50
+ 276 0147 01       		.uleb128 0x1
+ 277 0148 30       		.byte	0x30
+ 278 0149 00       		.byte	0
+ 279 014a 09       		.uleb128 0x9
+ 280 014b 2E000000 		.4byte	.LVL7
+ 281 014f EF010000 		.4byte	0x1ef
+ 282 0153 5D010000 		.4byte	0x15d
+ 283 0157 0A       		.uleb128 0xa
+ 284 0158 01       		.uleb128 0x1
+ 285 0159 50       		.byte	0x50
+ 286 015a 01       		.uleb128 0x1
+ 287 015b 30       		.byte	0x30
+ 288 015c 00       		.byte	0
+ 289 015d 09       		.uleb128 0x9
+ 290 015e 38000000 		.4byte	.LVL9
+ 291 0162 FA010000 		.4byte	0x1fa
+ 292 0166 75010000 		.4byte	0x175
+ 293 016a 0A       		.uleb128 0xa
+ 294 016b 01       		.uleb128 0x1
+ 295 016c 50       		.byte	0x50
+ 296 016d 01       		.uleb128 0x1
+ 297 016e 30       		.byte	0x30
+ 298 016f 0A       		.uleb128 0xa
+ 299 0170 01       		.uleb128 0x1
+ 300 0171 51       		.byte	0x51
+ 301 0172 01       		.uleb128 0x1
+ 302 0173 30       		.byte	0x30
+ 303 0174 00       		.byte	0
+ 304 0175 09       		.uleb128 0x9
+ 305 0176 40000000 		.4byte	.LVL10
+ 306 017a 05020000 		.4byte	0x205
+ 307 017e 89010000 		.4byte	0x189
+ 308 0182 0A       		.uleb128 0xa
+ 309 0183 01       		.uleb128 0x1
+ 310 0184 50       		.byte	0x50
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccKajofx.s 			page 7
+
+
+ 311 0185 02       		.uleb128 0x2
+ 312 0186 74       		.byte	0x74
+ 313 0187 00       		.sleb128 0
+ 314 0188 00       		.byte	0
+ 315 0189 0B       		.uleb128 0xb
+ 316 018a 46000000 		.4byte	.LVL11
+ 317 018e 10020000 		.4byte	0x210
+ 318 0192 0A       		.uleb128 0xa
+ 319 0193 01       		.uleb128 0x1
+ 320 0194 50       		.byte	0x50
+ 321 0195 05       		.uleb128 0x5
+ 322 0196 03       		.byte	0x3
+ 323 0197 00000000 		.4byte	.LC0
+ 324 019b 00       		.byte	0
+ 325 019c 00       		.byte	0
+ 326 019d 0C       		.uleb128 0xc
+ 327 019e 6B000000 		.4byte	0x6b
+ 328 01a2 AD010000 		.4byte	0x1ad
+ 329 01a6 0D       		.uleb128 0xd
+ 330 01a7 AB000000 		.4byte	0xab
+ 331 01ab 01       		.byte	0x1
+ 332 01ac 00       		.byte	0
+ 333 01ad 0E       		.uleb128 0xe
+ 334 01ae 38010000 		.4byte	.LASF20
+ 335 01b2 38010000 		.4byte	.LASF20
+ 336 01b6 03       		.byte	0x3
+ 337 01b7 99       		.byte	0x99
+ 338 01b8 0E       		.uleb128 0xe
+ 339 01b9 E0010000 		.4byte	.LASF21
+ 340 01bd E0010000 		.4byte	.LASF21
+ 341 01c1 03       		.byte	0x3
+ 342 01c2 9D       		.byte	0x9d
+ 343 01c3 0E       		.uleb128 0xe
+ 344 01c4 4F000000 		.4byte	.LASF22
+ 345 01c8 4F000000 		.4byte	.LASF22
+ 346 01cc 04       		.byte	0x4
+ 347 01cd 38       		.byte	0x38
+ 348 01ce 0E       		.uleb128 0xe
+ 349 01cf 07020000 		.4byte	.LASF23
+ 350 01d3 07020000 		.4byte	.LASF23
+ 351 01d7 05       		.byte	0x5
+ 352 01d8 72       		.byte	0x72
+ 353 01d9 0E       		.uleb128 0xe
+ 354 01da 02010000 		.4byte	.LASF24
+ 355 01de 02010000 		.4byte	.LASF24
+ 356 01e2 06       		.byte	0x6
+ 357 01e3 A2       		.byte	0xa2
+ 358 01e4 0E       		.uleb128 0xe
+ 359 01e5 85000000 		.4byte	.LASF25
+ 360 01e9 85000000 		.4byte	.LASF25
+ 361 01ed 03       		.byte	0x3
+ 362 01ee A0       		.byte	0xa0
+ 363 01ef 0E       		.uleb128 0xe
+ 364 01f0 15000000 		.4byte	.LASF26
+ 365 01f4 15000000 		.4byte	.LASF26
+ 366 01f8 03       		.byte	0x3
+ 367 01f9 AC       		.byte	0xac
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccKajofx.s 			page 8
+
+
+ 368 01fa 0E       		.uleb128 0xe
+ 369 01fb 18010000 		.4byte	.LASF27
+ 370 01ff 18010000 		.4byte	.LASF27
+ 371 0203 04       		.byte	0x4
+ 372 0204 3D       		.byte	0x3d
+ 373 0205 0E       		.uleb128 0xe
+ 374 0206 25010000 		.4byte	.LASF28
+ 375 020a 25010000 		.4byte	.LASF28
+ 376 020e 04       		.byte	0x4
+ 377 020f 61       		.byte	0x61
+ 378 0210 0E       		.uleb128 0xe
+ 379 0211 A1000000 		.4byte	.LASF29
+ 380 0215 A1000000 		.4byte	.LASF29
+ 381 0219 04       		.byte	0x4
+ 382 021a 3C       		.byte	0x3c
+ 383 021b 00       		.byte	0
+ 384              		.section	.debug_abbrev,"",%progbits
+ 385              	.Ldebug_abbrev0:
+ 386 0000 01       		.uleb128 0x1
+ 387 0001 11       		.uleb128 0x11
+ 388 0002 01       		.byte	0x1
+ 389 0003 25       		.uleb128 0x25
+ 390 0004 0E       		.uleb128 0xe
+ 391 0005 13       		.uleb128 0x13
+ 392 0006 0B       		.uleb128 0xb
+ 393 0007 03       		.uleb128 0x3
+ 394 0008 0E       		.uleb128 0xe
+ 395 0009 1B       		.uleb128 0x1b
+ 396 000a 0E       		.uleb128 0xe
+ 397 000b 55       		.uleb128 0x55
+ 398 000c 17       		.uleb128 0x17
+ 399 000d 11       		.uleb128 0x11
+ 400 000e 01       		.uleb128 0x1
+ 401 000f 10       		.uleb128 0x10
+ 402 0010 17       		.uleb128 0x17
+ 403 0011 00       		.byte	0
+ 404 0012 00       		.byte	0
+ 405 0013 02       		.uleb128 0x2
+ 406 0014 24       		.uleb128 0x24
+ 407 0015 00       		.byte	0
+ 408 0016 0B       		.uleb128 0xb
+ 409 0017 0B       		.uleb128 0xb
+ 410 0018 3E       		.uleb128 0x3e
+ 411 0019 0B       		.uleb128 0xb
+ 412 001a 03       		.uleb128 0x3
+ 413 001b 0E       		.uleb128 0xe
+ 414 001c 00       		.byte	0
+ 415 001d 00       		.byte	0
+ 416 001e 03       		.uleb128 0x3
+ 417 001f 24       		.uleb128 0x24
+ 418 0020 00       		.byte	0
+ 419 0021 0B       		.uleb128 0xb
+ 420 0022 0B       		.uleb128 0xb
+ 421 0023 3E       		.uleb128 0x3e
+ 422 0024 0B       		.uleb128 0xb
+ 423 0025 03       		.uleb128 0x3
+ 424 0026 08       		.uleb128 0x8
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccKajofx.s 			page 9
+
+
+ 425 0027 00       		.byte	0
+ 426 0028 00       		.byte	0
+ 427 0029 04       		.uleb128 0x4
+ 428 002a 16       		.uleb128 0x16
+ 429 002b 00       		.byte	0
+ 430 002c 03       		.uleb128 0x3
+ 431 002d 0E       		.uleb128 0xe
+ 432 002e 3A       		.uleb128 0x3a
+ 433 002f 0B       		.uleb128 0xb
+ 434 0030 3B       		.uleb128 0x3b
+ 435 0031 05       		.uleb128 0x5
+ 436 0032 49       		.uleb128 0x49
+ 437 0033 13       		.uleb128 0x13
+ 438 0034 00       		.byte	0
+ 439 0035 00       		.byte	0
+ 440 0036 05       		.uleb128 0x5
+ 441 0037 2E       		.uleb128 0x2e
+ 442 0038 01       		.byte	0x1
+ 443 0039 3F       		.uleb128 0x3f
+ 444 003a 19       		.uleb128 0x19
+ 445 003b 03       		.uleb128 0x3
+ 446 003c 0E       		.uleb128 0xe
+ 447 003d 3A       		.uleb128 0x3a
+ 448 003e 0B       		.uleb128 0xb
+ 449 003f 3B       		.uleb128 0x3b
+ 450 0040 0B       		.uleb128 0xb
+ 451 0041 49       		.uleb128 0x49
+ 452 0042 13       		.uleb128 0x13
+ 453 0043 8701     		.uleb128 0x87
+ 454 0045 19       		.uleb128 0x19
+ 455 0046 11       		.uleb128 0x11
+ 456 0047 01       		.uleb128 0x1
+ 457 0048 12       		.uleb128 0x12
+ 458 0049 06       		.uleb128 0x6
+ 459 004a 40       		.uleb128 0x40
+ 460 004b 18       		.uleb128 0x18
+ 461 004c 9742     		.uleb128 0x2117
+ 462 004e 19       		.uleb128 0x19
+ 463 004f 01       		.uleb128 0x1
+ 464 0050 13       		.uleb128 0x13
+ 465 0051 00       		.byte	0
+ 466 0052 00       		.byte	0
+ 467 0053 06       		.uleb128 0x6
+ 468 0054 34       		.uleb128 0x34
+ 469 0055 00       		.byte	0
+ 470 0056 03       		.uleb128 0x3
+ 471 0057 0E       		.uleb128 0xe
+ 472 0058 3A       		.uleb128 0x3a
+ 473 0059 0B       		.uleb128 0xb
+ 474 005a 3B       		.uleb128 0x3b
+ 475 005b 0B       		.uleb128 0xb
+ 476 005c 49       		.uleb128 0x49
+ 477 005d 13       		.uleb128 0x13
+ 478 005e 02       		.uleb128 0x2
+ 479 005f 17       		.uleb128 0x17
+ 480 0060 00       		.byte	0
+ 481 0061 00       		.byte	0
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccKajofx.s 			page 10
+
+
+ 482 0062 07       		.uleb128 0x7
+ 483 0063 34       		.uleb128 0x34
+ 484 0064 00       		.byte	0
+ 485 0065 03       		.uleb128 0x3
+ 486 0066 0E       		.uleb128 0xe
+ 487 0067 3A       		.uleb128 0x3a
+ 488 0068 0B       		.uleb128 0xb
+ 489 0069 3B       		.uleb128 0x3b
+ 490 006a 0B       		.uleb128 0xb
+ 491 006b 49       		.uleb128 0x49
+ 492 006c 13       		.uleb128 0x13
+ 493 006d 02       		.uleb128 0x2
+ 494 006e 18       		.uleb128 0x18
+ 495 006f 00       		.byte	0
+ 496 0070 00       		.byte	0
+ 497 0071 08       		.uleb128 0x8
+ 498 0072 898201   		.uleb128 0x4109
+ 499 0075 00       		.byte	0
+ 500 0076 11       		.uleb128 0x11
+ 501 0077 01       		.uleb128 0x1
+ 502 0078 31       		.uleb128 0x31
+ 503 0079 13       		.uleb128 0x13
+ 504 007a 00       		.byte	0
+ 505 007b 00       		.byte	0
+ 506 007c 09       		.uleb128 0x9
+ 507 007d 898201   		.uleb128 0x4109
+ 508 0080 01       		.byte	0x1
+ 509 0081 11       		.uleb128 0x11
+ 510 0082 01       		.uleb128 0x1
+ 511 0083 31       		.uleb128 0x31
+ 512 0084 13       		.uleb128 0x13
+ 513 0085 01       		.uleb128 0x1
+ 514 0086 13       		.uleb128 0x13
+ 515 0087 00       		.byte	0
+ 516 0088 00       		.byte	0
+ 517 0089 0A       		.uleb128 0xa
+ 518 008a 8A8201   		.uleb128 0x410a
+ 519 008d 00       		.byte	0
+ 520 008e 02       		.uleb128 0x2
+ 521 008f 18       		.uleb128 0x18
+ 522 0090 9142     		.uleb128 0x2111
+ 523 0092 18       		.uleb128 0x18
+ 524 0093 00       		.byte	0
+ 525 0094 00       		.byte	0
+ 526 0095 0B       		.uleb128 0xb
+ 527 0096 898201   		.uleb128 0x4109
+ 528 0099 01       		.byte	0x1
+ 529 009a 11       		.uleb128 0x11
+ 530 009b 01       		.uleb128 0x1
+ 531 009c 31       		.uleb128 0x31
+ 532 009d 13       		.uleb128 0x13
+ 533 009e 00       		.byte	0
+ 534 009f 00       		.byte	0
+ 535 00a0 0C       		.uleb128 0xc
+ 536 00a1 01       		.uleb128 0x1
+ 537 00a2 01       		.byte	0x1
+ 538 00a3 49       		.uleb128 0x49
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccKajofx.s 			page 11
+
+
+ 539 00a4 13       		.uleb128 0x13
+ 540 00a5 01       		.uleb128 0x1
+ 541 00a6 13       		.uleb128 0x13
+ 542 00a7 00       		.byte	0
+ 543 00a8 00       		.byte	0
+ 544 00a9 0D       		.uleb128 0xd
+ 545 00aa 21       		.uleb128 0x21
+ 546 00ab 00       		.byte	0
+ 547 00ac 49       		.uleb128 0x49
+ 548 00ad 13       		.uleb128 0x13
+ 549 00ae 2F       		.uleb128 0x2f
+ 550 00af 0B       		.uleb128 0xb
+ 551 00b0 00       		.byte	0
+ 552 00b1 00       		.byte	0
+ 553 00b2 0E       		.uleb128 0xe
+ 554 00b3 2E       		.uleb128 0x2e
+ 555 00b4 00       		.byte	0
+ 556 00b5 3F       		.uleb128 0x3f
+ 557 00b6 19       		.uleb128 0x19
+ 558 00b7 3C       		.uleb128 0x3c
+ 559 00b8 19       		.uleb128 0x19
+ 560 00b9 6E       		.uleb128 0x6e
+ 561 00ba 0E       		.uleb128 0xe
+ 562 00bb 03       		.uleb128 0x3
+ 563 00bc 0E       		.uleb128 0xe
+ 564 00bd 3A       		.uleb128 0x3a
+ 565 00be 0B       		.uleb128 0xb
+ 566 00bf 3B       		.uleb128 0x3b
+ 567 00c0 0B       		.uleb128 0xb
+ 568 00c1 00       		.byte	0
+ 569 00c2 00       		.byte	0
+ 570 00c3 00       		.byte	0
+ 571              		.section	.debug_loc,"",%progbits
+ 572              	.Ldebug_loc0:
+ 573              	.LLST0:
+ 574 0000 28000000 		.4byte	.LVL6
+ 575 0004 2D000000 		.4byte	.LVL7-1
+ 576 0008 0100     		.2byte	0x1
+ 577 000a 51       		.byte	0x51
+ 578 000b 00000000 		.4byte	0
+ 579 000f 00000000 		.4byte	0
+ 580              		.section	.debug_aranges,"",%progbits
+ 581 0000 1C000000 		.4byte	0x1c
+ 582 0004 0200     		.2byte	0x2
+ 583 0006 00000000 		.4byte	.Ldebug_info0
+ 584 000a 04       		.byte	0x4
+ 585 000b 00       		.byte	0
+ 586 000c 0000     		.2byte	0
+ 587 000e 0000     		.2byte	0
+ 588 0010 00000000 		.4byte	.LFB32
+ 589 0014 54000000 		.4byte	.LFE32-.LFB32
+ 590 0018 00000000 		.4byte	0
+ 591 001c 00000000 		.4byte	0
+ 592              		.section	.debug_ranges,"",%progbits
+ 593              	.Ldebug_ranges0:
+ 594 0000 00000000 		.4byte	.LFB32
+ 595 0004 54000000 		.4byte	.LFE32
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccKajofx.s 			page 12
+
+
+ 596 0008 00000000 		.4byte	0
+ 597 000c 00000000 		.4byte	0
+ 598              		.section	.debug_line,"",%progbits
+ 599              	.Ldebug_line0:
+ 600 0000 AB000000 		.section	.debug_str,"MS",%progbits,1
+ 600      02006F00 
+ 600      00000201 
+ 600      FB0E0D00 
+ 600      01010101 
+ 601              	.LASF6:
+ 602 0000 6C6F6E67 		.ascii	"long long int\000"
+ 602      206C6F6E 
+ 602      6720696E 
+ 602      7400
+ 603              	.LASF19:
+ 604 000e 69326352 		.ascii	"i2cReg\000"
+ 604      656700
+ 605              	.LASF26:
+ 606 0015 4144435F 		.ascii	"ADC_CountsTo_mVolts\000"
+ 606      436F756E 
+ 606      7473546F 
+ 606      5F6D566F 
+ 606      6C747300 
+ 607              	.LASF3:
+ 608 0029 73686F72 		.ascii	"short unsigned int\000"
+ 608      7420756E 
+ 608      7369676E 
+ 608      65642069 
+ 608      6E7400
+ 609              	.LASF8:
+ 610 003c 756E7369 		.ascii	"unsigned int\000"
+ 610      676E6564 
+ 610      20696E74 
+ 610      00
+ 611              	.LASF12:
+ 612 0049 666C6F61 		.ascii	"float\000"
+ 612      7400
+ 613              	.LASF22:
+ 614 004f 4C43445F 		.ascii	"LCD_Start\000"
+ 614      53746172 
+ 614      7400
+ 615              	.LASF1:
+ 616 0059 756E7369 		.ascii	"unsigned char\000"
+ 616      676E6564 
+ 616      20636861 
+ 616      7200
+ 617              	.LASF11:
+ 618 0067 696E7431 		.ascii	"int16\000"
+ 618      3600
+ 619              	.LASF5:
+ 620 006d 6C6F6E67 		.ascii	"long unsigned int\000"
+ 620      20756E73 
+ 620      69676E65 
+ 620      6420696E 
+ 620      7400
+ 621              	.LASF9:
+ 622 007f 75696E74 		.ascii	"uint8\000"
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccKajofx.s 			page 13
+
+
+ 622      3800
+ 623              	.LASF25:
+ 624 0085 4144435F 		.ascii	"ADC_GetResult16\000"
+ 624      47657452 
+ 624      6573756C 
+ 624      74313600 
+ 625              	.LASF13:
+ 626 0095 646F7562 		.ascii	"double\000"
+ 626      6C6500
+ 627              	.LASF33:
+ 628 009c 6D61696E 		.ascii	"main\000"
+ 628      00
+ 629              	.LASF29:
+ 630 00a1 4C43445F 		.ascii	"LCD_PrintString\000"
+ 630      5072696E 
+ 630      74537472 
+ 630      696E6700 
+ 631              	.LASF10:
+ 632 00b1 75696E74 		.ascii	"uint16\000"
+ 632      313600
+ 633              	.LASF32:
+ 634 00b8 433A5C44 		.ascii	"C:\\DenysProjects\\Workspace01\\Design09.cydsn\000"
+ 634      656E7973 
+ 634      50726F6A 
+ 634      65637473 
+ 634      5C576F72 
+ 635              	.LASF17:
+ 636 00e4 636F756E 		.ascii	"counts\000"
+ 636      747300
+ 637              	.LASF7:
+ 638 00eb 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 638      206C6F6E 
+ 638      6720756E 
+ 638      7369676E 
+ 638      65642069 
+ 639              	.LASF24:
+ 640 0102 455A4932 		.ascii	"EZI2C_EzI2CSetBuffer1\000"
+ 640      435F457A 
+ 640      49324353 
+ 640      65744275 
+ 640      66666572 
+ 641              	.LASF27:
+ 642 0118 4C43445F 		.ascii	"LCD_Position\000"
+ 642      506F7369 
+ 642      74696F6E 
+ 642      00
+ 643              	.LASF28:
+ 644 0125 4C43445F 		.ascii	"LCD_PrintU32Number\000"
+ 644      5072696E 
+ 644      74553332 
+ 644      4E756D62 
+ 644      657200
+ 645              	.LASF20:
+ 646 0138 4144435F 		.ascii	"ADC_Start\000"
+ 646      53746172 
+ 646      7400
+ 647              	.LASF30:
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccKajofx.s 			page 14
+
+
+ 648 0142 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 648      43313120 
+ 648      352E342E 
+ 648      31203230 
+ 648      31363036 
+ 649 0175 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 649      20726576 
+ 649      6973696F 
+ 649      6E203233 
+ 649      37373135 
+ 650 01a8 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 650      66756E63 
+ 650      74696F6E 
+ 650      2D736563 
+ 650      74696F6E 
+ 651              	.LASF18:
+ 652 01d0 6D566F6C 		.ascii	"mVolts\000"
+ 652      747300
+ 653              	.LASF16:
+ 654 01d7 73697A65 		.ascii	"sizetype\000"
+ 654      74797065 
+ 654      00
+ 655              	.LASF21:
+ 656 01e0 4144435F 		.ascii	"ADC_StartConvert\000"
+ 656      53746172 
+ 656      74436F6E 
+ 656      76657274 
+ 656      00
+ 657              	.LASF31:
+ 658 01f1 6D61696E 		.ascii	"main.c\000"
+ 658      2E6300
+ 659              	.LASF14:
+ 660 01f8 63686172 		.ascii	"char\000"
+ 660      00
+ 661              	.LASF2:
+ 662 01fd 73686F72 		.ascii	"short int\000"
+ 662      7420696E 
+ 662      7400
+ 663              	.LASF23:
+ 664 0207 455A4932 		.ascii	"EZI2C_Start\000"
+ 664      435F5374 
+ 664      61727400 
+ 665              	.LASF4:
+ 666 0213 6C6F6E67 		.ascii	"long int\000"
+ 666      20696E74 
+ 666      00
+ 667              	.LASF15:
+ 668 021c 6C6F6E67 		.ascii	"long double\000"
+ 668      20646F75 
+ 668      626C6500 
+ 669              	.LASF0:
+ 670 0228 7369676E 		.ascii	"signed char\000"
+ 670      65642063 
+ 670      68617200 
+ 671              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

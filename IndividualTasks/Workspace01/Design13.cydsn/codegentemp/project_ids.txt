@@ -1,0 +1,18 @@
+C:\DenysProjects\Workspace01\Design01.cydsn\Design01.cyprj|265200ea-7abb-4d38-9f08-78783c656807
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|7f0de436-7ef5-47ac-bb2d-636ca4d3bfdb
+C:\Users\latao\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|e433ffb9-d259-46b1-9a4e-a9521c72889d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|929b1514-f6ca-4990-916a-b2913c5ffc9e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|60c6dd80-3d4e-47d7-9bf4-0dfee808e679
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|b9d2b6a4-7712-4ab0-99ae-31f744b020f4
+C:\DenysProjects\Workspace01\Design02.cydsn\Design02.cyprj|09ccf6f9-1153-47f2-a491-d8a72b801397
+C:\DenysProjects\Workspace01\Design03.cydsn\Design03.cyprj|5622abcf-036d-4af8-a9eb-2f5bbd7b6067
+C:\DenysProjects\Workspace01\Design04.cydsn\Design04.cyprj|f8dd4f8d-1b38-44d1-90e1-c648a33ccbf0
+C:\DenysProjects\Workspace01\Design05.cydsn\Design05.cyprj|44d5be16-5f32-4002-a33c-9c0ae2a4805f
+C:\DenysProjects\Workspace01\Design06.cydsn\Design06.cyprj|9714a3cd-193c-457c-b882-f826bff148cc
+C:\DenysProjects\Workspace01\Design07.cydsn\Design07.cyprj|cc5089e2-3930-42ac-a453-dae89b4ef855
+C:\DenysProjects\Workspace01\Design08.cydsn\Design08.cyprj|8187a886-e3c8-4048-984e-2ec91b7fcc3a
+C:\DenysProjects\Workspace01\Design09.cydsn\Design09.cyprj|2353e7b5-8acf-4670-aa19-20126f267c7f
+C:\DenysProjects\Workspace01\Design10.cydsn\Design10.cyprj|fe3490ba-8fcb-40da-be55-95fa6c197e49
+C:\DenysProjects\Workspace01\Design11.cydsn\Design11.cyprj|adfb1d18-6a7c-4f33-beb5-925614ca44e0
+C:\DenysProjects\Workspace01\Design12.cydsn\Design12.cyprj|ec400072-12f7-4d30-877d-b5a29ec7051d
+C:\DenysProjects\Workspace01\Design13.cydsn\Design13.cyprj|fe2c4bc1-7285-4802-bd7d-ee89f127cb0d

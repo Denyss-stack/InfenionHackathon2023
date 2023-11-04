@@ -1,0 +1,813 @@
+ARM GAS  C:\Users\yura\AppData\Local\Temp\cc2LIHpv.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB32:
+  27              		.file 1 "main.c"
+   1:main.c        **** #include <project.h>
+   2:main.c        **** #define POT_CHAN (0)
+   3:main.c        **** #define WRITABLE (3)
+   4:main.c        **** int main()
+   5:main.c        **** {
+  28              		.loc 1 5 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 8
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 00B5     		push	{lr}
+  33              		.cfi_def_cfa_offset 4
+  34              		.cfi_offset 14, -4
+  35 0002 83B0     		sub	sp, sp, #12
+  36              		.cfi_def_cfa_offset 16
+   6:main.c        ****     int16 counts; /* ADC result in counts */
+   7:main.c        ****     int16 mVolts; /* ADC result in mVolts */
+   8:main.c        **** 
+   9:main.c        ****     uint8 i2cReg[3]; /* 1 byte I2C register */
+  10:main.c        ****     EZI2C_Start();
+  37              		.loc 1 10 0
+  38 0004 FFF7FEFF 		bl	EZI2C_Start
+  39              	.LVL0:
+  11:main.c        ****     EZI2C_EzI2CSetBuffer1(sizeof(i2cReg), WRITABLE, i2cReg);
+  40              		.loc 1 11 0
+  41 0008 01AA     		add	r2, sp, #4
+  42 000a 0321     		movs	r1, #3
+  43 000c 0320     		movs	r0, #3
+  44 000e FFF7FEFF 		bl	EZI2C_EzI2CSetBuffer1
+  45              	.LVL1:
+  12:main.c        ****     ADC_Start();
+ARM GAS  C:\Users\yura\AppData\Local\Temp\cc2LIHpv.s 			page 2
+
+
+  46              		.loc 1 12 0
+  47 0012 FFF7FEFF 		bl	ADC_Start
+  48              	.LVL2:
+  13:main.c        ****     ADC_StartConvert();
+  49              		.loc 1 13 0
+  50 0016 FFF7FEFF 		bl	ADC_StartConvert
+  51              	.LVL3:
+  14:main.c        ****     LCD_Start();
+  52              		.loc 1 14 0
+  53 001a FFF7FEFF 		bl	LCD_Start
+  54              	.LVL4:
+  15:main.c        **** 
+  16:main.c        ****     CyGlobalIntEnable;
+  55              		.loc 1 16 0
+  56              		.syntax divided
+  57              	@ 16 "main.c" 1
+  58 001e 62B6     		CPSIE   i
+  59              	@ 0 "" 2
+  60              		.thumb
+  61              		.syntax unified
+  62              	.L2:
+  63              	.LBB2:
+  17:main.c        ****     for(;;)
+  18:main.c        ****     {
+  19:main.c        ****         counts = ADC_GetResult16(POT_CHAN);
+  64              		.loc 1 19 0 discriminator 1
+  65 0020 0020     		movs	r0, #0
+  66 0022 FFF7FEFF 		bl	ADC_GetResult16
+  67              	.LVL5:
+  68 0026 0100     		movs	r1, r0
+  69              	.LVL6:
+  20:main.c        ****         mVolts = ADC_CountsTo_mVolts(POT_CHAN,counts);
+  70              		.loc 1 20 0 discriminator 1
+  71 0028 0020     		movs	r0, #0
+  72 002a FFF7FEFF 		bl	ADC_CountsTo_mVolts
+  73              	.LVL7:
+  21:main.c        ****         //if ((mVolts>= 0x0000) && (mVolts <= 0x000F)){
+  22:main.c        ****         //i2cReg[2] = 1;
+  23:main.c        ****         //}
+  24:main.c        ****         int pot_state =  (mVolts >> 10) +1;
+  74              		.loc 1 24 0 discriminator 1
+  75 002e 8012     		asrs	r0, r0, #10
+  76              	.LVL8:
+  77 0030 00B2     		sxth	r0, r0
+  78 0032 0130     		adds	r0, r0, #1
+  79              	.LVL9:
+  25:main.c        ****         i2cReg[2] = pot_state;
+  80              		.loc 1 25 0 discriminator 1
+  81 0034 01AB     		add	r3, sp, #4
+  82 0036 9870     		strb	r0, [r3, #2]
+  26:main.c        ****         
+  27:main.c        ****         
+  28:main.c        ****         
+  29:main.c        ****         
+  30:main.c        **** 
+  31:main.c        ****              
+  32:main.c        ****         
+ARM GAS  C:\Users\yura\AppData\Local\Temp\cc2LIHpv.s 			page 3
+
+
+  33:main.c        ****     
+  34:main.c        ****     /* Store ADC value in I2C buffer */
+  35:main.c        ****         CyDelay(100);
+  83              		.loc 1 35 0 discriminator 1
+  84 0038 6420     		movs	r0, #100
+  85              	.LVL10:
+  86 003a FFF7FEFF 		bl	CyDelay
+  87              	.LVL11:
+  88 003e EFE7     		b	.L2
+  89              	.LBE2:
+  90              		.cfi_endproc
+  91              	.LFE32:
+  92              		.size	main, .-main
+  93              		.text
+  94              	.Letext0:
+  95              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+  96              		.file 3 "Generated_Source\\PSoC4/ADC.h"
+  97              		.file 4 "Generated_Source\\PSoC4/CyLib.h"
+  98              		.file 5 "Generated_Source\\PSoC4/EZI2C.h"
+  99              		.file 6 "Generated_Source\\PSoC4/EZI2C_EZI2C.h"
+ 100              		.file 7 "Generated_Source\\PSoC4/LCD.h"
+ 101              		.section	.debug_info,"",%progbits
+ 102              	.Ldebug_info0:
+ 103 0000 E6010000 		.4byte	0x1e6
+ 104 0004 0400     		.2byte	0x4
+ 105 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 106 000a 04       		.byte	0x4
+ 107 000b 01       		.uleb128 0x1
+ 108 000c E9000000 		.4byte	.LASF28
+ 109 0010 0C       		.byte	0xc
+ 110 0011 A2010000 		.4byte	.LASF29
+ 111 0015 AE010000 		.4byte	.LASF30
+ 112 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 113 001d 00000000 		.4byte	0
+ 114 0021 00000000 		.4byte	.Ldebug_line0
+ 115 0025 02       		.uleb128 0x2
+ 116 0026 01       		.byte	0x1
+ 117 0027 06       		.byte	0x6
+ 118 0028 14020000 		.4byte	.LASF0
+ 119 002c 02       		.uleb128 0x2
+ 120 002d 01       		.byte	0x1
+ 121 002e 08       		.byte	0x8
+ 122 002f 4C000000 		.4byte	.LASF1
+ 123 0033 02       		.uleb128 0x2
+ 124 0034 02       		.byte	0x2
+ 125 0035 05       		.byte	0x5
+ 126 0036 8F000000 		.4byte	.LASF2
+ 127 003a 02       		.uleb128 0x2
+ 128 003b 02       		.byte	0x2
+ 129 003c 07       		.byte	0x7
+ 130 003d 29000000 		.4byte	.LASF3
+ 131 0041 02       		.uleb128 0x2
+ 132 0042 04       		.byte	0x4
+ 133 0043 05       		.byte	0x5
+ 134 0044 FF010000 		.4byte	.LASF4
+ 135 0048 02       		.uleb128 0x2
+ 136 0049 04       		.byte	0x4
+ARM GAS  C:\Users\yura\AppData\Local\Temp\cc2LIHpv.s 			page 4
+
+
+ 137 004a 07       		.byte	0x7
+ 138 004b 60000000 		.4byte	.LASF5
+ 139 004f 02       		.uleb128 0x2
+ 140 0050 08       		.byte	0x8
+ 141 0051 05       		.byte	0x5
+ 142 0052 00000000 		.4byte	.LASF6
+ 143 0056 02       		.uleb128 0x2
+ 144 0057 08       		.byte	0x8
+ 145 0058 07       		.byte	0x7
+ 146 0059 B2000000 		.4byte	.LASF7
+ 147 005d 03       		.uleb128 0x3
+ 148 005e 04       		.byte	0x4
+ 149 005f 05       		.byte	0x5
+ 150 0060 696E7400 		.ascii	"int\000"
+ 151 0064 02       		.uleb128 0x2
+ 152 0065 04       		.byte	0x4
+ 153 0066 07       		.byte	0x7
+ 154 0067 9E000000 		.4byte	.LASF8
+ 155 006b 04       		.uleb128 0x4
+ 156 006c 72000000 		.4byte	.LASF9
+ 157 0070 02       		.byte	0x2
+ 158 0071 FB01     		.2byte	0x1fb
+ 159 0073 2C000000 		.4byte	0x2c
+ 160 0077 04       		.uleb128 0x4
+ 161 0078 5A000000 		.4byte	.LASF10
+ 162 007c 02       		.byte	0x2
+ 163 007d FF01     		.2byte	0x1ff
+ 164 007f 33000000 		.4byte	0x33
+ 165 0083 02       		.uleb128 0x2
+ 166 0084 04       		.byte	0x4
+ 167 0085 04       		.byte	0x4
+ 168 0086 3C000000 		.4byte	.LASF11
+ 169 008a 02       		.uleb128 0x2
+ 170 008b 08       		.byte	0x8
+ 171 008c 04       		.byte	0x4
+ 172 008d 88000000 		.4byte	.LASF12
+ 173 0091 02       		.uleb128 0x2
+ 174 0092 01       		.byte	0x1
+ 175 0093 08       		.byte	0x8
+ 176 0094 A9010000 		.4byte	.LASF13
+ 177 0098 02       		.uleb128 0x2
+ 178 0099 08       		.byte	0x8
+ 179 009a 04       		.byte	0x4
+ 180 009b 08020000 		.4byte	.LASF14
+ 181 009f 02       		.uleb128 0x2
+ 182 00a0 04       		.byte	0x4
+ 183 00a1 07       		.byte	0x7
+ 184 00a2 88010000 		.4byte	.LASF15
+ 185 00a6 05       		.uleb128 0x5
+ 186 00a7 99000000 		.4byte	.LASF31
+ 187 00ab 01       		.byte	0x1
+ 188 00ac 04       		.byte	0x4
+ 189 00ad 5D000000 		.4byte	0x5d
+ 190 00b1 00000000 		.4byte	.LFB32
+ 191 00b5 40000000 		.4byte	.LFE32-.LFB32
+ 192 00b9 01       		.uleb128 0x1
+ 193 00ba 9C       		.byte	0x9c
+ARM GAS  C:\Users\yura\AppData\Local\Temp\cc2LIHpv.s 			page 5
+
+
+ 194 00bb 81010000 		.4byte	0x181
+ 195 00bf 06       		.uleb128 0x6
+ 196 00c0 AB000000 		.4byte	.LASF16
+ 197 00c4 01       		.byte	0x1
+ 198 00c5 06       		.byte	0x6
+ 199 00c6 77000000 		.4byte	0x77
+ 200 00ca 00000000 		.4byte	.LLST0
+ 201 00ce 06       		.uleb128 0x6
+ 202 00cf 77010000 		.4byte	.LASF17
+ 203 00d3 01       		.byte	0x1
+ 204 00d4 07       		.byte	0x7
+ 205 00d5 77000000 		.4byte	0x77
+ 206 00d9 13000000 		.4byte	.LLST1
+ 207 00dd 07       		.uleb128 0x7
+ 208 00de 0E000000 		.4byte	.LASF18
+ 209 00e2 01       		.byte	0x1
+ 210 00e3 09       		.byte	0x9
+ 211 00e4 81010000 		.4byte	0x181
+ 212 00e8 02       		.uleb128 0x2
+ 213 00e9 91       		.byte	0x91
+ 214 00ea 74       		.sleb128 -12
+ 215 00eb 08       		.uleb128 0x8
+ 216 00ec 20000000 		.4byte	.LBB2
+ 217 00f0 20000000 		.4byte	.LBE2-.LBB2
+ 218 00f4 3E010000 		.4byte	0x13e
+ 219 00f8 06       		.uleb128 0x6
+ 220 00f9 7E010000 		.4byte	.LASF19
+ 221 00fd 01       		.byte	0x1
+ 222 00fe 18       		.byte	0x18
+ 223 00ff 5D000000 		.4byte	0x5d
+ 224 0103 26000000 		.4byte	.LLST2
+ 225 0107 09       		.uleb128 0x9
+ 226 0108 26000000 		.4byte	.LVL5
+ 227 010c 91010000 		.4byte	0x191
+ 228 0110 1A010000 		.4byte	0x11a
+ 229 0114 0A       		.uleb128 0xa
+ 230 0115 01       		.uleb128 0x1
+ 231 0116 50       		.byte	0x50
+ 232 0117 01       		.uleb128 0x1
+ 233 0118 30       		.byte	0x30
+ 234 0119 00       		.byte	0
+ 235 011a 09       		.uleb128 0x9
+ 236 011b 2E000000 		.4byte	.LVL7
+ 237 011f 9C010000 		.4byte	0x19c
+ 238 0123 2D010000 		.4byte	0x12d
+ 239 0127 0A       		.uleb128 0xa
+ 240 0128 01       		.uleb128 0x1
+ 241 0129 50       		.byte	0x50
+ 242 012a 01       		.uleb128 0x1
+ 243 012b 30       		.byte	0x30
+ 244 012c 00       		.byte	0
+ 245 012d 0B       		.uleb128 0xb
+ 246 012e 3E000000 		.4byte	.LVL11
+ 247 0132 A7010000 		.4byte	0x1a7
+ 248 0136 0A       		.uleb128 0xa
+ 249 0137 01       		.uleb128 0x1
+ 250 0138 50       		.byte	0x50
+ARM GAS  C:\Users\yura\AppData\Local\Temp\cc2LIHpv.s 			page 6
+
+
+ 251 0139 02       		.uleb128 0x2
+ 252 013a 08       		.byte	0x8
+ 253 013b 64       		.byte	0x64
+ 254 013c 00       		.byte	0
+ 255 013d 00       		.byte	0
+ 256 013e 0C       		.uleb128 0xc
+ 257 013f 08000000 		.4byte	.LVL0
+ 258 0143 B2010000 		.4byte	0x1b2
+ 259 0147 09       		.uleb128 0x9
+ 260 0148 12000000 		.4byte	.LVL1
+ 261 014c BD010000 		.4byte	0x1bd
+ 262 0150 65010000 		.4byte	0x165
+ 263 0154 0A       		.uleb128 0xa
+ 264 0155 01       		.uleb128 0x1
+ 265 0156 50       		.byte	0x50
+ 266 0157 01       		.uleb128 0x1
+ 267 0158 33       		.byte	0x33
+ 268 0159 0A       		.uleb128 0xa
+ 269 015a 01       		.uleb128 0x1
+ 270 015b 51       		.byte	0x51
+ 271 015c 01       		.uleb128 0x1
+ 272 015d 33       		.byte	0x33
+ 273 015e 0A       		.uleb128 0xa
+ 274 015f 01       		.uleb128 0x1
+ 275 0160 52       		.byte	0x52
+ 276 0161 02       		.uleb128 0x2
+ 277 0162 91       		.byte	0x91
+ 278 0163 74       		.sleb128 -12
+ 279 0164 00       		.byte	0
+ 280 0165 0C       		.uleb128 0xc
+ 281 0166 16000000 		.4byte	.LVL2
+ 282 016a C8010000 		.4byte	0x1c8
+ 283 016e 0C       		.uleb128 0xc
+ 284 016f 1A000000 		.4byte	.LVL3
+ 285 0173 D3010000 		.4byte	0x1d3
+ 286 0177 0C       		.uleb128 0xc
+ 287 0178 1E000000 		.4byte	.LVL4
+ 288 017c DE010000 		.4byte	0x1de
+ 289 0180 00       		.byte	0
+ 290 0181 0D       		.uleb128 0xd
+ 291 0182 6B000000 		.4byte	0x6b
+ 292 0186 91010000 		.4byte	0x191
+ 293 018a 0E       		.uleb128 0xe
+ 294 018b 9F000000 		.4byte	0x9f
+ 295 018f 02       		.byte	0x2
+ 296 0190 00       		.byte	0
+ 297 0191 0F       		.uleb128 0xf
+ 298 0192 78000000 		.4byte	.LASF20
+ 299 0196 78000000 		.4byte	.LASF20
+ 300 019a 03       		.byte	0x3
+ 301 019b A0       		.byte	0xa0
+ 302 019c 0F       		.uleb128 0xf
+ 303 019d 15000000 		.4byte	.LASF21
+ 304 01a1 15000000 		.4byte	.LASF21
+ 305 01a5 03       		.byte	0x3
+ 306 01a6 AC       		.byte	0xac
+ 307 01a7 0F       		.uleb128 0xf
+ARM GAS  C:\Users\yura\AppData\Local\Temp\cc2LIHpv.s 			page 7
+
+
+ 308 01a8 20020000 		.4byte	.LASF22
+ 309 01ac 20020000 		.4byte	.LASF22
+ 310 01b0 04       		.byte	0x4
+ 311 01b1 EC       		.byte	0xec
+ 312 01b2 0F       		.uleb128 0xf
+ 313 01b3 F3010000 		.4byte	.LASF23
+ 314 01b7 F3010000 		.4byte	.LASF23
+ 315 01bb 05       		.byte	0x5
+ 316 01bc 72       		.byte	0x72
+ 317 01bd 0F       		.uleb128 0xf
+ 318 01be C9000000 		.4byte	.LASF24
+ 319 01c2 C9000000 		.4byte	.LASF24
+ 320 01c6 06       		.byte	0x6
+ 321 01c7 A2       		.byte	0xa2
+ 322 01c8 0F       		.uleb128 0xf
+ 323 01c9 DF000000 		.4byte	.LASF25
+ 324 01cd DF000000 		.4byte	.LASF25
+ 325 01d1 03       		.byte	0x3
+ 326 01d2 99       		.byte	0x99
+ 327 01d3 0F       		.uleb128 0xf
+ 328 01d4 91010000 		.4byte	.LASF26
+ 329 01d8 91010000 		.4byte	.LASF26
+ 330 01dc 03       		.byte	0x3
+ 331 01dd 9D       		.byte	0x9d
+ 332 01de 0F       		.uleb128 0xf
+ 333 01df 42000000 		.4byte	.LASF27
+ 334 01e3 42000000 		.4byte	.LASF27
+ 335 01e7 07       		.byte	0x7
+ 336 01e8 38       		.byte	0x38
+ 337 01e9 00       		.byte	0
+ 338              		.section	.debug_abbrev,"",%progbits
+ 339              	.Ldebug_abbrev0:
+ 340 0000 01       		.uleb128 0x1
+ 341 0001 11       		.uleb128 0x11
+ 342 0002 01       		.byte	0x1
+ 343 0003 25       		.uleb128 0x25
+ 344 0004 0E       		.uleb128 0xe
+ 345 0005 13       		.uleb128 0x13
+ 346 0006 0B       		.uleb128 0xb
+ 347 0007 03       		.uleb128 0x3
+ 348 0008 0E       		.uleb128 0xe
+ 349 0009 1B       		.uleb128 0x1b
+ 350 000a 0E       		.uleb128 0xe
+ 351 000b 55       		.uleb128 0x55
+ 352 000c 17       		.uleb128 0x17
+ 353 000d 11       		.uleb128 0x11
+ 354 000e 01       		.uleb128 0x1
+ 355 000f 10       		.uleb128 0x10
+ 356 0010 17       		.uleb128 0x17
+ 357 0011 00       		.byte	0
+ 358 0012 00       		.byte	0
+ 359 0013 02       		.uleb128 0x2
+ 360 0014 24       		.uleb128 0x24
+ 361 0015 00       		.byte	0
+ 362 0016 0B       		.uleb128 0xb
+ 363 0017 0B       		.uleb128 0xb
+ 364 0018 3E       		.uleb128 0x3e
+ARM GAS  C:\Users\yura\AppData\Local\Temp\cc2LIHpv.s 			page 8
+
+
+ 365 0019 0B       		.uleb128 0xb
+ 366 001a 03       		.uleb128 0x3
+ 367 001b 0E       		.uleb128 0xe
+ 368 001c 00       		.byte	0
+ 369 001d 00       		.byte	0
+ 370 001e 03       		.uleb128 0x3
+ 371 001f 24       		.uleb128 0x24
+ 372 0020 00       		.byte	0
+ 373 0021 0B       		.uleb128 0xb
+ 374 0022 0B       		.uleb128 0xb
+ 375 0023 3E       		.uleb128 0x3e
+ 376 0024 0B       		.uleb128 0xb
+ 377 0025 03       		.uleb128 0x3
+ 378 0026 08       		.uleb128 0x8
+ 379 0027 00       		.byte	0
+ 380 0028 00       		.byte	0
+ 381 0029 04       		.uleb128 0x4
+ 382 002a 16       		.uleb128 0x16
+ 383 002b 00       		.byte	0
+ 384 002c 03       		.uleb128 0x3
+ 385 002d 0E       		.uleb128 0xe
+ 386 002e 3A       		.uleb128 0x3a
+ 387 002f 0B       		.uleb128 0xb
+ 388 0030 3B       		.uleb128 0x3b
+ 389 0031 05       		.uleb128 0x5
+ 390 0032 49       		.uleb128 0x49
+ 391 0033 13       		.uleb128 0x13
+ 392 0034 00       		.byte	0
+ 393 0035 00       		.byte	0
+ 394 0036 05       		.uleb128 0x5
+ 395 0037 2E       		.uleb128 0x2e
+ 396 0038 01       		.byte	0x1
+ 397 0039 3F       		.uleb128 0x3f
+ 398 003a 19       		.uleb128 0x19
+ 399 003b 03       		.uleb128 0x3
+ 400 003c 0E       		.uleb128 0xe
+ 401 003d 3A       		.uleb128 0x3a
+ 402 003e 0B       		.uleb128 0xb
+ 403 003f 3B       		.uleb128 0x3b
+ 404 0040 0B       		.uleb128 0xb
+ 405 0041 49       		.uleb128 0x49
+ 406 0042 13       		.uleb128 0x13
+ 407 0043 8701     		.uleb128 0x87
+ 408 0045 19       		.uleb128 0x19
+ 409 0046 11       		.uleb128 0x11
+ 410 0047 01       		.uleb128 0x1
+ 411 0048 12       		.uleb128 0x12
+ 412 0049 06       		.uleb128 0x6
+ 413 004a 40       		.uleb128 0x40
+ 414 004b 18       		.uleb128 0x18
+ 415 004c 9742     		.uleb128 0x2117
+ 416 004e 19       		.uleb128 0x19
+ 417 004f 01       		.uleb128 0x1
+ 418 0050 13       		.uleb128 0x13
+ 419 0051 00       		.byte	0
+ 420 0052 00       		.byte	0
+ 421 0053 06       		.uleb128 0x6
+ARM GAS  C:\Users\yura\AppData\Local\Temp\cc2LIHpv.s 			page 9
+
+
+ 422 0054 34       		.uleb128 0x34
+ 423 0055 00       		.byte	0
+ 424 0056 03       		.uleb128 0x3
+ 425 0057 0E       		.uleb128 0xe
+ 426 0058 3A       		.uleb128 0x3a
+ 427 0059 0B       		.uleb128 0xb
+ 428 005a 3B       		.uleb128 0x3b
+ 429 005b 0B       		.uleb128 0xb
+ 430 005c 49       		.uleb128 0x49
+ 431 005d 13       		.uleb128 0x13
+ 432 005e 02       		.uleb128 0x2
+ 433 005f 17       		.uleb128 0x17
+ 434 0060 00       		.byte	0
+ 435 0061 00       		.byte	0
+ 436 0062 07       		.uleb128 0x7
+ 437 0063 34       		.uleb128 0x34
+ 438 0064 00       		.byte	0
+ 439 0065 03       		.uleb128 0x3
+ 440 0066 0E       		.uleb128 0xe
+ 441 0067 3A       		.uleb128 0x3a
+ 442 0068 0B       		.uleb128 0xb
+ 443 0069 3B       		.uleb128 0x3b
+ 444 006a 0B       		.uleb128 0xb
+ 445 006b 49       		.uleb128 0x49
+ 446 006c 13       		.uleb128 0x13
+ 447 006d 02       		.uleb128 0x2
+ 448 006e 18       		.uleb128 0x18
+ 449 006f 00       		.byte	0
+ 450 0070 00       		.byte	0
+ 451 0071 08       		.uleb128 0x8
+ 452 0072 0B       		.uleb128 0xb
+ 453 0073 01       		.byte	0x1
+ 454 0074 11       		.uleb128 0x11
+ 455 0075 01       		.uleb128 0x1
+ 456 0076 12       		.uleb128 0x12
+ 457 0077 06       		.uleb128 0x6
+ 458 0078 01       		.uleb128 0x1
+ 459 0079 13       		.uleb128 0x13
+ 460 007a 00       		.byte	0
+ 461 007b 00       		.byte	0
+ 462 007c 09       		.uleb128 0x9
+ 463 007d 898201   		.uleb128 0x4109
+ 464 0080 01       		.byte	0x1
+ 465 0081 11       		.uleb128 0x11
+ 466 0082 01       		.uleb128 0x1
+ 467 0083 31       		.uleb128 0x31
+ 468 0084 13       		.uleb128 0x13
+ 469 0085 01       		.uleb128 0x1
+ 470 0086 13       		.uleb128 0x13
+ 471 0087 00       		.byte	0
+ 472 0088 00       		.byte	0
+ 473 0089 0A       		.uleb128 0xa
+ 474 008a 8A8201   		.uleb128 0x410a
+ 475 008d 00       		.byte	0
+ 476 008e 02       		.uleb128 0x2
+ 477 008f 18       		.uleb128 0x18
+ 478 0090 9142     		.uleb128 0x2111
+ARM GAS  C:\Users\yura\AppData\Local\Temp\cc2LIHpv.s 			page 10
+
+
+ 479 0092 18       		.uleb128 0x18
+ 480 0093 00       		.byte	0
+ 481 0094 00       		.byte	0
+ 482 0095 0B       		.uleb128 0xb
+ 483 0096 898201   		.uleb128 0x4109
+ 484 0099 01       		.byte	0x1
+ 485 009a 11       		.uleb128 0x11
+ 486 009b 01       		.uleb128 0x1
+ 487 009c 31       		.uleb128 0x31
+ 488 009d 13       		.uleb128 0x13
+ 489 009e 00       		.byte	0
+ 490 009f 00       		.byte	0
+ 491 00a0 0C       		.uleb128 0xc
+ 492 00a1 898201   		.uleb128 0x4109
+ 493 00a4 00       		.byte	0
+ 494 00a5 11       		.uleb128 0x11
+ 495 00a6 01       		.uleb128 0x1
+ 496 00a7 31       		.uleb128 0x31
+ 497 00a8 13       		.uleb128 0x13
+ 498 00a9 00       		.byte	0
+ 499 00aa 00       		.byte	0
+ 500 00ab 0D       		.uleb128 0xd
+ 501 00ac 01       		.uleb128 0x1
+ 502 00ad 01       		.byte	0x1
+ 503 00ae 49       		.uleb128 0x49
+ 504 00af 13       		.uleb128 0x13
+ 505 00b0 01       		.uleb128 0x1
+ 506 00b1 13       		.uleb128 0x13
+ 507 00b2 00       		.byte	0
+ 508 00b3 00       		.byte	0
+ 509 00b4 0E       		.uleb128 0xe
+ 510 00b5 21       		.uleb128 0x21
+ 511 00b6 00       		.byte	0
+ 512 00b7 49       		.uleb128 0x49
+ 513 00b8 13       		.uleb128 0x13
+ 514 00b9 2F       		.uleb128 0x2f
+ 515 00ba 0B       		.uleb128 0xb
+ 516 00bb 00       		.byte	0
+ 517 00bc 00       		.byte	0
+ 518 00bd 0F       		.uleb128 0xf
+ 519 00be 2E       		.uleb128 0x2e
+ 520 00bf 00       		.byte	0
+ 521 00c0 3F       		.uleb128 0x3f
+ 522 00c1 19       		.uleb128 0x19
+ 523 00c2 3C       		.uleb128 0x3c
+ 524 00c3 19       		.uleb128 0x19
+ 525 00c4 6E       		.uleb128 0x6e
+ 526 00c5 0E       		.uleb128 0xe
+ 527 00c6 03       		.uleb128 0x3
+ 528 00c7 0E       		.uleb128 0xe
+ 529 00c8 3A       		.uleb128 0x3a
+ 530 00c9 0B       		.uleb128 0xb
+ 531 00ca 3B       		.uleb128 0x3b
+ 532 00cb 0B       		.uleb128 0xb
+ 533 00cc 00       		.byte	0
+ 534 00cd 00       		.byte	0
+ 535 00ce 00       		.byte	0
+ARM GAS  C:\Users\yura\AppData\Local\Temp\cc2LIHpv.s 			page 11
+
+
+ 536              		.section	.debug_loc,"",%progbits
+ 537              	.Ldebug_loc0:
+ 538              	.LLST0:
+ 539 0000 28000000 		.4byte	.LVL6
+ 540 0004 2D000000 		.4byte	.LVL7-1
+ 541 0008 0100     		.2byte	0x1
+ 542 000a 51       		.byte	0x51
+ 543 000b 00000000 		.4byte	0
+ 544 000f 00000000 		.4byte	0
+ 545              	.LLST1:
+ 546 0013 2E000000 		.4byte	.LVL7
+ 547 0017 30000000 		.4byte	.LVL8
+ 548 001b 0100     		.2byte	0x1
+ 549 001d 50       		.byte	0x50
+ 550 001e 00000000 		.4byte	0
+ 551 0022 00000000 		.4byte	0
+ 552              	.LLST2:
+ 553 0026 34000000 		.4byte	.LVL9
+ 554 002a 3A000000 		.4byte	.LVL10
+ 555 002e 0100     		.2byte	0x1
+ 556 0030 50       		.byte	0x50
+ 557 0031 00000000 		.4byte	0
+ 558 0035 00000000 		.4byte	0
+ 559              		.section	.debug_aranges,"",%progbits
+ 560 0000 1C000000 		.4byte	0x1c
+ 561 0004 0200     		.2byte	0x2
+ 562 0006 00000000 		.4byte	.Ldebug_info0
+ 563 000a 04       		.byte	0x4
+ 564 000b 00       		.byte	0
+ 565 000c 0000     		.2byte	0
+ 566 000e 0000     		.2byte	0
+ 567 0010 00000000 		.4byte	.LFB32
+ 568 0014 40000000 		.4byte	.LFE32-.LFB32
+ 569 0018 00000000 		.4byte	0
+ 570 001c 00000000 		.4byte	0
+ 571              		.section	.debug_ranges,"",%progbits
+ 572              	.Ldebug_ranges0:
+ 573 0000 00000000 		.4byte	.LFB32
+ 574 0004 40000000 		.4byte	.LFE32
+ 575 0008 00000000 		.4byte	0
+ 576 000c 00000000 		.4byte	0
+ 577              		.section	.debug_line,"",%progbits
+ 578              	.Ldebug_line0:
+ 579 0000 AE000000 		.section	.debug_str,"MS",%progbits,1
+ 579      02007A00 
+ 579      00000201 
+ 579      FB0E0D00 
+ 579      01010101 
+ 580              	.LASF6:
+ 581 0000 6C6F6E67 		.ascii	"long long int\000"
+ 581      206C6F6E 
+ 581      6720696E 
+ 581      7400
+ 582              	.LASF18:
+ 583 000e 69326352 		.ascii	"i2cReg\000"
+ 583      656700
+ 584              	.LASF21:
+ARM GAS  C:\Users\yura\AppData\Local\Temp\cc2LIHpv.s 			page 12
+
+
+ 585 0015 4144435F 		.ascii	"ADC_CountsTo_mVolts\000"
+ 585      436F756E 
+ 585      7473546F 
+ 585      5F6D566F 
+ 585      6C747300 
+ 586              	.LASF3:
+ 587 0029 73686F72 		.ascii	"short unsigned int\000"
+ 587      7420756E 
+ 587      7369676E 
+ 587      65642069 
+ 587      6E7400
+ 588              	.LASF11:
+ 589 003c 666C6F61 		.ascii	"float\000"
+ 589      7400
+ 590              	.LASF27:
+ 591 0042 4C43445F 		.ascii	"LCD_Start\000"
+ 591      53746172 
+ 591      7400
+ 592              	.LASF1:
+ 593 004c 756E7369 		.ascii	"unsigned char\000"
+ 593      676E6564 
+ 593      20636861 
+ 593      7200
+ 594              	.LASF10:
+ 595 005a 696E7431 		.ascii	"int16\000"
+ 595      3600
+ 596              	.LASF5:
+ 597 0060 6C6F6E67 		.ascii	"long unsigned int\000"
+ 597      20756E73 
+ 597      69676E65 
+ 597      6420696E 
+ 597      7400
+ 598              	.LASF9:
+ 599 0072 75696E74 		.ascii	"uint8\000"
+ 599      3800
+ 600              	.LASF20:
+ 601 0078 4144435F 		.ascii	"ADC_GetResult16\000"
+ 601      47657452 
+ 601      6573756C 
+ 601      74313600 
+ 602              	.LASF12:
+ 603 0088 646F7562 		.ascii	"double\000"
+ 603      6C6500
+ 604              	.LASF2:
+ 605 008f 73686F72 		.ascii	"short int\000"
+ 605      7420696E 
+ 605      7400
+ 606              	.LASF31:
+ 607 0099 6D61696E 		.ascii	"main\000"
+ 607      00
+ 608              	.LASF8:
+ 609 009e 756E7369 		.ascii	"unsigned int\000"
+ 609      676E6564 
+ 609      20696E74 
+ 609      00
+ 610              	.LASF16:
+ 611 00ab 636F756E 		.ascii	"counts\000"
+ARM GAS  C:\Users\yura\AppData\Local\Temp\cc2LIHpv.s 			page 13
+
+
+ 611      747300
+ 612              	.LASF7:
+ 613 00b2 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 613      206C6F6E 
+ 613      6720756E 
+ 613      7369676E 
+ 613      65642069 
+ 614              	.LASF24:
+ 615 00c9 455A4932 		.ascii	"EZI2C_EzI2CSetBuffer1\000"
+ 615      435F457A 
+ 615      49324353 
+ 615      65744275 
+ 615      66666572 
+ 616              	.LASF25:
+ 617 00df 4144435F 		.ascii	"ADC_Start\000"
+ 617      53746172 
+ 617      7400
+ 618              	.LASF28:
+ 619 00e9 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 619      43313120 
+ 619      352E342E 
+ 619      31203230 
+ 619      31363036 
+ 620 011c 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 620      20726576 
+ 620      6973696F 
+ 620      6E203233 
+ 620      37373135 
+ 621 014f 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 621      66756E63 
+ 621      74696F6E 
+ 621      2D736563 
+ 621      74696F6E 
+ 622              	.LASF17:
+ 623 0177 6D566F6C 		.ascii	"mVolts\000"
+ 623      747300
+ 624              	.LASF19:
+ 625 017e 706F745F 		.ascii	"pot_state\000"
+ 625      73746174 
+ 625      6500
+ 626              	.LASF15:
+ 627 0188 73697A65 		.ascii	"sizetype\000"
+ 627      74797065 
+ 627      00
+ 628              	.LASF26:
+ 629 0191 4144435F 		.ascii	"ADC_StartConvert\000"
+ 629      53746172 
+ 629      74436F6E 
+ 629      76657274 
+ 629      00
+ 630              	.LASF29:
+ 631 01a2 6D61696E 		.ascii	"main.c\000"
+ 631      2E6300
+ 632              	.LASF13:
+ 633 01a9 63686172 		.ascii	"char\000"
+ 633      00
+ 634              	.LASF30:
+ARM GAS  C:\Users\yura\AppData\Local\Temp\cc2LIHpv.s 			page 14
+
+
+ 635 01ae 433A5C55 		.ascii	"C:\\Users\\yura\\Documents\\PSoC Creator\\Yura_hack"
+ 635      73657273 
+ 635      5C797572 
+ 635      615C446F 
+ 635      63756D65 
+ 636 01dc 61746F6E 		.ascii	"aton\\teamProject.cydsn\000"
+ 636      5C746561 
+ 636      6D50726F 
+ 636      6A656374 
+ 636      2E637964 
+ 637              	.LASF23:
+ 638 01f3 455A4932 		.ascii	"EZI2C_Start\000"
+ 638      435F5374 
+ 638      61727400 
+ 639              	.LASF4:
+ 640 01ff 6C6F6E67 		.ascii	"long int\000"
+ 640      20696E74 
+ 640      00
+ 641              	.LASF14:
+ 642 0208 6C6F6E67 		.ascii	"long double\000"
+ 642      20646F75 
+ 642      626C6500 
+ 643              	.LASF0:
+ 644 0214 7369676E 		.ascii	"signed char\000"
+ 644      65642063 
+ 644      68617200 
+ 645              	.LASF22:
+ 646 0220 43794465 		.ascii	"CyDelay\000"
+ 646      6C617900 
+ 647              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

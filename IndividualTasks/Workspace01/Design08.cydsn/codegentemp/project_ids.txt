@@ -1,0 +1,15 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|5409d9db-3e65-46b9-b272-357d539e7748
+C:\Users\latao\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|03cba2c8-2517-4e8a-b7a5-f3defec0369b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|a8a5c41d-6bae-4cad-bcea-17b7f6717c8d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|57431b7a-9a8b-4763-9d40-3e15d6d7c803
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|a240d4a7-005b-4a0c-ac50-a56654b7b4ee
+C:\DenysProjects\Workspace01\Design01.cydsn\Design01.cyprj|c3f8ca35-9ba5-4871-891e-a3df1ac49b28
+C:\DenysProjects\Workspace01\Design02.cydsn\Design02.cyprj|d058bffc-4c90-45e3-b80a-7f5c454beb7b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4\PSoC4AnalogDevice\psoc4arch.cydsn\psoc4arch.cyprj|9397bd30-07a2-48b5-9b72-1ea1fff19720
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|083b67a2-b1cb-432b-8030-2e9c3cb62188
+C:\DenysProjects\Workspace01\Design03.cydsn\Design03.cyprj|1c573ef4-db94-47f2-951b-29c263186a62
+C:\DenysProjects\Workspace01\Design04.cydsn\Design04.cyprj|c1ccc498-269f-42ca-9de4-76901a00712b
+C:\DenysProjects\Workspace01\Design05.cydsn\Design05.cyprj|ce8f917f-8bf2-49dc-8bd7-104abb382ee7
+C:\DenysProjects\Workspace01\Design06.cydsn\Design06.cyprj|bef5952a-3366-43c3-ac57-2e54725cb672
+C:\DenysProjects\Workspace01\Design07.cydsn\Design07.cyprj|bf529941-de4b-4696-9364-0ebc7f3e1141
+C:\DenysProjects\Workspace01\Design08.cydsn\Design08.cyprj|8843261d-ab99-4265-b993-7db235e6c40a

@@ -1,0 +1,44 @@
+C:/DenysProjects/Workspace01/Design13.cydsn/CortexM0/ARM_GCC_541/Debug/main.o : C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/CyFlash.h C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/CyLib.h C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/LCD.h C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/LCD_LCDPort.h C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/LCD_LCDPort_aliases.h C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/cmsis_armcc.h C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/cmsis_compiler.h C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/cmsis_gcc.h C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/core_cm0.h C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/cyPm.h C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/cy_em_eeprom.h C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/cydisabledsheets.h C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/cypins.h C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/cytypes.h C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/project.h C:/DenysProjects/Workspace01/Design13.cydsn/main.c 
+
+C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/CyFlash.h : 
+
+C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/CyLFClk.h : 
+
+C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/CyLib.h : 
+
+C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/LCD.h : 
+
+C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/LCD_LCDPort.h : 
+
+C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/LCD_LCDPort_aliases.h : 
+
+C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/cmsis_armcc.h : 
+
+C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/cmsis_compiler.h : 
+
+C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/cmsis_gcc.h : 
+
+C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/core_cm0.h : 
+
+C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h : 
+
+C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/cyPm.h : 
+
+C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/cy_em_eeprom.h : 
+
+C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/cydevice_trm.h : 
+
+C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/cydisabledsheets.h : 
+
+C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/cyfitter.h : 
+
+C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h : 
+
+C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/cypins.h : 
+
+C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/cytypes.h : 
+
+C:/DenysProjects/Workspace01/Design13.cydsn/Generated_Source/PSoC4/project.h : 
+
+C:/DenysProjects/Workspace01/Design13.cydsn/main.c : 
+

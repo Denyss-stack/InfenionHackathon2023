@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace01\Design13\Source Files\main.c">
+<ExpandedNodeIds>
+<v>Workspace01</v>
+<v>Workspace01\Design13</v>
+<v>Workspace01\Design13\Design13.cydwr</v>
+<v>Workspace01\Design13\Source Files</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Workspace01</v>
+<v>Workspace01\Design01</v>
+<v>Workspace01\Design02</v>
+<v>Workspace01\Design03</v>
+<v>Workspace01\Design04</v>
+<v>Workspace01\Design05</v>
+<v>Workspace01\Design06</v>
+<v>Workspace01\Design07</v>
+<v>Workspace01\Design08</v>
+<v>Workspace01\Design09</v>
+<v>Workspace01\Design10</v>
+<v>Workspace01\Design11</v>
+<v>Workspace01\Design12</v>
+<v>Workspace01\Design13</v>
+<v>Workspace01\Design13\TopDesign</v>
+<v>Workspace01\Design13\Design13.cydwr</v>
+<v>Workspace01\Design13\Design13.cydwr\Pins</v>
+<v>Workspace01\Design13\Design13.cydwr\Analog</v>
+<v>Workspace01\Design13\Design13.cydwr\Clocks</v>
+<v>Workspace01\Design13\Design13.cydwr\Interrupts</v>
+<v>Workspace01\Design13\Design13.cydwr\System</v>
+<v>Workspace01\Design13\Design13.cydwr\Directives</v>
+<v>Workspace01\Design13\Design13.cydwr\Flash Security</v>
+<v>Workspace01\Design13\Header Files</v>
+<v>Workspace01\Design13\Source Files</v>
+<v>Workspace01\Design13\Source Files\main.c</v>
+<v>Workspace01\Design13\Generated_Source</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Workspace01</v>
+<v>Workspace01\Design01</v>
+<v>Workspace01\Design01\TopDesign</v>
+<v>Workspace01\Design01\TopDesign\TopDesign.cysch</v>
+<v>Workspace01\Design02</v>
+<v>Workspace01\Design02\TopDesign</v>
+<v>Workspace01\Design02\TopDesign\TopDesign.cysch</v>
+<v>Workspace01\Design03</v>
+<v>Workspace01\Design03\TopDesign</v>
+<v>Workspace01\Design03\TopDesign\TopDesign.cysch</v>
+<v>Workspace01\Design04</v>
+<v>Workspace01\Design04\TopDesign</v>
+<v>Workspace01\Design04\TopDesign\TopDesign.cysch</v>
+<v>Workspace01\Design05</v>
+<v>Workspace01\Design05\TopDesign</v>
+<v>Workspace01\Design05\TopDesign\TopDesign.cysch</v>
+<v>Workspace01\Design06</v>
+<v>Workspace01\Design06\TopDesign</v>
+<v>Workspace01\Design06\TopDesign\TopDesign.cysch</v>
+<v>Workspace01\Design07</v>
+<v>Workspace01\Design07\TopDesign</v>
+<v>Workspace01\Design07\TopDesign\TopDesign.cysch</v>
+<v>Workspace01\Design08</v>
+<v>Workspace01\Design08\TopDesign</v>
+<v>Workspace01\Design08\TopDesign\TopDesign.cysch</v>
+<v>Workspace01\Design09</v>
+<v>Workspace01\Design09\TopDesign</v>
+<v>Workspace01\Design09\TopDesign\TopDesign.cysch</v>
+<v>Workspace01\Design10</v>
+<v>Workspace01\Design10\TopDesign</v>
+<v>Workspace01\Design10\TopDesign\TopDesign.cysch</v>
+<v>Workspace01\Design11</v>
+<v>Workspace01\Design11\TopDesign</v>
+<v>Workspace01\Design11\TopDesign\TopDesign.cysch</v>
+<v>Workspace01\Design12</v>
+<v>Workspace01\Design12\TopDesign</v>
+<v>Workspace01\Design12\TopDesign\TopDesign.cysch</v>
+<v>Workspace01\Design13</v>
+<v>Workspace01\Design13\TopDesign</v>
+<v>Workspace01\Design13\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Workspace01</v>
+<v>Workspace01\Design01</v>
+<v>Workspace01\Design01\TopDesign</v>
+<v>Workspace01\Design01\TopDesign\TopDesign.cysch</v>
+<v>Workspace01\Design02</v>
+<v>Workspace01\Design02\TopDesign</v>
+<v>Workspace01\Design02\TopDesign\TopDesign.cysch</v>
+<v>Workspace01\Design03</v>
+<v>Workspace01\Design03\TopDesign</v>
+<v>Workspace01\Design03\TopDesign\TopDesign.cysch</v>
+<v>Workspace01\Design04</v>
+<v>Workspace01\Design04\TopDesign</v>
+<v>Workspace01\Design04\TopDesign\TopDesign.cysch</v>
+<v>Workspace01\Design05</v>
+<v>Workspace01\Design05\TopDesign</v>
+<v>Workspace01\Design05\TopDesign\TopDesign.cysch</v>
+<v>Workspace01\Design06</v>
+<v>Workspace01\Design06\TopDesign</v>
+<v>Workspace01\Design06\TopDesign\TopDesign.cysch</v>
+<v>Workspace01\Design07</v>
+<v>Workspace01\Design07\TopDesign</v>
+<v>Workspace01\Design07\TopDesign\TopDesign.cysch</v>
+<v>Workspace01\Design08</v>
+<v>Workspace01\Design08\TopDesign</v>
+<v>Workspace01\Design08\TopDesign\TopDesign.cysch</v>
+<v>Workspace01\Design09</v>
+<v>Workspace01\Design09\TopDesign</v>
+<v>Workspace01\Design09\TopDesign\TopDesign.cysch</v>
+<v>Workspace01\Design10</v>
+<v>Workspace01\Design10\TopDesign</v>
+<v>Workspace01\Design10\TopDesign\TopDesign.cysch</v>
+<v>Workspace01\Design11</v>
+<v>Workspace01\Design11\TopDesign</v>
+<v>Workspace01\Design11\TopDesign\TopDesign.cysch</v>
+<v>Workspace01\Design12</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Workspace01</v>
+<v>Workspace01\Design01</v>
+<v>Workspace01\Design01\CortexM0</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_INT.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_intClock.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_IRQ.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_PM.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort_PM.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\Vin.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\Vin_PM.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Design01.elf</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Design01.hex</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Design01.map</v>
+<v>Workspace01\Design01\Design01.gpdsc</v>
+<v>Workspace01\Design01\Design01.rpt</v>
+<v>Workspace01\Design01\Design01_timing.html</v>
+<v>Workspace01\Design02</v>
+<v>Workspace01\Design02\CortexM0</v>
+<v>Workspace01\Design02\CortexM0\ARM_GCC_541</v>
+<v>Workspace01\Design02\CortexM0\ARM_GCC_541\Debug</v>
+<v>Workspace01\Design02\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Workspace01\Design02\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Workspace01\Design02\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Workspace01\Design02\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Workspace01\Design02\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Workspace01\Design02\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Workspace01\Design02\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Workspace01\Design02\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Workspace01\Design02\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Workspace01\Design02\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Workspace01\Design02\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace01\Design02\CortexM0\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
+<v>Workspace01\Design02\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_PM.lst</v>
+<v>Workspace01\Design02\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Workspace01\Design02\CortexM0\ARM_GCC_541\Debug\Design02.elf</v>
+<v>Workspace01\Design02\CortexM0\ARM_GCC_541\Debug\Design02.hex</v>
+<v>Workspace01\Design02\CortexM0\ARM_GCC_541\Debug\Design02.map</v>
+<v>Workspace01\Design02\Design02.gpdsc</v>
+<v>Workspace01\Design02\Design02.rpt</v>
+<v>Workspace01\Design02\Design02_timing.html</v>
+<v>Workspace01\Design03</v>
+<v>Workspace01\Design03\CortexM0</v>
+<v>Workspace01\Design03\CortexM0\ARM_GCC_541</v>
+<v>Workspace01\Design03\CortexM0\ARM_GCC_541\Debug</v>
+<v>Workspace01\Design03\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Workspace01\Design03\CortexM0\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
+<v>Workspace01\Design03\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Workspace01\Design03\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Workspace01\Design03\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Workspace01\Design03\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Workspace01\Design03\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Workspace01\Design03\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Workspace01\Design03\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Workspace01\Design03\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Workspace01\Design03\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Workspace01\Design03\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace01\Design03\CortexM0\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
+<v>Workspace01\Design03\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_PM.lst</v>
+<v>Workspace01\Design03\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Workspace01\Design03\CortexM0\ARM_GCC_541\Debug\Design03.elf</v>
+<v>Workspace01\Design03\CortexM0\ARM_GCC_541\Debug\Design03.hex</v>
+<v>Workspace01\Design03\CortexM0\ARM_GCC_541\Debug\Design03.map</v>
+<v>Workspace01\Design03\Design03.gpdsc</v>
+<v>Workspace01\Design03\Design03.rpt</v>
+<v>Workspace01\Design03\Design03_timing.html</v>
+<v>Workspace01\Design04</v>
+<v>Workspace01\Design04\CortexM0</v>
+<v>Workspace01\Design04\CortexM0\ARM_GCC_541</v>
+<v>Workspace01\Design04\CortexM0\ARM_GCC_541\Debug</v>
+<v>Workspace01\Design04\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Workspace01\Design04\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Workspace01\Design04\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Workspace01\Design04\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Workspace01\Design04\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Workspace01\Design04\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Workspace01\Design04\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Workspace01\Design04\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Workspace01\Design04\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Workspace01\Design04\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Workspace01\Design04\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace01\Design04\CortexM0\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
+<v>Workspace01\Design04\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_PM.lst</v>
+<v>Workspace01\Design04\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Workspace01\Design04\CortexM0\ARM_GCC_541\Debug\Listing Files\SW.lst</v>
+<v>Workspace01\Design04\CortexM0\ARM_GCC_541\Debug\Listing Files\SW_PM.lst</v>
+<v>Workspace01\Design04\CortexM0\ARM_GCC_541\Debug\Design04.elf</v>
+<v>Workspace01\Design04\CortexM0\ARM_GCC_541\Debug\Design04.hex</v>
+<v>Workspace01\Design04\CortexM0\ARM_GCC_541\Debug\Design04.map</v>
+<v>Workspace01\Design04\Design04.gpdsc</v>
+<v>Workspace01\Design04\Design04.rpt</v>
+<v>Workspace01\Design04\Design04_timing.html</v>
+<v>Workspace01\Design05</v>
+<v>Workspace01\Design05\CortexM0</v>
+<v>Workspace01\Design05\CortexM0\ARM_GCC_541</v>
+<v>Workspace01\Design05\CortexM0\ARM_GCC_541\Debug</v>
+<v>Workspace01\Design05\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Workspace01\Design05\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Workspace01\Design05\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Workspace01\Design05\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Workspace01\Design05\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Workspace01\Design05\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Workspace01\Design05\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Workspace01\Design05\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Workspace01\Design05\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Workspace01\Design05\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Workspace01\Design05\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace01\Design05\CortexM0\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
+<v>Workspace01\Design05\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_PM.lst</v>
+<v>Workspace01\Design05\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Workspace01\Design05\CortexM0\ARM_GCC_541\Debug\Listing Files\PWM.lst</v>
+<v>Workspace01\Design05\CortexM0\ARM_GCC_541\Debug\Listing Files\PWM_Clock.lst</v>
+<v>Workspace01\Design05\CortexM0\ARM_GCC_541\Debug\Listing Files\PWM_PM.lst</v>
+<v>Workspace01\Design05\CortexM0\ARM_GCC_541\Debug\Design05.elf</v>
+<v>Workspace01\Design05\CortexM0\ARM_GCC_541\Debug\Design05.hex</v>
+<v>Workspace01\Design05\CortexM0\ARM_GCC_541\Debug\Design05.map</v>
+<v>Workspace01\Design05\Design05.gpdsc</v>
+<v>Workspace01\Design05\Design05.rpt</v>
+<v>Workspace01\Design05\Design05_timing.html</v>
+<v>Workspace01\Design06</v>
+<v>Workspace01\Design06\CortexM0</v>
+<v>Workspace01\Design06\CortexM0\ARM_GCC_541</v>
+<v>Workspace01\Design06\CortexM0\ARM_GCC_541\Debug</v>
+<v>Workspace01\Design06\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Workspace01\Design06\CortexM0\ARM_GCC_541\Debug\Listing Files\Buzzer.lst</v>
+<v>Workspace01\Design06\CortexM0\ARM_GCC_541\Debug\Listing Files\Buzzer_PM.lst</v>
+<v>Workspace01\Design06\CortexM0\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
+<v>Workspace01\Design06\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Workspace01\Design06\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Workspace01\Design06\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Workspace01\Design06\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Workspace01\Design06\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Workspace01\Design06\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Workspace01\Design06\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Workspace01\Design06\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Workspace01\Design06\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Workspace01\Design06\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace01\Design06\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Workspace01\Design06\CortexM0\ARM_GCC_541\Debug\Design06.elf</v>
+<v>Workspace01\Design06\CortexM0\ARM_GCC_541\Debug\Design06.hex</v>
+<v>Workspace01\Design06\CortexM0\ARM_GCC_541\Debug\Design06.map</v>
+<v>Workspace01\Design06\Design06.gpdsc</v>
+<v>Workspace01\Design06\Design06.rpt</v>
+<v>Workspace01\Design06\Design06_timing.html</v>
+<v>Workspace01\Design07</v>
+<v>Workspace01\Design07\CortexM0</v>
+<v>Workspace01\Design07\CortexM0\ARM_GCC_541</v>
+<v>Workspace01\Design07\CortexM0\ARM_GCC_541\Debug</v>
+<v>Workspace01\Design07\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Workspace01\Design07\CortexM0\ARM_GCC_541\Debug\Listing Files\Buzzer.lst</v>
+<v>Workspace01\Design07\CortexM0\ARM_GCC_541\Debug\Listing Files\Buzzer_PM.lst</v>
+<v>Workspace01\Design07\CortexM0\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
+<v>Workspace01\Design07\CortexM0\ARM_GCC_541\Debug\Listing Files\Clock_2.lst</v>
+<v>Workspace01\Design07\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Workspace01\Design07\CortexM0\ARM_GCC_541\Debug\Listing Files\Control_Reg_1.lst</v>
+<v>Workspace01\Design07\CortexM0\ARM_GCC_541\Debug\Listing Files\Control_Reg_1_PM.lst</v>
+<v>Workspace01\Design07\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Workspace01\Design07\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Workspace01\Design07\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Workspace01\Design07\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Workspace01\Design07\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Workspace01\Design07\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Workspace01\Design07\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Workspace01\Design07\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Workspace01\Design07\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace01\Design07\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Workspace01\Design07\CortexM0\ARM_GCC_541\Debug\Design07.elf</v>
+<v>Workspace01\Design07\CortexM0\ARM_GCC_541\Debug\Design07.hex</v>
+<v>Workspace01\Design07\CortexM0\ARM_GCC_541\Debug\Design07.map</v>
+<v>Workspace01\Design07\Design07.gpdsc</v>
+<v>Workspace01\Design07\Design07.rpt</v>
+<v>Workspace01\Design07\Design07_timing.html</v>
+<v>Workspace01\Design08</v>
+<v>Workspace01\Design08\CortexM0</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort_PM.lst</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files\Status_Reg_1.lst</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files\SW1.lst</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files\SW1_PM.lst</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files\SW2.lst</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files\SW2_PM.lst</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files\SW3.lst</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files\SW3_PM.lst</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files\SW4.lst</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Listing Files\SW4_PM.lst</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Design08.elf</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Design08.hex</v>
+<v>Workspace01\Design08\CortexM0\ARM_GCC_541\Debug\Design08.map</v>
+<v>Workspace01\Design08\Design08.gpdsc</v>
+<v>Workspace01\Design08\Design08.rpt</v>
+<v>Workspace01\Design08\Design08_timing.html</v>
+<v>Workspace01\Design09</v>
+<v>Workspace01\Design09\CortexM0</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_INT.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_intClock.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_IRQ.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_PM.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_BOOT.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_EZI2C.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_EZI2C_BOOT.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_EZI2C_INT.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_PM.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_SCB_IRQ.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_SCBCLK.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_scl.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_scl_PM.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_sda.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_sda_PM.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort_PM.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\Vin.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Listing Files\Vin_PM.lst</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Design09.elf</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Design09.hex</v>
+<v>Workspace01\Design09\CortexM0\ARM_GCC_541\Debug\Design09.map</v>
+<v>Workspace01\Design09\Design09.gpdsc</v>
+<v>Workspace01\Design09\Design09.rpt</v>
+<v>Workspace01\Design09\Design09_timing.html</v>
+<v>Workspace01\Design10</v>
+<v>Workspace01\Design10\CortexM0</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_INT.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_intClock.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_IRQ.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_PM.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_BOOT.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_EZI2C.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_EZI2C_BOOT.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_EZI2C_INT.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_PM.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_SCB_IRQ.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_SCBCLK.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_scl.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_scl_PM.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_sda.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_sda_PM.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_1.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_1_PM.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_2.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_2_PM.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_3.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_3_PM.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_4.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_4_PM.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Design10.elf</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Design10.hex</v>
+<v>Workspace01\Design10\CortexM0\ARM_GCC_541\Debug\Design10.map</v>
+<v>Workspace01\Design10\Design10.gpdsc</v>
+<v>Workspace01\Design10\Design10.rpt</v>
+<v>Workspace01\Design10\Design10_timing.html</v>
+<v>Workspace01\Design11</v>
+<v>Workspace01\Design11\CortexM0</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Listing Files\CapSense_Control.lst</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Listing Files\CapSense_Filter.lst</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Listing Files\CapSense_INT.lst</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Listing Files\CapSense_ISR.lst</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Listing Files\CapSense_Processing.lst</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Listing Files\CapSense_Sensing.lst</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Listing Files\CapSense_SensingCSD_LL.lst</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Listing Files\CapSense_Structure.lst</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Listing Files\CapSense_Tuner.lst</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Listing Files\led.lst</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Listing Files\led_PM.lst</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Design11.elf</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Design11.hex</v>
+<v>Workspace01\Design11\CortexM0\ARM_GCC_541\Debug\Design11.map</v>
+<v>Workspace01\Design11\Design11.gpdsc</v>
+<v>Workspace01\Design11\Design11.rpt</v>
+<v>Workspace01\Design11\Design11_timing.html</v>
+<v>Workspace01\Design12</v>
+<v>Workspace01\Design12\CortexM0</v>
+<v>Workspace01\Design12\CortexM0\ARM_GCC_541</v>
+<v>Workspace01\Design12\CortexM0\ARM_GCC_541\Debug</v>
+<v>Workspace01\Design12\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Workspace01\Design12\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Workspace01\Design12\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Workspace01\Design12\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Workspace01\Design12\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Workspace01\Design12\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Workspace01\Design12\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Workspace01\Design12\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Workspace01\Design12\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Workspace01\Design12\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Workspace01\Design12\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace01\Design12\CortexM0\ARM_GCC_541\Debug\Listing Files\isr_1.lst</v>
+<v>Workspace01\Design12\CortexM0\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
+<v>Workspace01\Design12\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_PM.lst</v>
+<v>Workspace01\Design12\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Workspace01\Design12\CortexM0\ARM_GCC_541\Debug\Listing Files\Timer_1.lst</v>
+<v>Workspace01\Design12\CortexM0\ARM_GCC_541\Debug\Listing Files\Timer_1_PM.lst</v>
+<v>Workspace01\Design12\CortexM0\ARM_GCC_541\Debug\Design12.elf</v>
+<v>Workspace01\Design12\CortexM0\ARM_GCC_541\Debug\Design12.hex</v>
+<v>Workspace01\Design12\CortexM0\ARM_GCC_541\Debug\Design12.map</v>
+<v>Workspace01\Design12\Design12.gpdsc</v>
+<v>Workspace01\Design12\Design12.rpt</v>
+<v>Workspace01\Design12\Design12_timing.html</v>
+<v>Workspace01\Design13</v>
+<v>Workspace01\Design13\CortexM0</v>
+<v>Workspace01\Design13\CortexM0\ARM_GCC_541</v>
+<v>Workspace01\Design13\CortexM0\ARM_GCC_541\Debug</v>
+<v>Workspace01\Design13\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Workspace01\Design13\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Workspace01\Design13\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Workspace01\Design13\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Workspace01\Design13\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Workspace01\Design13\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Workspace01\Design13\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Workspace01\Design13\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Workspace01\Design13\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Workspace01\Design13\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Workspace01\Design13\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace01\Design13\CortexM0\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
+<v>Workspace01\Design13\CortexM0\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>Workspace01\Design13\CortexM0\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort_PM.lst</v>
+<v>Workspace01\Design13\CortexM0\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
+<v>Workspace01\Design13\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Workspace01\Design13\CortexM0\ARM_GCC_541\Debug\Design13.elf</v>
+<v>Workspace01\Design13\CortexM0\ARM_GCC_541\Debug\Design13.hex</v>
+<v>Workspace01\Design13\CortexM0\ARM_GCC_541\Debug\Design13.map</v>
+<v>Workspace01\Design13\Design13.gpdsc</v>
+<v>Workspace01\Design13\Design13.rpt</v>
+<v>Workspace01\Design13\Design13_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Workspace01</v>
+<v>Workspace01\Design01</v>
+<v>Workspace01\Design01\CortexM0</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_INT.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_intClock.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_IRQ.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_PM.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort_PM.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\Vin.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Listing Files\Vin_PM.lst</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Design01.elf</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Design01.hex</v>
+<v>Workspace01\Design01\CortexM0\ARM_GCC_541\Debug\Design01.map</v>
+<v>Workspace01\Design01\Design01.gpdsc</v>
+<v>Workspace01\Design01\Design01.rpt</v>
+<v>Workspace01\Design01\Design01_timing.html</v>
+<v>Workspace01\Design02</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Workspace01</v>
+<v>Workspace01\Design01</v>
+<v>Workspace01\Design01\PSoC 4 Architecture TRM</v>
+<v>Workspace01\Design01\PSoC 4200 Family Datasheet</v>
+<v>Workspace01\Design01\System Reference Guides</v>
+<v>Workspace01\Design01\System Reference Guides\cy_boot_v6_0</v>
+<v>Workspace01\Design01\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Workspace01\Design01\ADC_SAR_SEQ_P4_v2_50.pdf</v>
+<v>Workspace01\Design01\CharLCD_v2_20.pdf</v>
+<v>Workspace01\Design01\cy_pins_v2_20.pdf</v>
+<v>Workspace01\Design01\Gnd_v1_0.pdf</v>
+<v>Workspace01\Design01\Potentiometer_v1_0.pdf</v>
+<v>Workspace01\Design01\Power_v1_0.pdf</v>
+<v>Workspace01\Design02</v>
+<v>Workspace01\Design02\PSoC 4 Architecture TRM</v>
+<v>Workspace01\Design02\PSoC 4200 Family Datasheet</v>
+<v>Workspace01\Design02\System Reference Guides</v>
+<v>Workspace01\Design02\System Reference Guides\cy_boot_v6_0</v>
+<v>Workspace01\Design02\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Workspace01\Design02\cy_pins_v2_20.pdf</v>
+<v>Workspace01\Design03</v>
+<v>Workspace01\Design03\PSoC 4 Architecture TRM</v>
+<v>Workspace01\Design03\PSoC 4200 Family Datasheet</v>
+<v>Workspace01\Design03\System Reference Guides</v>
+<v>Workspace01\Design03\System Reference Guides\cy_boot_v6_0</v>
+<v>Workspace01\Design03\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Workspace01\Design03\cy_clock_v2_20.pdf</v>
+<v>Workspace01\Design03\cy_constant_v1_0.pdf</v>
+<v>Workspace01\Design03\cy_pins_v2_20.pdf</v>
+<v>Workspace01\Design03\cy_tff_v1_0.pdf</v>
+<v>Workspace01\Design04</v>
+<v>Workspace01\Design04\PSoC 4 Architecture TRM</v>
+<v>Workspace01\Design04\PSoC 4200 Family Datasheet</v>
+<v>Workspace01\Design04\System Reference Guides</v>
+<v>Workspace01\Design04\System Reference Guides\cy_boot_v6_0</v>
+<v>Workspace01\Design04\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Workspace01\Design04\cy_pins_v2_20</v>
+<v>Workspace01\Design04\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Workspace01\Design05</v>
+<v>Workspace01\Design05\PSoC 4 Architecture TRM</v>
+<v>Workspace01\Design05\PSoC 4200 Family Datasheet</v>
+<v>Workspace01\Design05\System Reference Guides</v>
+<v>Workspace01\Design05\System Reference Guides\cy_boot_v6_0</v>
+<v>Workspace01\Design05\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Workspace01\Design05\cy_clock_v2_20.pdf</v>
+<v>Workspace01\Design05\cy_pins_v2_20.pdf</v>
+<v>Workspace01\Design05\PWM_v3_30.pdf</v>
+<v>Workspace01\Design06</v>
+<v>Workspace01\Design06\PSoC 4 Architecture TRM</v>
+<v>Workspace01\Design06\PSoC 4200 Family Datasheet</v>
+<v>Workspace01\Design06\System Reference Guides</v>
+<v>Workspace01\Design06\System Reference Guides\cy_boot_v6_0</v>
+<v>Workspace01\Design06\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Workspace01\Design06\cy_clock_v2_20.pdf</v>
+<v>Workspace01\Design06\cy_constant_v1_0.pdf</v>
+<v>Workspace01\Design06\cy_pins_v2_20.pdf</v>
+<v>Workspace01\Design06\cy_tff_v1_0.pdf</v>
+<v>Workspace01\Design07</v>
+<v>Workspace01\Design07\PSoC 4 Architecture TRM</v>
+<v>Workspace01\Design07\PSoC 4200 Family Datasheet</v>
+<v>Workspace01\Design07\System Reference Guides</v>
+<v>Workspace01\Design07\System Reference Guides\cy_boot_v6_0</v>
+<v>Workspace01\Design07\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Workspace01\Design07\cy_clock_v2_20</v>
+<v>Workspace01\Design07\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>Workspace01\Design07\cy_constant_v1_0</v>
+<v>Workspace01\Design07\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
+<v>Workspace01\Design07\cy_pins_v2_20.pdf</v>
+<v>Workspace01\Design07\cy_tff_v1_0</v>
+<v>Workspace01\Design07\cy_tff_v1_0\cy_tff_v1_0.pdf</v>
+<v>Workspace01\Design07\CyControlReg_v1_80.pdf</v>
+<v>Workspace01\Design07\mux_v1_10.pdf</v>
+<v>Workspace01\Design08</v>
+<v>Workspace01\Design08\PSoC 4 Architecture TRM</v>
+<v>Workspace01\Design08\PSoC 4200 Family Datasheet</v>
+<v>Workspace01\Design08\System Reference Guides</v>
+<v>Workspace01\Design08\System Reference Guides\cy_boot_v6_0</v>
+<v>Workspace01\Design08\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Workspace01\Design08\CharLCD_v2_20.pdf</v>
+<v>Workspace01\Design08\cy_clock_v2_20.pdf</v>
+<v>Workspace01\Design08\cy_pins_v2_20</v>
+<v>Workspace01\Design08\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Workspace01\Design08\CyStatusReg_v1_90.pdf</v>
+<v>Workspace01\Design09</v>
+<v>Workspace01\Design09\PSoC 4 Architecture TRM</v>
+<v>Workspace01\Design09\PSoC 4200 Family Datasheet</v>
+<v>Workspace01\Design09\System Reference Guides</v>
+<v>Workspace01\Design09\System Reference Guides\cy_boot_v6_0</v>
+<v>Workspace01\Design09\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Workspace01\Design09\ADC_SAR_SEQ_P4_v2_50.pdf</v>
+<v>Workspace01\Design09\CharLCD_v2_20.pdf</v>
+<v>Workspace01\Design09\cy_pins_v2_20.pdf</v>
+<v>Workspace01\Design09\Gnd_v1_0.pdf</v>
+<v>Workspace01\Design09\Potentiometer_v1_0.pdf</v>
+<v>Workspace01\Design09\Power_v1_0.pdf</v>
+<v>Workspace01\Design09\SCB_P4_v4_0.pdf</v>
+<v>Workspace01\Design10</v>
+<v>Workspace01\Design10\PSoC 4 Architecture TRM</v>
+<v>Workspace01\Design10\PSoC 4200 Family Datasheet</v>
+<v>Workspace01\Design10\System Reference Guides</v>
+<v>Workspace01\Design10\System Reference Guides\cy_boot_v6_0</v>
+<v>Workspace01\Design10\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Workspace01\Design10\ADC_SAR_SEQ_P4_v2_50.pdf</v>
+<v>Workspace01\Design10\cy_pins_v2_20</v>
+<v>Workspace01\Design10\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Workspace01\Design10\SCB_P4_v4_0.pdf</v>
+<v>Workspace01\Design11</v>
+<v>Workspace01\Design11\PSoC 4 Architecture TRM</v>
+<v>Workspace01\Design11\PSoC 4200 Family Datasheet</v>
+<v>Workspace01\Design11\System Reference Guides</v>
+<v>Workspace01\Design11\System Reference Guides\cy_boot_v6_0</v>
+<v>Workspace01\Design11\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Workspace01\Design11\CapSense_P4_v7_0.pdf</v>
+<v>Workspace01\Design11\cy_pins_v2_20.pdf</v>
+<v>Workspace01\Design12</v>
+<v>Workspace01\Design12\PSoC 4 Architecture TRM</v>
+<v>Workspace01\Design12\PSoC 4200 Family Datasheet</v>
+<v>Workspace01\Design12\System Reference Guides</v>
+<v>Workspace01\Design12\System Reference Guides\cy_boot_v6_0</v>
+<v>Workspace01\Design12\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Workspace01\Design12\cy_clock_v2_20.pdf</v>
+<v>Workspace01\Design12\cy_isr_v1_70.pdf</v>
+<v>Workspace01\Design12\cy_pins_v2_20</v>
+<v>Workspace01\Design12\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Workspace01\Design12\Timer_v2_80.pdf</v>
+<v>Workspace01\Design12\ZeroTerminal.pdf</v>
+<v>Workspace01\Design13</v>
+<v>Workspace01\Design13\PSoC 4 Architecture TRM</v>
+<v>Workspace01\Design13\PSoC 4200 Family Datasheet</v>
+<v>Workspace01\Design13\System Reference Guides</v>
+<v>Workspace01\Design13\System Reference Guides\cy_boot_v6_0</v>
+<v>Workspace01\Design13\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Workspace01\Design13\CharLCD_v2_20.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Workspace01</v>
+<v>Workspace01\Design01</v>
+<v>Workspace01\Design01\PSoC 4 Architecture TRM</v>
+<v>Workspace01\Design01\PSoC 4200 Family Datasheet</v>
+<v>Workspace01\Design01\System Reference Guides</v>
+<v>Workspace01\Design01\System Reference Guides\cy_boot_v6_0</v>
+<v>Workspace01\Design01\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Workspace01\Design01\ADC_SAR_SEQ_P4_v2_50.pdf</v>
+<v>Workspace01\Design01\CharLCD_v2_20.pdf</v>
+<v>Workspace01\Design01\cy_pins_v2_20.pdf</v>
+<v>Workspace01\Design01\Gnd_v1_0.pdf</v>
+<v>Workspace01\Design01\Potentiometer_v1_0.pdf</v>
+<v>Workspace01\Design01\Power_v1_0.pdf</v>
+<v>Workspace01\Design02</v>
+<v>Workspace01\Design02\PSoC 4 Architecture TRM</v>
+<v>Workspace01\Design02\PSoC 4200 Family Datasheet</v>
+<v>Workspace01\Design02\System Reference Guides</v>
+<v>Workspace01\Design02\System Reference Guides\cy_boot_v6_0</v>
+<v>Workspace01\Design02\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Workspace01\Design02\cy_pins_v2_20.pdf</v>
+<v>Workspace01\Design03</v>
+<v>Workspace01\Design03\PSoC 4 Architecture TRM</v>
+<v>Workspace01\Design03\PSoC 4200 Family Datasheet</v>
+<v>Workspace01\Design03\System Reference Guides</v>
+<v>Workspace01\Design03\System Reference Guides\cy_boot_v6_0</v>
+<v>Workspace01\Design03\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Workspace01\Design03\cy_clock_v2_20.pdf</v>
+<v>Workspace01\Design03\cy_constant_v1_0.pdf</v>
+<v>Workspace01\Design03\cy_pins_v2_20.pdf</v>
+<v>Workspace01\Design03\cy_tff_v1_0.pdf</v>
+<v>Workspace01\Design04</v>
+<v>Workspace01\Design04\PSoC 4 Architecture TRM</v>
+<v>Workspace01\Design04\PSoC 4200 Family Datasheet</v>
+<v>Workspace01\Design04\System Reference Guides</v>
+<v>Workspace01\Design04\System Reference Guides\cy_boot_v6_0</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\Design13.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Design13.cydsn\Design13.cydwr" />
+<name v=".\Design13.cydsn\main.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1098, 487" SelectedTabbedMdiWindow="d92f839f-95df-48c5-9e39-e371fb46535e"><DocumentWindow Key="C:\DenysProjects\Workspace01\Design13.cydsn\TopDesign\TopDesign.cysch" Guid="2c1d873e-dde7-47f4-ab66-a46f26577349" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="e9763d99-ac4e-4473-a945-58663bfc34e6" /><DocumentWindow Key="C:\DenysProjects\Workspace01\Design13.cydsn\Design13.cydwr" Guid="d32516cd-2fda-4e87-a6f4-4091c0f3149d" /><DocumentWindow Key="C:\DenysProjects\Workspace01\Design13.cydsn\main.c" Guid="d92f839f-95df-48c5-9e39-e371fb46535e" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

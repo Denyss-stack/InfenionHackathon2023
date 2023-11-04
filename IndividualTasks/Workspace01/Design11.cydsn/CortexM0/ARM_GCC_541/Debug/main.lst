@@ -1,0 +1,641 @@
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccOP3Ybn.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB32:
+  27              		.file 1 "main.c"
+   1:main.c        ****     #include <project.h>
+   2:main.c        **** int main()
+   3:main.c        **** {
+  28              		.loc 1 3 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 10B5     		push	{r4, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 4, -8
+  35              		.cfi_offset 14, -4
+  36              	.LVL0:
+   4:main.c        **** uint8 button1=0;
+   5:main.c        ****  /* Must enable interrupts before starting CapSense */
+   6:main.c        ****  CyGlobalIntEnable;
+  37              		.loc 1 6 0
+  38              		.syntax divided
+  39              	@ 6 "main.c" 1
+  40 0002 62B6     		CPSIE   i
+  41              	@ 0 "" 2
+   7:main.c        ****  
+   8:main.c        ****  CapSense_Start();
+  42              		.loc 1 8 0
+  43              		.thumb
+  44              		.syntax unified
+  45 0004 FFF7FEFF 		bl	CapSense_Start
+  46              	.LVL1:
+   9:main.c        ****  CapSense_ScanAllWidgets(); /* Do initial scan */
+  47              		.loc 1 9 0
+  48 0008 FFF7FEFF 		bl	CapSense_ScanAllWidgets
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccOP3Ybn.s 			page 2
+
+
+  49              	.LVL2:
+   4:main.c        **** uint8 button1=0;
+  50              		.loc 1 4 0
+  51 000c 0024     		movs	r4, #0
+  52              	.LVL3:
+  53              	.L3:
+  10:main.c        ****  for(;;)
+  11:main.c        ****      {
+  12:main.c        ****          if(!CapSense_IsBusy())
+  54              		.loc 1 12 0
+  55 000e FFF7FEFF 		bl	CapSense_IsBusy
+  56              	.LVL4:
+  57 0012 0028     		cmp	r0, #0
+  58 0014 07D1     		bne	.L2
+  13:main.c        ****          {
+  14:main.c        ****             CapSense_ProcessAllWidgets();
+  59              		.loc 1 14 0
+  60 0016 FFF7FEFF 		bl	CapSense_ProcessAllWidgets
+  61              	.LVL5:
+  15:main.c        ****             button1 = CapSense_IsWidgetActive(CapSense_BUTTON0_WDGT_ID);
+  62              		.loc 1 15 0
+  63 001a 0020     		movs	r0, #0
+  64 001c FFF7FEFF 		bl	CapSense_IsWidgetActive
+  65              	.LVL6:
+  66 0020 C4B2     		uxtb	r4, r0
+  67              	.LVL7:
+  16:main.c        ****             CapSense_ScanAllWidgets();
+  68              		.loc 1 16 0
+  69 0022 FFF7FEFF 		bl	CapSense_ScanAllWidgets
+  70              	.LVL8:
+  71              	.L2:
+  17:main.c        ****          }
+  18:main.c        ****          led_Write(button1); /* Turn on LED if the button is being pressed */
+  72              		.loc 1 18 0
+  73 0026 2000     		movs	r0, r4
+  74 0028 FFF7FEFF 		bl	led_Write
+  75              	.LVL9:
+  19:main.c        ****     }
+  76              		.loc 1 19 0
+  77 002c EFE7     		b	.L3
+  78              		.cfi_endproc
+  79              	.LFE32:
+  80              		.size	main, .-main
+  81 002e C046     		.text
+  82              	.Letext0:
+  83              		.file 2 "Generated_Source\\PSoC4/CapSense_Control.h"
+  84              		.file 3 "Generated_Source\\PSoC4/CapSense_Sensing.h"
+  85              		.file 4 "Generated_Source\\PSoC4/CapSense_Structure.h"
+  86              		.file 5 "Generated_Source\\PSoC4/led.h"
+  87              		.file 6 "Generated_Source\\PSoC4/cytypes.h"
+  88              		.section	.debug_info,"",%progbits
+  89              	.Ldebug_info0:
+  90 0000 53010000 		.4byte	0x153
+  91 0004 0400     		.2byte	0x4
+  92 0006 00000000 		.4byte	.Ldebug_abbrev0
+  93 000a 04       		.byte	0x4
+  94 000b 01       		.uleb128 0x1
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccOP3Ybn.s 			page 3
+
+
+  95 000c C6000000 		.4byte	.LASF20
+  96 0010 0C       		.byte	0xc
+  97 0011 2E000000 		.4byte	.LASF21
+  98 0015 84010000 		.4byte	.LASF22
+  99 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 100 001d 00000000 		.4byte	0
+ 101 0021 00000000 		.4byte	.Ldebug_line0
+ 102 0025 02       		.uleb128 0x2
+ 103 0026 01       		.byte	0x1
+ 104 0027 06       		.byte	0x6
+ 105 0028 5C010000 		.4byte	.LASF0
+ 106 002c 02       		.uleb128 0x2
+ 107 002d 01       		.byte	0x1
+ 108 002e 08       		.byte	0x8
+ 109 002f 69000000 		.4byte	.LASF1
+ 110 0033 02       		.uleb128 0x2
+ 111 0034 02       		.byte	0x2
+ 112 0035 05       		.byte	0x5
+ 113 0036 B5000000 		.4byte	.LASF2
+ 114 003a 02       		.uleb128 0x2
+ 115 003b 02       		.byte	0x2
+ 116 003c 07       		.byte	0x7
+ 117 003d 0E000000 		.4byte	.LASF3
+ 118 0041 02       		.uleb128 0x2
+ 119 0042 04       		.byte	0x4
+ 120 0043 05       		.byte	0x5
+ 121 0044 94000000 		.4byte	.LASF4
+ 122 0048 02       		.uleb128 0x2
+ 123 0049 04       		.byte	0x4
+ 124 004a 07       		.byte	0x7
+ 125 004b 40000000 		.4byte	.LASF5
+ 126 004f 02       		.uleb128 0x2
+ 127 0050 08       		.byte	0x8
+ 128 0051 05       		.byte	0x5
+ 129 0052 00000000 		.4byte	.LASF6
+ 130 0056 02       		.uleb128 0x2
+ 131 0057 08       		.byte	0x8
+ 132 0058 07       		.byte	0x7
+ 133 0059 52000000 		.4byte	.LASF7
+ 134 005d 03       		.uleb128 0x3
+ 135 005e 04       		.byte	0x4
+ 136 005f 05       		.byte	0x5
+ 137 0060 696E7400 		.ascii	"int\000"
+ 138 0064 02       		.uleb128 0x2
+ 139 0065 04       		.byte	0x4
+ 140 0066 07       		.byte	0x7
+ 141 0067 21000000 		.4byte	.LASF8
+ 142 006b 04       		.uleb128 0x4
+ 143 006c 3A000000 		.4byte	.LASF23
+ 144 0070 06       		.byte	0x6
+ 145 0071 FB01     		.2byte	0x1fb
+ 146 0073 2C000000 		.4byte	0x2c
+ 147 0077 02       		.uleb128 0x2
+ 148 0078 04       		.byte	0x4
+ 149 0079 04       		.byte	0x4
+ 150 007a BF010000 		.4byte	.LASF9
+ 151 007e 02       		.uleb128 0x2
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccOP3Ybn.s 			page 4
+
+
+ 152 007f 08       		.byte	0x8
+ 153 0080 04       		.byte	0x4
+ 154 0081 BF000000 		.4byte	.LASF10
+ 155 0085 02       		.uleb128 0x2
+ 156 0086 01       		.byte	0x1
+ 157 0087 08       		.byte	0x8
+ 158 0088 77000000 		.4byte	.LASF11
+ 159 008c 02       		.uleb128 0x2
+ 160 008d 08       		.byte	0x8
+ 161 008e 04       		.byte	0x4
+ 162 008f 68010000 		.4byte	.LASF12
+ 163 0093 02       		.uleb128 0x2
+ 164 0094 04       		.byte	0x4
+ 165 0095 07       		.byte	0x7
+ 166 0096 EA010000 		.4byte	.LASF13
+ 167 009a 05       		.uleb128 0x5
+ 168 009b 35000000 		.4byte	.LASF24
+ 169 009f 01       		.byte	0x1
+ 170 00a0 02       		.byte	0x2
+ 171 00a1 5D000000 		.4byte	0x5d
+ 172 00a5 00000000 		.4byte	.LFB32
+ 173 00a9 2E000000 		.4byte	.LFE32-.LFB32
+ 174 00ad 01       		.uleb128 0x1
+ 175 00ae 9C       		.byte	0x9c
+ 176 00af 13010000 		.4byte	0x113
+ 177 00b3 06       		.uleb128 0x6
+ 178 00b4 54010000 		.4byte	.LASF25
+ 179 00b8 01       		.byte	0x1
+ 180 00b9 04       		.byte	0x4
+ 181 00ba 6B000000 		.4byte	0x6b
+ 182 00be 00000000 		.4byte	.LLST0
+ 183 00c2 07       		.uleb128 0x7
+ 184 00c3 08000000 		.4byte	.LVL1
+ 185 00c7 13010000 		.4byte	0x113
+ 186 00cb 07       		.uleb128 0x7
+ 187 00cc 0C000000 		.4byte	.LVL2
+ 188 00d0 1E010000 		.4byte	0x11e
+ 189 00d4 07       		.uleb128 0x7
+ 190 00d5 12000000 		.4byte	.LVL4
+ 191 00d9 29010000 		.4byte	0x129
+ 192 00dd 07       		.uleb128 0x7
+ 193 00de 1A000000 		.4byte	.LVL5
+ 194 00e2 34010000 		.4byte	0x134
+ 195 00e6 08       		.uleb128 0x8
+ 196 00e7 20000000 		.4byte	.LVL6
+ 197 00eb 3F010000 		.4byte	0x13f
+ 198 00ef F9000000 		.4byte	0xf9
+ 199 00f3 09       		.uleb128 0x9
+ 200 00f4 01       		.uleb128 0x1
+ 201 00f5 50       		.byte	0x50
+ 202 00f6 01       		.uleb128 0x1
+ 203 00f7 30       		.byte	0x30
+ 204 00f8 00       		.byte	0
+ 205 00f9 07       		.uleb128 0x7
+ 206 00fa 26000000 		.4byte	.LVL8
+ 207 00fe 1E010000 		.4byte	0x11e
+ 208 0102 0A       		.uleb128 0xa
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccOP3Ybn.s 			page 5
+
+
+ 209 0103 2C000000 		.4byte	.LVL9
+ 210 0107 4B010000 		.4byte	0x14b
+ 211 010b 09       		.uleb128 0x9
+ 212 010c 01       		.uleb128 0x1
+ 213 010d 50       		.byte	0x50
+ 214 010e 02       		.uleb128 0x2
+ 215 010f 74       		.byte	0x74
+ 216 0110 00       		.sleb128 0
+ 217 0111 00       		.byte	0
+ 218 0112 00       		.byte	0
+ 219 0113 0B       		.uleb128 0xb
+ 220 0114 B0010000 		.4byte	.LASF14
+ 221 0118 B0010000 		.4byte	.LASF14
+ 222 011c 02       		.byte	0x2
+ 223 011d 3B       		.byte	0x3b
+ 224 011e 0B       		.uleb128 0xb
+ 225 011f 9D000000 		.4byte	.LASF15
+ 226 0123 9D000000 		.4byte	.LASF15
+ 227 0127 03       		.byte	0x3
+ 228 0128 59       		.byte	0x59
+ 229 0129 0B       		.uleb128 0xb
+ 230 012a 74010000 		.4byte	.LASF16
+ 231 012e 74010000 		.4byte	.LASF16
+ 232 0132 03       		.byte	0x3
+ 233 0133 5A       		.byte	0x5a
+ 234 0134 0B       		.uleb128 0xb
+ 235 0135 C5010000 		.4byte	.LASF17
+ 236 0139 C5010000 		.4byte	.LASF17
+ 237 013d 02       		.byte	0x2
+ 238 013e 3F       		.byte	0x3f
+ 239 013f 0C       		.uleb128 0xc
+ 240 0140 7C000000 		.4byte	.LASF18
+ 241 0144 7C000000 		.4byte	.LASF18
+ 242 0148 04       		.byte	0x4
+ 243 0149 6A04     		.2byte	0x46a
+ 244 014b 0B       		.uleb128 0xb
+ 245 014c E0010000 		.4byte	.LASF19
+ 246 0150 E0010000 		.4byte	.LASF19
+ 247 0154 05       		.byte	0x5
+ 248 0155 33       		.byte	0x33
+ 249 0156 00       		.byte	0
+ 250              		.section	.debug_abbrev,"",%progbits
+ 251              	.Ldebug_abbrev0:
+ 252 0000 01       		.uleb128 0x1
+ 253 0001 11       		.uleb128 0x11
+ 254 0002 01       		.byte	0x1
+ 255 0003 25       		.uleb128 0x25
+ 256 0004 0E       		.uleb128 0xe
+ 257 0005 13       		.uleb128 0x13
+ 258 0006 0B       		.uleb128 0xb
+ 259 0007 03       		.uleb128 0x3
+ 260 0008 0E       		.uleb128 0xe
+ 261 0009 1B       		.uleb128 0x1b
+ 262 000a 0E       		.uleb128 0xe
+ 263 000b 55       		.uleb128 0x55
+ 264 000c 17       		.uleb128 0x17
+ 265 000d 11       		.uleb128 0x11
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccOP3Ybn.s 			page 6
+
+
+ 266 000e 01       		.uleb128 0x1
+ 267 000f 10       		.uleb128 0x10
+ 268 0010 17       		.uleb128 0x17
+ 269 0011 00       		.byte	0
+ 270 0012 00       		.byte	0
+ 271 0013 02       		.uleb128 0x2
+ 272 0014 24       		.uleb128 0x24
+ 273 0015 00       		.byte	0
+ 274 0016 0B       		.uleb128 0xb
+ 275 0017 0B       		.uleb128 0xb
+ 276 0018 3E       		.uleb128 0x3e
+ 277 0019 0B       		.uleb128 0xb
+ 278 001a 03       		.uleb128 0x3
+ 279 001b 0E       		.uleb128 0xe
+ 280 001c 00       		.byte	0
+ 281 001d 00       		.byte	0
+ 282 001e 03       		.uleb128 0x3
+ 283 001f 24       		.uleb128 0x24
+ 284 0020 00       		.byte	0
+ 285 0021 0B       		.uleb128 0xb
+ 286 0022 0B       		.uleb128 0xb
+ 287 0023 3E       		.uleb128 0x3e
+ 288 0024 0B       		.uleb128 0xb
+ 289 0025 03       		.uleb128 0x3
+ 290 0026 08       		.uleb128 0x8
+ 291 0027 00       		.byte	0
+ 292 0028 00       		.byte	0
+ 293 0029 04       		.uleb128 0x4
+ 294 002a 16       		.uleb128 0x16
+ 295 002b 00       		.byte	0
+ 296 002c 03       		.uleb128 0x3
+ 297 002d 0E       		.uleb128 0xe
+ 298 002e 3A       		.uleb128 0x3a
+ 299 002f 0B       		.uleb128 0xb
+ 300 0030 3B       		.uleb128 0x3b
+ 301 0031 05       		.uleb128 0x5
+ 302 0032 49       		.uleb128 0x49
+ 303 0033 13       		.uleb128 0x13
+ 304 0034 00       		.byte	0
+ 305 0035 00       		.byte	0
+ 306 0036 05       		.uleb128 0x5
+ 307 0037 2E       		.uleb128 0x2e
+ 308 0038 01       		.byte	0x1
+ 309 0039 3F       		.uleb128 0x3f
+ 310 003a 19       		.uleb128 0x19
+ 311 003b 03       		.uleb128 0x3
+ 312 003c 0E       		.uleb128 0xe
+ 313 003d 3A       		.uleb128 0x3a
+ 314 003e 0B       		.uleb128 0xb
+ 315 003f 3B       		.uleb128 0x3b
+ 316 0040 0B       		.uleb128 0xb
+ 317 0041 49       		.uleb128 0x49
+ 318 0042 13       		.uleb128 0x13
+ 319 0043 8701     		.uleb128 0x87
+ 320 0045 19       		.uleb128 0x19
+ 321 0046 11       		.uleb128 0x11
+ 322 0047 01       		.uleb128 0x1
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccOP3Ybn.s 			page 7
+
+
+ 323 0048 12       		.uleb128 0x12
+ 324 0049 06       		.uleb128 0x6
+ 325 004a 40       		.uleb128 0x40
+ 326 004b 18       		.uleb128 0x18
+ 327 004c 9742     		.uleb128 0x2117
+ 328 004e 19       		.uleb128 0x19
+ 329 004f 01       		.uleb128 0x1
+ 330 0050 13       		.uleb128 0x13
+ 331 0051 00       		.byte	0
+ 332 0052 00       		.byte	0
+ 333 0053 06       		.uleb128 0x6
+ 334 0054 34       		.uleb128 0x34
+ 335 0055 00       		.byte	0
+ 336 0056 03       		.uleb128 0x3
+ 337 0057 0E       		.uleb128 0xe
+ 338 0058 3A       		.uleb128 0x3a
+ 339 0059 0B       		.uleb128 0xb
+ 340 005a 3B       		.uleb128 0x3b
+ 341 005b 0B       		.uleb128 0xb
+ 342 005c 49       		.uleb128 0x49
+ 343 005d 13       		.uleb128 0x13
+ 344 005e 02       		.uleb128 0x2
+ 345 005f 17       		.uleb128 0x17
+ 346 0060 00       		.byte	0
+ 347 0061 00       		.byte	0
+ 348 0062 07       		.uleb128 0x7
+ 349 0063 898201   		.uleb128 0x4109
+ 350 0066 00       		.byte	0
+ 351 0067 11       		.uleb128 0x11
+ 352 0068 01       		.uleb128 0x1
+ 353 0069 31       		.uleb128 0x31
+ 354 006a 13       		.uleb128 0x13
+ 355 006b 00       		.byte	0
+ 356 006c 00       		.byte	0
+ 357 006d 08       		.uleb128 0x8
+ 358 006e 898201   		.uleb128 0x4109
+ 359 0071 01       		.byte	0x1
+ 360 0072 11       		.uleb128 0x11
+ 361 0073 01       		.uleb128 0x1
+ 362 0074 31       		.uleb128 0x31
+ 363 0075 13       		.uleb128 0x13
+ 364 0076 01       		.uleb128 0x1
+ 365 0077 13       		.uleb128 0x13
+ 366 0078 00       		.byte	0
+ 367 0079 00       		.byte	0
+ 368 007a 09       		.uleb128 0x9
+ 369 007b 8A8201   		.uleb128 0x410a
+ 370 007e 00       		.byte	0
+ 371 007f 02       		.uleb128 0x2
+ 372 0080 18       		.uleb128 0x18
+ 373 0081 9142     		.uleb128 0x2111
+ 374 0083 18       		.uleb128 0x18
+ 375 0084 00       		.byte	0
+ 376 0085 00       		.byte	0
+ 377 0086 0A       		.uleb128 0xa
+ 378 0087 898201   		.uleb128 0x4109
+ 379 008a 01       		.byte	0x1
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccOP3Ybn.s 			page 8
+
+
+ 380 008b 11       		.uleb128 0x11
+ 381 008c 01       		.uleb128 0x1
+ 382 008d 31       		.uleb128 0x31
+ 383 008e 13       		.uleb128 0x13
+ 384 008f 00       		.byte	0
+ 385 0090 00       		.byte	0
+ 386 0091 0B       		.uleb128 0xb
+ 387 0092 2E       		.uleb128 0x2e
+ 388 0093 00       		.byte	0
+ 389 0094 3F       		.uleb128 0x3f
+ 390 0095 19       		.uleb128 0x19
+ 391 0096 3C       		.uleb128 0x3c
+ 392 0097 19       		.uleb128 0x19
+ 393 0098 6E       		.uleb128 0x6e
+ 394 0099 0E       		.uleb128 0xe
+ 395 009a 03       		.uleb128 0x3
+ 396 009b 0E       		.uleb128 0xe
+ 397 009c 3A       		.uleb128 0x3a
+ 398 009d 0B       		.uleb128 0xb
+ 399 009e 3B       		.uleb128 0x3b
+ 400 009f 0B       		.uleb128 0xb
+ 401 00a0 00       		.byte	0
+ 402 00a1 00       		.byte	0
+ 403 00a2 0C       		.uleb128 0xc
+ 404 00a3 2E       		.uleb128 0x2e
+ 405 00a4 00       		.byte	0
+ 406 00a5 3F       		.uleb128 0x3f
+ 407 00a6 19       		.uleb128 0x19
+ 408 00a7 3C       		.uleb128 0x3c
+ 409 00a8 19       		.uleb128 0x19
+ 410 00a9 6E       		.uleb128 0x6e
+ 411 00aa 0E       		.uleb128 0xe
+ 412 00ab 03       		.uleb128 0x3
+ 413 00ac 0E       		.uleb128 0xe
+ 414 00ad 3A       		.uleb128 0x3a
+ 415 00ae 0B       		.uleb128 0xb
+ 416 00af 3B       		.uleb128 0x3b
+ 417 00b0 05       		.uleb128 0x5
+ 418 00b1 00       		.byte	0
+ 419 00b2 00       		.byte	0
+ 420 00b3 00       		.byte	0
+ 421              		.section	.debug_loc,"",%progbits
+ 422              	.Ldebug_loc0:
+ 423              	.LLST0:
+ 424 0000 02000000 		.4byte	.LVL0
+ 425 0004 0E000000 		.4byte	.LVL3
+ 426 0008 0200     		.2byte	0x2
+ 427 000a 30       		.byte	0x30
+ 428 000b 9F       		.byte	0x9f
+ 429 000c 0E000000 		.4byte	.LVL3
+ 430 0010 2E000000 		.4byte	.LFE32
+ 431 0014 0100     		.2byte	0x1
+ 432 0016 54       		.byte	0x54
+ 433 0017 00000000 		.4byte	0
+ 434 001b 00000000 		.4byte	0
+ 435              		.section	.debug_aranges,"",%progbits
+ 436 0000 1C000000 		.4byte	0x1c
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccOP3Ybn.s 			page 9
+
+
+ 437 0004 0200     		.2byte	0x2
+ 438 0006 00000000 		.4byte	.Ldebug_info0
+ 439 000a 04       		.byte	0x4
+ 440 000b 00       		.byte	0
+ 441 000c 0000     		.2byte	0
+ 442 000e 0000     		.2byte	0
+ 443 0010 00000000 		.4byte	.LFB32
+ 444 0014 2E000000 		.4byte	.LFE32-.LFB32
+ 445 0018 00000000 		.4byte	0
+ 446 001c 00000000 		.4byte	0
+ 447              		.section	.debug_ranges,"",%progbits
+ 448              	.Ldebug_ranges0:
+ 449 0000 00000000 		.4byte	.LFB32
+ 450 0004 2E000000 		.4byte	.LFE32
+ 451 0008 00000000 		.4byte	0
+ 452 000c 00000000 		.4byte	0
+ 453              		.section	.debug_line,"",%progbits
+ 454              	.Ldebug_line0:
+ 455 0000 AB000000 		.section	.debug_str,"MS",%progbits,1
+ 455      02008E00 
+ 455      00000201 
+ 455      FB0E0D00 
+ 455      01010101 
+ 456              	.LASF6:
+ 457 0000 6C6F6E67 		.ascii	"long long int\000"
+ 457      206C6F6E 
+ 457      6720696E 
+ 457      7400
+ 458              	.LASF3:
+ 459 000e 73686F72 		.ascii	"short unsigned int\000"
+ 459      7420756E 
+ 459      7369676E 
+ 459      65642069 
+ 459      6E7400
+ 460              	.LASF8:
+ 461 0021 756E7369 		.ascii	"unsigned int\000"
+ 461      676E6564 
+ 461      20696E74 
+ 461      00
+ 462              	.LASF21:
+ 463 002e 6D61696E 		.ascii	"main.c\000"
+ 463      2E6300
+ 464              	.LASF24:
+ 465 0035 6D61696E 		.ascii	"main\000"
+ 465      00
+ 466              	.LASF23:
+ 467 003a 75696E74 		.ascii	"uint8\000"
+ 467      3800
+ 468              	.LASF5:
+ 469 0040 6C6F6E67 		.ascii	"long unsigned int\000"
+ 469      20756E73 
+ 469      69676E65 
+ 469      6420696E 
+ 469      7400
+ 470              	.LASF7:
+ 471 0052 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 471      206C6F6E 
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccOP3Ybn.s 			page 10
+
+
+ 471      6720756E 
+ 471      7369676E 
+ 471      65642069 
+ 472              	.LASF1:
+ 473 0069 756E7369 		.ascii	"unsigned char\000"
+ 473      676E6564 
+ 473      20636861 
+ 473      7200
+ 474              	.LASF11:
+ 475 0077 63686172 		.ascii	"char\000"
+ 475      00
+ 476              	.LASF18:
+ 477 007c 43617053 		.ascii	"CapSense_IsWidgetActive\000"
+ 477      656E7365 
+ 477      5F497357 
+ 477      69646765 
+ 477      74416374 
+ 478              	.LASF4:
+ 479 0094 6C6F6E67 		.ascii	"long int\000"
+ 479      20696E74 
+ 479      00
+ 480              	.LASF15:
+ 481 009d 43617053 		.ascii	"CapSense_ScanAllWidgets\000"
+ 481      656E7365 
+ 481      5F536361 
+ 481      6E416C6C 
+ 481      57696467 
+ 482              	.LASF2:
+ 483 00b5 73686F72 		.ascii	"short int\000"
+ 483      7420696E 
+ 483      7400
+ 484              	.LASF10:
+ 485 00bf 646F7562 		.ascii	"double\000"
+ 485      6C6500
+ 486              	.LASF20:
+ 487 00c6 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 487      43313120 
+ 487      352E342E 
+ 487      31203230 
+ 487      31363036 
+ 488 00f9 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 488      20726576 
+ 488      6973696F 
+ 488      6E203233 
+ 488      37373135 
+ 489 012c 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 489      66756E63 
+ 489      74696F6E 
+ 489      2D736563 
+ 489      74696F6E 
+ 490              	.LASF25:
+ 491 0154 62757474 		.ascii	"button1\000"
+ 491      6F6E3100 
+ 492              	.LASF0:
+ 493 015c 7369676E 		.ascii	"signed char\000"
+ 493      65642063 
+ 493      68617200 
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccOP3Ybn.s 			page 11
+
+
+ 494              	.LASF12:
+ 495 0168 6C6F6E67 		.ascii	"long double\000"
+ 495      20646F75 
+ 495      626C6500 
+ 496              	.LASF16:
+ 497 0174 43617053 		.ascii	"CapSense_IsBusy\000"
+ 497      656E7365 
+ 497      5F497342 
+ 497      75737900 
+ 498              	.LASF22:
+ 499 0184 433A5C44 		.ascii	"C:\\DenysProjects\\Workspace01\\Design11.cydsn\000"
+ 499      656E7973 
+ 499      50726F6A 
+ 499      65637473 
+ 499      5C576F72 
+ 500              	.LASF14:
+ 501 01b0 43617053 		.ascii	"CapSense_Start\000"
+ 501      656E7365 
+ 501      5F537461 
+ 501      727400
+ 502              	.LASF9:
+ 503 01bf 666C6F61 		.ascii	"float\000"
+ 503      7400
+ 504              	.LASF17:
+ 505 01c5 43617053 		.ascii	"CapSense_ProcessAllWidgets\000"
+ 505      656E7365 
+ 505      5F50726F 
+ 505      63657373 
+ 505      416C6C57 
+ 506              	.LASF19:
+ 507 01e0 6C65645F 		.ascii	"led_Write\000"
+ 507      57726974 
+ 507      6500
+ 508              	.LASF13:
+ 509 01ea 73697A65 		.ascii	"sizetype\000"
+ 509      74797065 
+ 509      00
+ 510              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

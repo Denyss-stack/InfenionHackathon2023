@@ -1,0 +1,572 @@
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccxWRTTg.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.my_ISR,"ax",%progbits
+  20              		.align	2
+  21              		.global	my_ISR
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	my_ISR, %function
+  25              	my_ISR:
+  26              	.LFB33:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** #include "project.h"
+  13:main.c        **** uint8 counts = 0;
+  14:main.c        **** CY_ISR_PROTO(my_ISR);
+  15:main.c        **** int main(void)
+  16:main.c        **** {
+  17:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  18:main.c        ****     isr_1_StartEx(my_ISR);
+  19:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+  20:main.c        ****     for(;;)
+  21:main.c        ****     {
+  22:main.c        ****         /* Place your application code here. */
+  23:main.c        ****     }
+  24:main.c        **** }
+  25:main.c        **** CY_ISR(my_ISR){
+  28              		.loc 1 25 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccxWRTTg.s 			page 2
+
+
+  26:main.c        ****     counts++;
+  33              		.loc 1 26 0
+  34 0000 024A     		ldr	r2, .L2
+  35 0002 1378     		ldrb	r3, [r2]
+  36 0004 0133     		adds	r3, r3, #1
+  37 0006 1370     		strb	r3, [r2]
+  27:main.c        **** }
+  38              		.loc 1 27 0
+  39              		@ sp needed
+  40 0008 7047     		bx	lr
+  41              	.L3:
+  42 000a C046     		.align	2
+  43              	.L2:
+  44 000c 00000000 		.word	.LANCHOR0
+  45              		.cfi_endproc
+  46              	.LFE33:
+  47              		.size	my_ISR, .-my_ISR
+  48              		.section	.text.main,"ax",%progbits
+  49              		.align	2
+  50              		.global	main
+  51              		.code	16
+  52              		.thumb_func
+  53              		.type	main, %function
+  54              	main:
+  55              	.LFB32:
+  16:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  56              		.loc 1 16 0
+  57              		.cfi_startproc
+  58              		@ Volatile: function does not return.
+  59              		@ args = 0, pretend = 0, frame = 0
+  60              		@ frame_needed = 0, uses_anonymous_args = 0
+  61 0000 10B5     		push	{r4, lr}
+  62              		.cfi_def_cfa_offset 8
+  63              		.cfi_offset 4, -8
+  64              		.cfi_offset 14, -4
+  17:main.c        ****     isr_1_StartEx(my_ISR);
+  65              		.loc 1 17 0
+  66              		.syntax divided
+  67              	@ 17 "main.c" 1
+  68 0002 62B6     		CPSIE   i
+  69              	@ 0 "" 2
+  18:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+  70              		.loc 1 18 0
+  71              		.thumb
+  72              		.syntax unified
+  73 0004 0148     		ldr	r0, .L6
+  74 0006 FFF7FEFF 		bl	isr_1_StartEx
+  75              	.LVL0:
+  76              	.L5:
+  77 000a FEE7     		b	.L5
+  78              	.L7:
+  79              		.align	2
+  80              	.L6:
+  81 000c 00000000 		.word	my_ISR
+  82              		.cfi_endproc
+  83              	.LFE32:
+  84              		.size	main, .-main
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccxWRTTg.s 			page 3
+
+
+  85              		.global	counts
+  86              		.bss
+  87              		.set	.LANCHOR0,. + 0
+  88              		.type	counts, %object
+  89              		.size	counts, 1
+  90              	counts:
+  91 0000 00       		.space	1
+  92              		.text
+  93              	.Letext0:
+  94              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+  95              		.file 3 "Generated_Source\\PSoC4/isr_1.h"
+  96              		.section	.debug_info,"",%progbits
+  97              	.Ldebug_info0:
+  98 0000 F1000000 		.4byte	0xf1
+  99 0004 0400     		.2byte	0x4
+ 100 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 101 000a 04       		.byte	0x4
+ 102 000b 01       		.uleb128 0x1
+ 103 000c C6000000 		.4byte	.LASF14
+ 104 0010 0C       		.byte	0xc
+ 105 0011 47000000 		.4byte	.LASF15
+ 106 0015 0E000000 		.4byte	.LASF16
+ 107 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 108 001d 00000000 		.4byte	0
+ 109 0021 00000000 		.4byte	.Ldebug_line0
+ 110 0025 02       		.uleb128 0x2
+ 111 0026 01       		.byte	0x1
+ 112 0027 06       		.byte	0x6
+ 113 0028 5A010000 		.4byte	.LASF0
+ 114 002c 02       		.uleb128 0x2
+ 115 002d 01       		.byte	0x1
+ 116 002e 08       		.byte	0x8
+ 117 002f A3000000 		.4byte	.LASF1
+ 118 0033 02       		.uleb128 0x2
+ 119 0034 02       		.byte	0x2
+ 120 0035 05       		.byte	0x5
+ 121 0036 72010000 		.4byte	.LASF2
+ 122 003a 02       		.uleb128 0x2
+ 123 003b 02       		.byte	0x2
+ 124 003c 07       		.byte	0x7
+ 125 003d 8A000000 		.4byte	.LASF3
+ 126 0041 02       		.uleb128 0x2
+ 127 0042 04       		.byte	0x4
+ 128 0043 05       		.byte	0x5
+ 129 0044 B6000000 		.4byte	.LASF4
+ 130 0048 02       		.uleb128 0x2
+ 131 0049 04       		.byte	0x4
+ 132 004a 07       		.byte	0x7
+ 133 004b 61000000 		.4byte	.LASF5
+ 134 004f 02       		.uleb128 0x2
+ 135 0050 08       		.byte	0x8
+ 136 0051 05       		.byte	0x5
+ 137 0052 00000000 		.4byte	.LASF6
+ 138 0056 02       		.uleb128 0x2
+ 139 0057 08       		.byte	0x8
+ 140 0058 07       		.byte	0x7
+ 141 0059 73000000 		.4byte	.LASF7
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccxWRTTg.s 			page 4
+
+
+ 142 005d 03       		.uleb128 0x3
+ 143 005e 04       		.byte	0x4
+ 144 005f 05       		.byte	0x5
+ 145 0060 696E7400 		.ascii	"int\000"
+ 146 0064 02       		.uleb128 0x2
+ 147 0065 04       		.byte	0x4
+ 148 0066 07       		.byte	0x7
+ 149 0067 3A000000 		.4byte	.LASF8
+ 150 006b 04       		.uleb128 0x4
+ 151 006c 54010000 		.4byte	.LASF17
+ 152 0070 02       		.byte	0x2
+ 153 0071 FB01     		.2byte	0x1fb
+ 154 0073 2C000000 		.4byte	0x2c
+ 155 0077 02       		.uleb128 0x2
+ 156 0078 04       		.byte	0x4
+ 157 0079 04       		.byte	0x4
+ 158 007a 9D000000 		.4byte	.LASF9
+ 159 007e 02       		.uleb128 0x2
+ 160 007f 08       		.byte	0x8
+ 161 0080 04       		.byte	0x4
+ 162 0081 BF000000 		.4byte	.LASF10
+ 163 0085 02       		.uleb128 0x2
+ 164 0086 01       		.byte	0x1
+ 165 0087 08       		.byte	0x8
+ 166 0088 B1000000 		.4byte	.LASF11
+ 167 008c 02       		.uleb128 0x2
+ 168 008d 08       		.byte	0x8
+ 169 008e 04       		.byte	0x4
+ 170 008f 66010000 		.4byte	.LASF12
+ 171 0093 02       		.uleb128 0x2
+ 172 0094 04       		.byte	0x4
+ 173 0095 07       		.byte	0x7
+ 174 0096 8A010000 		.4byte	.LASF13
+ 175 009a 05       		.uleb128 0x5
+ 176 009b 4E000000 		.4byte	.LASF18
+ 177 009f 01       		.byte	0x1
+ 178 00a0 19       		.byte	0x19
+ 179 00a1 00000000 		.4byte	.LFB33
+ 180 00a5 10000000 		.4byte	.LFE33-.LFB33
+ 181 00a9 01       		.uleb128 0x1
+ 182 00aa 9C       		.byte	0x9c
+ 183 00ab 06       		.uleb128 0x6
+ 184 00ac 55000000 		.4byte	.LASF19
+ 185 00b0 01       		.byte	0x1
+ 186 00b1 0F       		.byte	0xf
+ 187 00b2 5D000000 		.4byte	0x5d
+ 188 00b6 00000000 		.4byte	.LFB32
+ 189 00ba 10000000 		.4byte	.LFE32-.LFB32
+ 190 00be 01       		.uleb128 0x1
+ 191 00bf 9C       		.byte	0x9c
+ 192 00c0 D8000000 		.4byte	0xd8
+ 193 00c4 07       		.uleb128 0x7
+ 194 00c5 0A000000 		.4byte	.LVL0
+ 195 00c9 E9000000 		.4byte	0xe9
+ 196 00cd 08       		.uleb128 0x8
+ 197 00ce 01       		.uleb128 0x1
+ 198 00cf 50       		.byte	0x50
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccxWRTTg.s 			page 5
+
+
+ 199 00d0 05       		.uleb128 0x5
+ 200 00d1 03       		.byte	0x3
+ 201 00d2 00000000 		.4byte	my_ISR
+ 202 00d6 00       		.byte	0
+ 203 00d7 00       		.byte	0
+ 204 00d8 09       		.uleb128 0x9
+ 205 00d9 5A000000 		.4byte	.LASF20
+ 206 00dd 01       		.byte	0x1
+ 207 00de 0D       		.byte	0xd
+ 208 00df 6B000000 		.4byte	0x6b
+ 209 00e3 05       		.uleb128 0x5
+ 210 00e4 03       		.byte	0x3
+ 211 00e5 00000000 		.4byte	counts
+ 212 00e9 0A       		.uleb128 0xa
+ 213 00ea 7C010000 		.4byte	.LASF21
+ 214 00ee 7C010000 		.4byte	.LASF21
+ 215 00f2 03       		.byte	0x3
+ 216 00f3 18       		.byte	0x18
+ 217 00f4 00       		.byte	0
+ 218              		.section	.debug_abbrev,"",%progbits
+ 219              	.Ldebug_abbrev0:
+ 220 0000 01       		.uleb128 0x1
+ 221 0001 11       		.uleb128 0x11
+ 222 0002 01       		.byte	0x1
+ 223 0003 25       		.uleb128 0x25
+ 224 0004 0E       		.uleb128 0xe
+ 225 0005 13       		.uleb128 0x13
+ 226 0006 0B       		.uleb128 0xb
+ 227 0007 03       		.uleb128 0x3
+ 228 0008 0E       		.uleb128 0xe
+ 229 0009 1B       		.uleb128 0x1b
+ 230 000a 0E       		.uleb128 0xe
+ 231 000b 55       		.uleb128 0x55
+ 232 000c 17       		.uleb128 0x17
+ 233 000d 11       		.uleb128 0x11
+ 234 000e 01       		.uleb128 0x1
+ 235 000f 10       		.uleb128 0x10
+ 236 0010 17       		.uleb128 0x17
+ 237 0011 00       		.byte	0
+ 238 0012 00       		.byte	0
+ 239 0013 02       		.uleb128 0x2
+ 240 0014 24       		.uleb128 0x24
+ 241 0015 00       		.byte	0
+ 242 0016 0B       		.uleb128 0xb
+ 243 0017 0B       		.uleb128 0xb
+ 244 0018 3E       		.uleb128 0x3e
+ 245 0019 0B       		.uleb128 0xb
+ 246 001a 03       		.uleb128 0x3
+ 247 001b 0E       		.uleb128 0xe
+ 248 001c 00       		.byte	0
+ 249 001d 00       		.byte	0
+ 250 001e 03       		.uleb128 0x3
+ 251 001f 24       		.uleb128 0x24
+ 252 0020 00       		.byte	0
+ 253 0021 0B       		.uleb128 0xb
+ 254 0022 0B       		.uleb128 0xb
+ 255 0023 3E       		.uleb128 0x3e
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccxWRTTg.s 			page 6
+
+
+ 256 0024 0B       		.uleb128 0xb
+ 257 0025 03       		.uleb128 0x3
+ 258 0026 08       		.uleb128 0x8
+ 259 0027 00       		.byte	0
+ 260 0028 00       		.byte	0
+ 261 0029 04       		.uleb128 0x4
+ 262 002a 16       		.uleb128 0x16
+ 263 002b 00       		.byte	0
+ 264 002c 03       		.uleb128 0x3
+ 265 002d 0E       		.uleb128 0xe
+ 266 002e 3A       		.uleb128 0x3a
+ 267 002f 0B       		.uleb128 0xb
+ 268 0030 3B       		.uleb128 0x3b
+ 269 0031 05       		.uleb128 0x5
+ 270 0032 49       		.uleb128 0x49
+ 271 0033 13       		.uleb128 0x13
+ 272 0034 00       		.byte	0
+ 273 0035 00       		.byte	0
+ 274 0036 05       		.uleb128 0x5
+ 275 0037 2E       		.uleb128 0x2e
+ 276 0038 00       		.byte	0
+ 277 0039 3F       		.uleb128 0x3f
+ 278 003a 19       		.uleb128 0x19
+ 279 003b 03       		.uleb128 0x3
+ 280 003c 0E       		.uleb128 0xe
+ 281 003d 3A       		.uleb128 0x3a
+ 282 003e 0B       		.uleb128 0xb
+ 283 003f 3B       		.uleb128 0x3b
+ 284 0040 0B       		.uleb128 0xb
+ 285 0041 27       		.uleb128 0x27
+ 286 0042 19       		.uleb128 0x19
+ 287 0043 11       		.uleb128 0x11
+ 288 0044 01       		.uleb128 0x1
+ 289 0045 12       		.uleb128 0x12
+ 290 0046 06       		.uleb128 0x6
+ 291 0047 40       		.uleb128 0x40
+ 292 0048 18       		.uleb128 0x18
+ 293 0049 9742     		.uleb128 0x2117
+ 294 004b 19       		.uleb128 0x19
+ 295 004c 00       		.byte	0
+ 296 004d 00       		.byte	0
+ 297 004e 06       		.uleb128 0x6
+ 298 004f 2E       		.uleb128 0x2e
+ 299 0050 01       		.byte	0x1
+ 300 0051 3F       		.uleb128 0x3f
+ 301 0052 19       		.uleb128 0x19
+ 302 0053 03       		.uleb128 0x3
+ 303 0054 0E       		.uleb128 0xe
+ 304 0055 3A       		.uleb128 0x3a
+ 305 0056 0B       		.uleb128 0xb
+ 306 0057 3B       		.uleb128 0x3b
+ 307 0058 0B       		.uleb128 0xb
+ 308 0059 27       		.uleb128 0x27
+ 309 005a 19       		.uleb128 0x19
+ 310 005b 49       		.uleb128 0x49
+ 311 005c 13       		.uleb128 0x13
+ 312 005d 8701     		.uleb128 0x87
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccxWRTTg.s 			page 7
+
+
+ 313 005f 19       		.uleb128 0x19
+ 314 0060 11       		.uleb128 0x11
+ 315 0061 01       		.uleb128 0x1
+ 316 0062 12       		.uleb128 0x12
+ 317 0063 06       		.uleb128 0x6
+ 318 0064 40       		.uleb128 0x40
+ 319 0065 18       		.uleb128 0x18
+ 320 0066 9742     		.uleb128 0x2117
+ 321 0068 19       		.uleb128 0x19
+ 322 0069 01       		.uleb128 0x1
+ 323 006a 13       		.uleb128 0x13
+ 324 006b 00       		.byte	0
+ 325 006c 00       		.byte	0
+ 326 006d 07       		.uleb128 0x7
+ 327 006e 898201   		.uleb128 0x4109
+ 328 0071 01       		.byte	0x1
+ 329 0072 11       		.uleb128 0x11
+ 330 0073 01       		.uleb128 0x1
+ 331 0074 31       		.uleb128 0x31
+ 332 0075 13       		.uleb128 0x13
+ 333 0076 00       		.byte	0
+ 334 0077 00       		.byte	0
+ 335 0078 08       		.uleb128 0x8
+ 336 0079 8A8201   		.uleb128 0x410a
+ 337 007c 00       		.byte	0
+ 338 007d 02       		.uleb128 0x2
+ 339 007e 18       		.uleb128 0x18
+ 340 007f 9142     		.uleb128 0x2111
+ 341 0081 18       		.uleb128 0x18
+ 342 0082 00       		.byte	0
+ 343 0083 00       		.byte	0
+ 344 0084 09       		.uleb128 0x9
+ 345 0085 34       		.uleb128 0x34
+ 346 0086 00       		.byte	0
+ 347 0087 03       		.uleb128 0x3
+ 348 0088 0E       		.uleb128 0xe
+ 349 0089 3A       		.uleb128 0x3a
+ 350 008a 0B       		.uleb128 0xb
+ 351 008b 3B       		.uleb128 0x3b
+ 352 008c 0B       		.uleb128 0xb
+ 353 008d 49       		.uleb128 0x49
+ 354 008e 13       		.uleb128 0x13
+ 355 008f 3F       		.uleb128 0x3f
+ 356 0090 19       		.uleb128 0x19
+ 357 0091 02       		.uleb128 0x2
+ 358 0092 18       		.uleb128 0x18
+ 359 0093 00       		.byte	0
+ 360 0094 00       		.byte	0
+ 361 0095 0A       		.uleb128 0xa
+ 362 0096 2E       		.uleb128 0x2e
+ 363 0097 00       		.byte	0
+ 364 0098 3F       		.uleb128 0x3f
+ 365 0099 19       		.uleb128 0x19
+ 366 009a 3C       		.uleb128 0x3c
+ 367 009b 19       		.uleb128 0x19
+ 368 009c 6E       		.uleb128 0x6e
+ 369 009d 0E       		.uleb128 0xe
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccxWRTTg.s 			page 8
+
+
+ 370 009e 03       		.uleb128 0x3
+ 371 009f 0E       		.uleb128 0xe
+ 372 00a0 3A       		.uleb128 0x3a
+ 373 00a1 0B       		.uleb128 0xb
+ 374 00a2 3B       		.uleb128 0x3b
+ 375 00a3 0B       		.uleb128 0xb
+ 376 00a4 00       		.byte	0
+ 377 00a5 00       		.byte	0
+ 378 00a6 00       		.byte	0
+ 379              		.section	.debug_aranges,"",%progbits
+ 380 0000 24000000 		.4byte	0x24
+ 381 0004 0200     		.2byte	0x2
+ 382 0006 00000000 		.4byte	.Ldebug_info0
+ 383 000a 04       		.byte	0x4
+ 384 000b 00       		.byte	0
+ 385 000c 0000     		.2byte	0
+ 386 000e 0000     		.2byte	0
+ 387 0010 00000000 		.4byte	.LFB33
+ 388 0014 10000000 		.4byte	.LFE33-.LFB33
+ 389 0018 00000000 		.4byte	.LFB32
+ 390 001c 10000000 		.4byte	.LFE32-.LFB32
+ 391 0020 00000000 		.4byte	0
+ 392 0024 00000000 		.4byte	0
+ 393              		.section	.debug_ranges,"",%progbits
+ 394              	.Ldebug_ranges0:
+ 395 0000 00000000 		.4byte	.LFB33
+ 396 0004 10000000 		.4byte	.LFE33
+ 397 0008 00000000 		.4byte	.LFB32
+ 398 000c 10000000 		.4byte	.LFE32
+ 399 0010 00000000 		.4byte	0
+ 400 0014 00000000 		.4byte	0
+ 401              		.section	.debug_line,"",%progbits
+ 402              	.Ldebug_line0:
+ 403 0000 74000000 		.section	.debug_str,"MS",%progbits,1
+ 403      02004C00 
+ 403      00000201 
+ 403      FB0E0D00 
+ 403      01010101 
+ 404              	.LASF6:
+ 405 0000 6C6F6E67 		.ascii	"long long int\000"
+ 405      206C6F6E 
+ 405      6720696E 
+ 405      7400
+ 406              	.LASF16:
+ 407 000e 433A5C44 		.ascii	"C:\\DenysProjects\\Workspace01\\Design12.cydsn\000"
+ 407      656E7973 
+ 407      50726F6A 
+ 407      65637473 
+ 407      5C576F72 
+ 408              	.LASF8:
+ 409 003a 756E7369 		.ascii	"unsigned int\000"
+ 409      676E6564 
+ 409      20696E74 
+ 409      00
+ 410              	.LASF15:
+ 411 0047 6D61696E 		.ascii	"main.c\000"
+ 411      2E6300
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccxWRTTg.s 			page 9
+
+
+ 412              	.LASF18:
+ 413 004e 6D795F49 		.ascii	"my_ISR\000"
+ 413      535200
+ 414              	.LASF19:
+ 415 0055 6D61696E 		.ascii	"main\000"
+ 415      00
+ 416              	.LASF20:
+ 417 005a 636F756E 		.ascii	"counts\000"
+ 417      747300
+ 418              	.LASF5:
+ 419 0061 6C6F6E67 		.ascii	"long unsigned int\000"
+ 419      20756E73 
+ 419      69676E65 
+ 419      6420696E 
+ 419      7400
+ 420              	.LASF7:
+ 421 0073 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 421      206C6F6E 
+ 421      6720756E 
+ 421      7369676E 
+ 421      65642069 
+ 422              	.LASF3:
+ 423 008a 73686F72 		.ascii	"short unsigned int\000"
+ 423      7420756E 
+ 423      7369676E 
+ 423      65642069 
+ 423      6E7400
+ 424              	.LASF9:
+ 425 009d 666C6F61 		.ascii	"float\000"
+ 425      7400
+ 426              	.LASF1:
+ 427 00a3 756E7369 		.ascii	"unsigned char\000"
+ 427      676E6564 
+ 427      20636861 
+ 427      7200
+ 428              	.LASF11:
+ 429 00b1 63686172 		.ascii	"char\000"
+ 429      00
+ 430              	.LASF4:
+ 431 00b6 6C6F6E67 		.ascii	"long int\000"
+ 431      20696E74 
+ 431      00
+ 432              	.LASF10:
+ 433 00bf 646F7562 		.ascii	"double\000"
+ 433      6C6500
+ 434              	.LASF14:
+ 435 00c6 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 435      43313120 
+ 435      352E342E 
+ 435      31203230 
+ 435      31363036 
+ 436 00f9 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 436      20726576 
+ 436      6973696F 
+ 436      6E203233 
+ 436      37373135 
+ 437 012c 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ARM GAS  C:\Users\latao\AppData\Local\Temp\ccxWRTTg.s 			page 10
+
+
+ 437      66756E63 
+ 437      74696F6E 
+ 437      2D736563 
+ 437      74696F6E 
+ 438              	.LASF17:
+ 439 0154 75696E74 		.ascii	"uint8\000"
+ 439      3800
+ 440              	.LASF0:
+ 441 015a 7369676E 		.ascii	"signed char\000"
+ 441      65642063 
+ 441      68617200 
+ 442              	.LASF12:
+ 443 0166 6C6F6E67 		.ascii	"long double\000"
+ 443      20646F75 
+ 443      626C6500 
+ 444              	.LASF2:
+ 445 0172 73686F72 		.ascii	"short int\000"
+ 445      7420696E 
+ 445      7400
+ 446              	.LASF21:
+ 447 017c 6973725F 		.ascii	"isr_1_StartEx\000"
+ 447      315F5374 
+ 447      61727445 
+ 447      7800
+ 448              	.LASF13:
+ 449 018a 73697A65 		.ascii	"sizetype\000"
+ 449      74797065 
+ 449      00
+ 450              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

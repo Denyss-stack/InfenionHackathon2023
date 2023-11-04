@@ -1,0 +1,54 @@
+C:/DenysProjects/Workspace01/Design05.cydsn/CortexM0/ARM_GCC_541/Debug/PWM.o : C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/CyLib.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/PWM.c C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/PWM.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/CyLFClk.h : 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/CyLib.h : 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/PWM.c : 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/PWM.h : 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cydevice_trm.h : 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cyfitter.h : 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cytypes.h : 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/CortexM0/ARM_GCC_541/Debug/PWM_PM.o : C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/CyLib.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/PWM.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/PWM_PM.c C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/PWM_PM.c : 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/CortexM0/ARM_GCC_541/Debug/main.o : C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/CyFlash.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/LED.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/LED_aliases.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/PWM_Clock.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cmsis_armcc.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cmsis_compiler.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cmsis_gcc.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/core_cm0.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cyPm.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cy_em_eeprom.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cydisabledsheets.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cypins.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/project.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/CyLib.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/PWM.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cytypes.h C:/DenysProjects/Workspace01/Design05.cydsn/main.c 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/CyFlash.h : 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/LED.h : 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/LED_aliases.h : 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/PWM_Clock.h : 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cmsis_armcc.h : 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cmsis_compiler.h : 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cmsis_gcc.h : 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/core_cm0.h : 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h : 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cyPm.h : 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cy_em_eeprom.h : 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cydisabledsheets.h : 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h : 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/cypins.h : 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/Generated_Source/PSoC4/project.h : 
+
+C:/DenysProjects/Workspace01/Design05.cydsn/main.c : 
+

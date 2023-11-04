@@ -1,0 +1,15 @@
+# Design10
+# 2023-11-02 14:40:19Z
+
+# IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
+dont_use_io iocell 3 2
+# IO_3@[IOP=(3)][IoId=(3)] is reserved: SWDDebugEnabled
+dont_use_io iocell 3 3
+set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
+set_io "LED_1(0)" iocell 1 0
+set_io "\EZI2C:sda(0)\" iocell 3 1
+set_io "\EZI2C:scl(0)\" iocell 3 0
+set_io "LED_2(0)" iocell 0 5
+set_io "LED_3(0)" iocell 3 7
+set_io "LED_4(0)" iocell 0 0
+set_location "\ADC:cy_psoc4_sar\" p4sarcell -1 -1 0

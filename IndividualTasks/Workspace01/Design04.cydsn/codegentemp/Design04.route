@@ -1,0 +1,13 @@
+net Net_1
+	term   ":ioport0:pin7.fb"
+	switch ":ioport0:pin7.fb==>:ioport0:hsiom_in7.hsiom7_in"
+	switch ":ioport0:hsiom_in7.dsi==>Stub-:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v13+:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v15"
+	switch "OStub-:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v13+:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v15"
+	switch ":dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:13,80"
+	switch ":dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:85,80_f"
+	switch "IStub-:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v81+:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v83+:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v85"
+	switch "Stub-:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v81+:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v83+:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v85==>:ioport0:inputs1_mux.in_1"
+	switch ":ioport0:inputs1_mux.pin3__pin_input==>:ioport0:hsiom_out3.dsi"
+	switch ":ioport0:hsiom_out3.hsiom3_out==>:ioport0:pin3.pin_input"
+	term   ":ioport0:pin3.pin_input"
+end Net_1

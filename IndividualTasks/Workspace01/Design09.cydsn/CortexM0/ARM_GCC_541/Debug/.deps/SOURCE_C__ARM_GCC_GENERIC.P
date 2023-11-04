@@ -1,0 +1,204 @@
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/ADC.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/ADC.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/ADC.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLib.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/ADC.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/ADC.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLFClk.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLib.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/ADC_INT.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/ADC.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/ADC_INT.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLib.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h C:/DenysProjects/Workspace01/Design09.cydsn/cyapicallbacks.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/ADC_INT.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/cyapicallbacks.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/ADC_IRQ.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/ADC_IRQ.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/ADC_IRQ.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLib.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h C:/DenysProjects/Workspace01/Design09.cydsn/cyapicallbacks.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/ADC_IRQ.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/ADC_IRQ.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/ADC_PM.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/ADC.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/ADC_PM.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLib.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/ADC_PM.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/ADC_intClock.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/ADC_intClock.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/ADC_intClock.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/ADC_intClock.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/ADC_intClock.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/Cm0Start.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/Cm0Start.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLib.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h C:/DenysProjects/Workspace01/Design09.cydsn/cyapicallbacks.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/Cm0Start.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/CyFlash.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyFlash.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyFlash.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLib.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyFlash.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyFlash.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/CyLFClk.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLFClk.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLib.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLFClk.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/CyLib.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyFlash.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLib.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLib.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLib.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/EZI2C.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLib.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_EZI2C.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_EZI2C_PVT.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_PINS.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_PVT.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_SCBCLK.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_scl.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_scl_aliases.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_sda.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_sda_aliases.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cypins.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_EZI2C.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_EZI2C_PVT.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_PINS.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_PVT.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_SCBCLK.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_scl.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_scl_aliases.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_sda.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_sda_aliases.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cypins.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/EZI2C_BOOT.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLib.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_BOOT.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_BOOT.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_EZI2C.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_PINS.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_PVT.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_SCBCLK.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_scl.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_scl_aliases.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_sda.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_sda_aliases.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cypins.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_BOOT.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_BOOT.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/EZI2C_EZI2C.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLib.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_EZI2C.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_EZI2C.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_EZI2C_PVT.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_PINS.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_PVT.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_SCBCLK.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_scl.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_scl_aliases.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_sda.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_sda_aliases.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cypins.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_EZI2C.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/EZI2C_EZI2C_BOOT.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLib.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_BOOT.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_EZI2C.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_EZI2C_BOOT.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_EZI2C_PVT.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_PINS.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_PVT.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_SCBCLK.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_scl.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_scl_aliases.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_sda.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_sda_aliases.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cypins.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_EZI2C_BOOT.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/EZI2C_EZI2C_INT.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLib.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_EZI2C.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_EZI2C_INT.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_EZI2C_PVT.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_PINS.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_PVT.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_SCBCLK.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_scl.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_scl_aliases.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_sda.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_sda_aliases.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cypins.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h C:/DenysProjects/Workspace01/Design09.cydsn/cyapicallbacks.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_EZI2C_INT.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/EZI2C_PM.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLib.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_EZI2C.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_EZI2C_PVT.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_PINS.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_PM.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_PVT.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_SCBCLK.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_scl.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_scl_aliases.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_sda.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_sda_aliases.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cypins.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_PM.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/EZI2C_SCBCLK.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_SCBCLK.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_SCBCLK.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_SCBCLK.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/EZI2C_SCB_IRQ.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLib.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_SCB_IRQ.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_SCB_IRQ.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h C:/DenysProjects/Workspace01/Design09.cydsn/cyapicallbacks.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_SCB_IRQ.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_SCB_IRQ.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/EZI2C_scl.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_scl.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_scl.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_scl_aliases.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cypins.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_scl.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/EZI2C_scl_PM.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_scl.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_scl_PM.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_scl_aliases.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cypins.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_scl_PM.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/EZI2C_sda.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_sda.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_sda.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_sda_aliases.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cypins.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_sda.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/EZI2C_sda_PM.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_sda.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_sda_PM.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_sda_aliases.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cypins.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_sda_PM.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/LCD.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLib.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/LCD.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/LCD.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/LCD.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/LCD.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/LCD_LCDPort.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/LCD_LCDPort.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/LCD_LCDPort.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/LCD_LCDPort_aliases.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cypins.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/LCD_LCDPort.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/LCD_LCDPort.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/LCD_LCDPort_aliases.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/LCD_LCDPort_PM.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/LCD_LCDPort.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/LCD_LCDPort_PM.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/LCD_LCDPort_aliases.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cypins.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/LCD_LCDPort_PM.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/LCD_PM.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/LCD.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/LCD_PM.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/LCD_PM.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/Vin.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/Vin.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/Vin.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/Vin_aliases.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cypins.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/Vin.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/Vin.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/Vin_aliases.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/Vin_PM.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/Vin.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/Vin_PM.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/Vin_aliases.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cypins.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/Vin_PM.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/cyPm.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyFlash.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLib.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyPm.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyPm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cypins.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyPm.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyPm.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/cy_em_eeprom.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyFlash.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLib.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cy_em_eeprom.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cy_em_eeprom.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cy_em_eeprom.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cy_em_eeprom.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/cyfitter_cfg.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLib.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter_cfg.c C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h C:/DenysProjects/Workspace01/Design09.cydsn/cyapicallbacks.h 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter_cfg.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/cyutils.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyutils.c 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyutils.c : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/CortexM0/ARM_GCC_541/Debug/main.o : C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cmsis_armcc.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cmsis_compiler.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cmsis_gcc.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/core_cm0.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydisabledsheets.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/project.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/ADC.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/ADC_IRQ.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/ADC_intClock.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyFlash.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/CyLib.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_BOOT.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_EZI2C.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_EZI2C_PVT.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_PINS.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_PVT.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_SCBCLK.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_SCB_IRQ.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_scl.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_scl_aliases.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_sda.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/EZI2C_sda_aliases.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/LCD.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/LCD_LCDPort.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/LCD_LCDPort_aliases.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/Vin.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/Vin_aliases.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyPm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cy_em_eeprom.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cypins.h C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cytypes.h C:/DenysProjects/Workspace01/Design09.cydsn/main.c 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cmsis_armcc.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cmsis_compiler.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cmsis_gcc.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/core_cm0.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/cydisabledsheets.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/Generated_Source/PSoC4/project.h : 
+
+C:/DenysProjects/Workspace01/Design09.cydsn/main.c : 
+
